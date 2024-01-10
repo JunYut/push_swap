@@ -11,10 +11,10 @@ PART 2:
 
 PROCEDURE:
 -------------------------------------------------------------------------------
-1.	Input filtering
+1.	Input validation
 	- no arguments
 2.	Argument parsing
-3.	Argument filtering
+3.	Argument validation
 	- non integers
 	- greater than INT_MAX or smaller than INT_MIN
 	- duplicates
