@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   operations.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/11 12:51:40 by tjun-yu          ###   ########.fr       */
+/*   Created: 2024/01/11 14:37:17 by tjun-yu           #+#    #+#             */
+/*   Updated: 2024/01/11 14:53:01 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "stack.h"
 
-# include "../src/stack/stack.h"
-# include "../src/parser/parser.h"
-# include "../src/validation/validation.h"
-# include "../src/utils/utils.h"
-
-#endif
+void	swap(t_node *stack);
+void	push(t_node *stack, int element);
+void	pop(t_node *stack);
+void	rotateUp(t_node *stack);
+void	rotateDown(t_node *stack);

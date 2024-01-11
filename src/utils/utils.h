@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/11 12:51:40 by tjun-yu          ###   ########.fr       */
+/*   Created: 2024/01/11 13:26:01 by tjun-yu           #+#    #+#             */
+/*   Updated: 2024/01/11 15:29:46 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef UTILS_H
+# define UTILS_H
 
-# include "../src/stack/stack.h"
-# include "../src/parser/parser.h"
-# include "../src/validation/validation.h"
-# include "../src/utils/utils.h"
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
 
-#endif
+// Memory util functions
+void	*c_malloc(size_t size, const char *func);
+
+//String util functions
+void	console_log(const char *message);
+size_t	ft_strlen(const char *str);
+
+#endif /* UTILS_H */

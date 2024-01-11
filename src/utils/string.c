@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   string.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/11 12:51:40 by tjun-yu          ###   ########.fr       */
+/*   Created: 2024/01/11 15:04:09 by tjun-yu           #+#    #+#             */
+/*   Updated: 2024/01/11 15:29:39 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "utils.h"
 
-# include "../src/stack/stack.h"
-# include "../src/parser/parser.h"
-# include "../src/validation/validation.h"
-# include "../src/utils/utils.h"
+void	console_log(const char *message)
+{
+	write(1, message, ft_strlen(message));
+}
 
-#endif
+size_t	ft_strlen(const char *str)
+{
+	size_t	length;
+
+	length = 0;
+	while (str[length] != 0)
+		++length;
+	return (length);
+}
