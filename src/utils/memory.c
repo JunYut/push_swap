@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:56:42 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/11 15:46:43 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/12 13:08:37 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 /**
  * @brief Custom malloc function that provides insight into memory allocation
- * 		  failures.
- *
- * This function is used to allocate a specified amount of memory and provides
- * information about the function where the allocation fails.
+ * 		  failures. This function will terminate the program once the
+ * 		  allocation fails.
  *
  * @param size The amount of memory to allocate.
  * @param func The name of the function where the memory allocation is performed.
@@ -31,7 +29,7 @@ void	*c_malloc(size_t size, const char *func)
 	if (ptr == NULL)
 	{
 		consoleLog(func);
-		consoleLog(": Memory allocation failed\n");
+		consoleLog(": Memory allocation failed");
 		free(ptr);
 		exit(EXIT_FAILURE);
 	}
