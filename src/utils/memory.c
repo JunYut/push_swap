@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:56:42 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/12 13:08:37 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/16 11:39:10 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	*c_malloc(size_t size, const char *func)
 	ptr = malloc(size);
 	if (ptr == NULL)
 	{
-		consoleLog(func);
-		consoleLog(": Memory allocation failed");
+		write(1, func, ft_strlen(func));
+		write(1, ": Memory allocation failed\n", 28);
 		free(ptr);
 		exit(EXIT_FAILURE);
 	}

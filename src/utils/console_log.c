@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 11:19:42 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/12 13:50:40 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/16 14:53:21 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ void	console_log(const char *fmessage, ...)
 		{
 			arg_str = arg_parser(args, fmessage[i + 1]);
 			write(1, arg_str, ft_strlen(arg_str));
+			free(arg_str);
 			++i;
 		}
 	}
 	write(1, "\n", 1);
-	free(arg_str);
 	va_end(args);
 }
 
@@ -55,20 +55,27 @@ char	*arg_parser(va_list args, const char fspec)
 	char	c;
 
 	if (fspec == 's')
-		str = va_arg(args, char *);
-	if (fspec == 'd')
+		str = ft_strdup(va_arg(args, char *));
+	else if (fspec == 'd')
 		str = ft_itoa(va_arg(args, int));
-	if (fspec == 'c')
-	{
-		c = va_arg(args, char);
-	}
-	if (fspec == '%')
-	{
-		c = '%';
-	}
 	else
-		return ("");
-	write(1, &c, 1);
-	str = "";
+	{
+		if (fspec == 'c')
+			c = va_arg(args, int);
+		if (fspec == '%')
+			c = '%';
+		write(1, &c, 1);
+		return (ft_strdup(""));
+	}
 	return (str);
 }
+
+// int main()
+// {
+// 	console_log("A plain message");
+// 	console_log("%s %s %s", "A", "plain", "message");
+// 	console_log("print INT_MAX: %d", INT_MAX);
+// 	console_log("print INT_MIN: %d", INT_MIN);
+// 	console_log("%d", 0);
+// 	console_log("%c", 'E');
+// }

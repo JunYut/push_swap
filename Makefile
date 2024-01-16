@@ -6,7 +6,7 @@
 #    By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/11 12:51:48 by tjun-yu           #+#    #+#              #
-#    Updated: 2024/01/11 14:12:53 by tjun-yu          ###   ########.fr        #
+#    Updated: 2024/01/16 10:42:06 by tjun-yu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ SOURCES = $(wildcard \
 		  $(PARSER_DIR)/*.c \
 		  $(VALIDATION_DIR)/*.c \
 		  $(UTILS_DIR)/*.c)
-OBJECTS = $(patsubst %.c, $(OBJ_DIR)/%.o, $(SOURCES))
+OBJECTS = $(patsubst %.c, $(OBJ_DIR)/%.o, $(notdir $(SOURCES)))
 HEADERS = $(INCLUDE)/push_swap.h \
 		  $(STACK_DIR)/stack.h \
 		  $(PARSER_DIR)/parser.h \
