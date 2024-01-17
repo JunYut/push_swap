@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:51:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/17 12:02:14 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/17 13:59:49 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,24 @@
 */
 void	input_validation(int argc, char *argv[])
 {
+	size_t	size;
+
 	if (argc == 1)
 		exit(EXIT_FAILURE);
-	int_validation(argv);
+	size = sizeof(argv) / sizeof(argv[0]);
+	validator(argv, isnum);
 }
 
-void	int_validation(char *argv[])
+void	validator(char *argv[], int (*checker)(const char *num))
 {
 	size_t	size;
 	int		i;
 
 	size = sizeof(argv) / sizeof(argv[0]);
-	i  = -1;
+	i = -1;
 	while (++i < size)
 	{
-		if (!isnum(argv[i]))
+		if (!(*checker)(argv[i]))
 		{
 			console_log("Error");
 			exit(EXIT_FAILURE);
