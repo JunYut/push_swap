@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/12 11:16:06 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/17 10:28:20 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ void	free_stack(t_node *stack)
 	}
 }
 
-/**
- * @note	REMOVE 'printf()' !!!
- */
 void	print_stack(t_node *stack)
 {
 	t_node	*current;
@@ -40,7 +37,7 @@ void	print_stack(t_node *stack)
 	current = stack;
 	while (current != NULL)
 	{
-		printf("%d\n", current->num);
+		console_log("%d", current->num);
 		current = current->next;
 	}
 }
@@ -49,8 +46,7 @@ int	is_singleton(t_node *stack, const char *func)
 {
 	if (!is_empty(stack, "is_singleton") && stack->next != NULL)
 		return (0);
-	console_log(func);
-	console_log(": is singleton stack");
+	console_log("%s: is singleton stack", func);
 	return (1);
 }
 
@@ -58,8 +54,7 @@ int	is_empty(t_node *stack, const char *func)
 {
 	if (stack == NULL)
 	{
-		console_log(func);
-		console_log(": is empty stack");
+		console_log("%s: is empty stack", func);
 		return (1);
 	}
 	return (0);
