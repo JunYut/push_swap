@@ -6,19 +6,18 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:26:04 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/17 10:32:05 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/17 12:45:33 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PARSER_H
 # define PARSER_H
 
-# include "../stack/stack.h"
-# include "../utils/utils.h"
+# include "../../includes/push_swap.h"
 # include <limits.h>
 
 t_node	*parser(int argc, char *argv[]);
-int		ft_atoi(const char *num);
+long	ft_atoi(const char *integer);
 char	*ft_itoa(int num);
 
 #endif // PARSER_H

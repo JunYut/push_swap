@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/17 10:49:50 by tjun-yu          ###   ########.fr       */
+/*   Created: 2024/01/17 10:46:22 by tjun-yu           #+#    #+#             */
+/*   Updated: 2024/01/17 11:52:56 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "validation.h"
 
-int	main(int argc, char *argv[])
+int	isnum(const char *str)
 {
-	t_node	*stack;
-
-	input_validation(argc, argv);
-	stack = parser(argc, argv);
+	while (*str != 0)
+	{
+		if (*str < '0' || *str > '9')
+			return (0);
+		++str;
+	}
+	return (1);
 }
