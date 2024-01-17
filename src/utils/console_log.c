@@ -6,11 +6,13 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 11:19:42 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/16 14:53:21 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/17 10:21:30 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
+
+static char	*arg_parser(va_list args, const char fspec);
 
 /**
  * @brief A simiplified version of printf()
@@ -49,7 +51,7 @@ void	console_log(const char *fmessage, ...)
  * @param fspec format specifier
  * @return char* string generated from parsing arguments
  */
-char	*arg_parser(va_list args, const char fspec)
+static char	*arg_parser(va_list args, const char fspec)
 {
 	char	*str;
 	char	c;
