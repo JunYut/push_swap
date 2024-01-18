@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:04:29 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/17 12:43:33 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/18 09:57:19 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
  */
 long	ft_atoi(const char *integer)
 {
-	long num;
-	int	p_or_n;
-	int	i;
+	long	num;
+	int		p_or_n;
+	int		i;
 
 	num = 0;
 	p_or_n = 1;

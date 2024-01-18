@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:46:22 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/17 13:53:09 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/18 09:57:46 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	isnum(const char *str)
 	return (1);
 }
 
-int inrange(const char *num)
+int	inrange(const char *num)
 {
 	if (ft_atoi(num) < INT_MIN || ft_atoi(num) > INT_MAX)
 		return (0);
