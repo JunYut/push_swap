@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:29:21 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/18 12:29:40 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/18 14:04:30 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,4 @@ t_stack	*parser(int argc, char *argv[])
 	while (++i < argc)
 		push(stack, ft_atoi(argv[i]));
 	return (stack);
-}
-
-int main()
-{
-	console_log("Hello World");
 }
