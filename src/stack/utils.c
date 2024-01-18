@@ -6,20 +6,20 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/17 10:28:20 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/18 11:56:49 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-void	free_stack(t_node *stack)
+void	free_stack(t_stack *stack)
 {
 	t_node	*current;
 	t_node	*temp;
 
 	if (is_empty(stack, "free_stack"))
 		return ;
-	current = stack;
+	current = stack->head_ptr;
 	while (current->next != NULL)
 	{
 		temp = current->next;
@@ -28,13 +28,13 @@ void	free_stack(t_node *stack)
 	}
 }
 
-void	print_stack(t_node *stack)
+void	print_stack(t_stack *stack)
 {
 	t_node	*current;
 
 	if (is_empty(stack, "print_stack"))
 		return ;
-	current = stack;
+	current = stack->head_ptr;
 	while (current != NULL)
 	{
 		console_log("%d", current->num);
@@ -42,17 +42,17 @@ void	print_stack(t_node *stack)
 	}
 }
 
-int	is_singleton(t_node *stack, const char *func)
+int	is_singleton(t_stack *stack, const char *func)
 {
-	if (!is_empty(stack, "is_singleton") && stack->next != NULL)
+	if (!is_empty(stack, "is_singleton") && stack->head_ptr->next != NULL)
 		return (0);
 	console_log("%s: is singleton stack", func);
 	return (1);
 }
 
-int	is_empty(t_node *stack, const char *func)
+int	is_empty(t_stack *stack, const char *func)
 {
-	if (stack == NULL)
+	if (stack->head_ptr == NULL)
 	{
 		console_log("%s: is empty stack", func);
 		return (1);
@@ -60,12 +60,15 @@ int	is_empty(t_node *stack, const char *func)
 	return (0);
 }
 
-t_node	*new_stack(void)
+t_stack	*new_stack(void)
 {
-	t_node	*stack;
+	t_stack	*stack;
 
-	stack = (t_node *)c_malloc(sizeof(t_node), "new_stack");
-	stack->num = 0;
-	stack->next = NULL;
+	stack = (t_stack *)c_malloc(sizeof(t_stack), "new_stack");
+	stack->head_ptr->num = 0;
+	stack->head_ptr->digits = 0;
+	stack->head_ptr->next = NULL;
+	stack->size = 0;
+	stack->range = 0;
 	return (stack);
 }
