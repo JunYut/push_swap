@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:51:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/17 13:59:49 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/18 10:56:28 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,42 @@ void	input_validation(int argc, char *argv[])
 
 	if (argc == 1)
 		exit(EXIT_FAILURE);
-	size = sizeof(argv) / sizeof(argv[0]);
-	validator(argv, isnum);
+	validator(argv, isnum, argc);
+	validator(argv, inrange, argc);
+	duplicate_checker(argv, argc);
 }
 
-void	validator(char *argv[], int (*checker)(const char *num))
+void	validator(char *argv[], int (*checker)(const char *num), int argc)
 {
-	size_t	size;
-	int		i;
+	int	i;
 
-	size = sizeof(argv) / sizeof(argv[0]);
 	i = -1;
-	while (++i < size)
+	while (++i < argc)
 	{
 		if (!(*checker)(argv[i]))
 		{
 			console_log("Error");
 			exit(EXIT_FAILURE);
+		}
+	}
+}
+
+void	duplicate_checker(char *argv[], int argc)
+{
+	int	i;
+	int	j;
+
+	i = -1;
+	while (++i < argc - 1)
+	{
+		j = i;
+		while (++j < argc)
+		{
+			if (same_str(argv[i], argv[j]))
+			{
+				console_log("Error");
+				exit(EXIT_FAILURE);
+			}
 		}
 	}
 }
