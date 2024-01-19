@@ -6,16 +6,16 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:04:38 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/19 11:26:36 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/19 14:36:49 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STACK_H
 # define STACK_H
 
+# include "../../includes/push_swap.h"
 # include <stdlib.h>
 # include <stddef.h>
-# include "../utils/utils.h"
 
 typedef struct s_node
 {
@@ -39,9 +39,11 @@ void	rotate_up(t_stack *stack);
 void	rotate_down(t_stack *stack);
 
 void	free_stack(t_stack *stack);
+size_t	calc_range(t_stack *stack);
 void	print_stack(t_stack *stack);
-int		is_singleton(t_stack *stack, const char *func);
 int		is_empty(t_stack *stack, const char *func);
 t_stack	*new_stack(void);
+
+size_t	count_digits(long num);
 
 #endif
