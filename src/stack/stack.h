@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:04:38 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/18 14:12:22 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/19 11:26:36 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_node
 typedef struct s_stack
 {
 	t_node	*head;
+	t_node	*tail;
 	size_t	size;
 	size_t	range;
 }	t_stack;

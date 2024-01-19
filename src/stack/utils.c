@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/18 14:59:31 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/19 12:31:55 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,9 @@ void	print_stack(t_stack *stack)
 
 int	is_singleton(t_stack *stack, const char *func)
 {
-	if (stack->size != 1)
+	if (is_empty(stack, "is_singleton"))
+		return (0);
+	if (stack->size!= 1)
 		return (0);
 	console_log("%s: is singleton stack", func);
 	return (1);
@@ -52,12 +54,10 @@ int	is_singleton(t_stack *stack, const char *func)
 
 int	is_empty(t_stack *stack, const char *func)
 {
-	if (stack->size == 0)
-	{
-		console_log("%s: is empty stack", func);
-		return (1);
-	}
-	return (0);
+	if (stack->head != NULL)
+		return (0);
+	console_log("%s: is empty stack", func);
+	return (1);
 }
 
 /**
@@ -71,6 +71,7 @@ t_stack	*new_stack(void)
 
 	stack = (t_stack *)c_malloc(sizeof(t_stack), "new_stack");
 	stack->head = NULL;
+	stack->tail = NULL;
 	stack->size = 0;
 	stack->range = 0;
 	return (stack);
