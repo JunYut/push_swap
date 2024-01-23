@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:04:38 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/23 10:52:33 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/23 11:26:11 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,5 @@ size_t	calc_range(t_stack *stack);
 void	print_stack(t_stack *stack);
 int		is_empty(t_stack *stack, const char *func);
 t_stack	*new_stack(void);
-
-size_t	count_digits(long num);
 
 #endif

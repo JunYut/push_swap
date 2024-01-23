@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/19 14:04:58 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/23 12:58:28 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main()
 	for (int i = 0; i < 10; i++)
 	{
 		push(stack, i);
-		print_stack(stack);
+		print_stack(stack);	console_log("");
 	}
 	free_stack(stack);
 }

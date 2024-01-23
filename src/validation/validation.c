@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:51:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/18 10:56:28 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/23 12:55:48 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@
 */
 void	input_validation(int argc, char *argv[])
 {
-	size_t	size;
-
 	if (argc == 1)
 		exit(EXIT_FAILURE);
 	validator(argv, isnum, argc);

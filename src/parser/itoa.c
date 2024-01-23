@@ -6,13 +6,11 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 11:55:50 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/16 14:46:13 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/23 11:27:23 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parser.h"
-
-static size_t	count_digits(long num);
 
 /**
  * @brief This function creates a string base on num
@@ -43,32 +41,6 @@ char	*ft_itoa(int num)
 		temp /= 10;
 	}
 	return (str);
-}
-
-/**
- * @brief This function the digit count of a number without the negative sign
- *
- * @param num A long
- * @return size_t Digit count
- */
-static size_t	count_digits(long num)
-{
-	size_t	digits;
-
-	if (num == 0)
-		return (1);
-	digits = 0;
-	if (num < 0)
-	{
-		++digits;
-		num *= -1;
-	}
-	while (num > 0)
-	{
-		num /= 10;
-		++digits;
-	}
-	return (digits);
 }
 
 // int main()
