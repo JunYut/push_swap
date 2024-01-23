@@ -6,7 +6,7 @@
 #    By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/11 12:51:48 by tjun-yu           #+#    #+#              #
-#    Updated: 2024/01/23 11:19:21 by tjun-yu          ###   ########.fr        #
+#    Updated: 2024/01/23 14:43:35 by tjun-yu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ $(NAME): $(OBJECTS)
 
 # $(OBJECTS): $(SOURCES) $(HEADERS)
 # 	$(CC) $(CFLAGS) -c -I$(INCLUDE) $< -o $@
-%.o: %.c $(HEADERS)
+obj/%.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -c -I$(INCLUDE) $< -o $@
 
 clean:
