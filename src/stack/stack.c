@@ -6,13 +6,13 @@
 /*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/19 14:45:17 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/23 15:00:44 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-void	free_stack(t_stack *stack)
+void	free_stack(t_stack *stack)	// possible cause of memory leak
 {
 	t_node	*current;
 	t_node	*temp;
