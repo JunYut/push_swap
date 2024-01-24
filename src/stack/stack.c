@@ -6,15 +6,14 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 13:45:46 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 14:22:14 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
 /**
- * @attention This function is causing memory leak, will revamp after
- * 			  implementing pop()
+ * @note This function is tested
  */
 void	free_stack(t_stack *stack)
 {
@@ -23,6 +22,9 @@ void	free_stack(t_stack *stack)
 	free(stack);
 }
 
+/**
+ * @note This function is tested
+ */
 void	print_stack(t_stack *stack)
 {
 	t_node	*current;
@@ -38,8 +40,12 @@ void	print_stack(t_stack *stack)
 		console_log("element: %d | digits: %d", current->num, current->digits);
 		current = current->next;
 	}
+	console_log("");
 }
 
+/**
+ * @note This function is tested
+ */
 size_t	calc_range(t_stack *stack)
 {
 	int		max;
@@ -67,6 +73,9 @@ size_t	calc_range(t_stack *stack)
 	return (max - min);
 }
 
+/**
+ * @note This function is tested
+ */
 int	is_empty(t_stack *stack, const char *func)
 {
 	if (stack->head != NULL)

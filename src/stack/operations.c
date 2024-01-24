@@ -6,13 +6,26 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:37:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 12:15:32 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 14:20:20 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-void	swap(t_stack *stack);
+void	swap(t_stack *stack)
+{
+	t_node	*second;
+
+	if (is_empty(stack, "swap"))
+		return ;
+	if (stack->size == 1)
+		return ;
+	second = stack->head;
+	stack->head = stack->head->next;
+	second->next = stack->head->next;
+	stack->head->next = second;
+	stack->tail->next = stack->head;
+}
 
 void	push(t_stack *stack, int element)
 {

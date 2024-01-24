@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:26:01 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/23 10:53:19 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 14:06:47 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 void	*c_malloc(size_t size, const char *func);
 
-//String util functions
+// String util functions
 
 void	console_log(const char *fmessage, ...);
 char	*ft_strdup(const char *src);
