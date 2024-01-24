@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 12:08:11 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 12:18:43 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ size_t	calc_range(t_stack *stack)
 	int		min;
 	t_node	*current;
 
+	if (is_empty(stack, "calc_range"))
+		return (0);
 	max = stack->head->num;
 	min = stack->head->num;
 	current = stack->head;

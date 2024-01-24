@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:37:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 12:04:53 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 12:15:32 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,15 @@ void	pop(t_stack *stack)
 
 	if (is_empty(stack, "pop"))
 		return ;
+	if (stack->size == 1)
+	{
+		free(stack->head);
+		stack->head = NULL;
+		stack->tail = NULL;
+		stack->size = 0;
+		stack->range = 0;
+		return ;
+	}
 	temp = stack->head;
 	stack->head = stack->head->next;
 	stack->tail->next = stack->head;

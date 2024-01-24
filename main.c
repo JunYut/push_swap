@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 11:37:05 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 12:19:17 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,5 @@ int main()
 		print_stack(stack);	console_log("");
 		pop(stack);
 	}
-	console_log("DEBUG");
 	free_stack(stack);
-	console_log("DEBUG");
 }
