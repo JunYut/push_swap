@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:37:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 14:20:20 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 15:08:40 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ void	swap(t_stack *stack)
 {
 	t_node	*second;
 
-	if (is_empty(stack, "swap"))
-		return ;
-	if (stack->size == 1)
+	if (is_empty(stack, "swap") || stack->size == 1)
 		return ;
 	second = stack->head;
 	stack->head = stack->head->next;
@@ -73,5 +71,27 @@ void	pop(t_stack *stack)
 	stack->range = calc_range(stack);
 }
 
-void	rotateUp(t_stack *stack);
-void	rotateDown(t_stack *stack);
+void	rotate_up(t_stack *stack)
+{
+	t_node	*temp;
+
+	if (is_empty(stack, "rotateUp") || stack->size == 1)
+		return ;
+	temp = stack->head;
+	stack->head = stack->head->next;
+	stack->tail = temp;
+}
+
+void	rotate_down(t_stack *stack)
+{
+	t_node	*temp;
+
+	if (is_empty(stack, "rotateUp") || stack->size == 1)
+		return ;
+	temp = stack->head;
+	while (temp->next != stack->tail)
+		temp = temp->next;
+	stack->head = stack->tail;
+	stack->tail = temp;
+	stack->tail->next = stack->head;
+}

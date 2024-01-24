@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 14:39:56 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 15:10:05 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@ int	    TEST(char *test);
 void    PUSH_TEST(t_stack *stack);
 void	POP_TEST(t_stack *stack);
 void	SWAP_TEST(t_stack *stack);
+void	ROTATE_TEST(t_stack *stack);
 void	DEBUG_SWAP(t_stack *stack);
 
 int main()
 {
-	char	*test = "push";
+	char	*test = "rotate";
 	t_stack *stack = new_stack();
 
 	switch (TEST(test))
@@ -34,6 +35,9 @@ int main()
 			break;
 		case 3:
 			SWAP_TEST(stack);
+			break;
+		case 4:
+			ROTATE_TEST(stack);
 			break;
 		default:
 			break;
@@ -50,6 +54,8 @@ int	TEST(char *test)
 		return (2);
 	if (same_str("swap", test))
 		return (3);
+	if (same_str("rotate", test))
+		return (4);
 	return (0);
 }
 
@@ -88,6 +94,21 @@ void	SWAP_TEST(t_stack *stack)
 	DEBUG_SWAP(stack);
 	swap(stack);
 	DEBUG_SWAP(stack);
+	print_stack(stack);
+}
+
+void	ROTATE_TEST(t_stack *stack)
+{
+	console_log("ROTATE TEST:");
+	console_log("__________________________________________");
+	for (int i = 1; i <= 10; i++)
+		push(stack, i);
+	print_stack(stack);
+	rotate_up(stack);
+	print_stack(stack);
+	rotate_down(stack);
+	print_stack(stack);
+	rotate_down(stack);
 	print_stack(stack);
 }
 
