@@ -3,30 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/23 15:00:44 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 11:46:50 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-void	free_stack(t_stack *stack)	// possible cause of memory leak
+/**
+ * @attention This function is causing memory leak, will revamp after
+ * 			  implementing pop()
+ */
+void	free_stack(t_stack *stack)
 {
-	t_node	*current;
-	t_node	*temp;
-
-	if (!is_empty(stack, "free_stack"))
-	{
-		current = stack->head;
-		while (current->next != stack->tail)
-		{
-			temp = current->next;
-			free(current);
-			current = temp;
-		}
-	}
+	while (!is_empty(stack, "free_stack"))
+		pop(stack);
 	free(stack);
 }
 
@@ -36,10 +29,11 @@ void	print_stack(t_stack *stack)
 
 	if (is_empty(stack, "print_stack"))
 		return ;
+	console_log("STACK [size: %d, range: %d]", stack->size, stack->range);
 	current = stack->head;
 	while (current != stack->tail)
 	{
-		console_log("%d", current->num);
+		console_log("element: %d | digits: %d", current->num, current->digits);
 		current = current->next;
 	}
 }

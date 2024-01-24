@@ -7,7 +7,7 @@ case $1 in
 		leaks -atExit -- ./executable
 		;;
 	"M")
-		valgrind ./executable
+		valgrind --leak-check=full ./executable
 		;;
 	*)
 		./executable

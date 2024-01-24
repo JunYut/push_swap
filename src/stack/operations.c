@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:37:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/19 14:58:44 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 11:17:42 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,19 @@ void	push(t_stack *stack, int element)
 	stack->range = calc_range(stack);
 }
 
-void	pop(t_stack *stack);
+void	pop(t_stack *stack)
+{
+	t_node	*temp;
+
+	if (is_empty(stack, "pop"))
+		return ;
+	temp = stack->head;
+	stack->head = stack->head->next;
+	stack->tail->next = stack->head;
+	free(temp);
+	stack->size -= 1;
+	stack->range = calc_range(stack);
+}
+
 void	rotateUp(t_stack *stack);
 void	rotateDown(t_stack *stack);

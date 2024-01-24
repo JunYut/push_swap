@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/23 14:25:50 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 11:23:33 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 /**
  * @test void push(t_stack *stack, int element)
- * @test void push(t_stack *stack)
+ * @test void pop(t_stack *stack)
 */
 int main()
 {
@@ -36,5 +36,15 @@ int main()
 		push(stack, i);
 		print_stack(stack);	console_log("");
 	}
+
+	console_log("POP TEST:");
+	console_log("__________________________________________");
+	for (int i = 0; i < 10; i++)
+	{
+		print_stack(stack);	console_log("");
+		pop(stack);
+	}
+	console_log("DEBUG");
 	free_stack(stack);
+	console_log("DEBUG");
 }
