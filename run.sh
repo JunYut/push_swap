@@ -1,6 +1,6 @@
 #!/bin/bash
 
-gcc -g -Wall -Wextra -Werror -Wpedantic -o executable main.c -L. -lpush_swap
+gcc -g -Wall -Wextra -Werror -Wpedantic -o executable test.c -L. -lpush_swap
 
 case $1 in
 	"m")
