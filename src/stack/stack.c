@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 12:46:36 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 13:45:46 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,12 @@ size_t	calc_range(t_stack *stack)
 	max = stack->head->num;
 	min = stack->head->num;
 	current = stack->head;
-	while (current != stack->tail)
+	if (current->num > max)
+		max = current->num;
+	if (current->num < min)
+		min = current->num;
+	current = current->next;
+	while (current != stack->head)
 	{
 		if (current->num > max)
 			max = current->num;
