@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 11:46:50 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 12:08:11 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,9 @@ void	print_stack(t_stack *stack)
 		return ;
 	console_log("STACK [size: %d, range: %d]", stack->size, stack->range);
 	current = stack->head;
-	while (current != stack->tail)
+	console_log("element: %d | digits: %d", current->num, current->digits);
+	current = current->next;
+	while (current != stack->head)
 	{
 		console_log("element: %d | digits: %d", current->num, current->digits);
 		current = current->next;

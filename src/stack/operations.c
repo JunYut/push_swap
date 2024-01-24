@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:37:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 11:17:42 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/24 12:04:53 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	push(t_stack *stack, int element)
 	new_node->digits = count_digits(element);
 	if (is_empty(stack, "push"))
 	{
-		new_node->next = NULL;
+		new_node->next = new_node;
 		stack->head = new_node;
 		stack->tail = stack->head;
 	}
