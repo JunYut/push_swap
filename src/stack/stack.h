@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:04:38 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/23 14:33:46 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 11:37:05 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct s_stack
 
 void	swap(t_stack *stack);
 void	push(t_stack *stack, int element);
-void	pop(t_stack *stack);
+long	pop(t_stack *stack);
 void	rotate_up(t_stack *stack);
 void	rotate_down(t_stack *stack);
 

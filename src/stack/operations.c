@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:37:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 15:08:40 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 11:46:34 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,14 @@ void	push(t_stack *stack, int element)
 	stack->range = calc_range(stack);
 }
 
-void	pop(t_stack *stack)
+long	pop(t_stack *stack)
 {
+	int		element;
 	t_node	*temp;
 
 	if (is_empty(stack, "pop"))
-		return ;
+		return (LONG_MIN);
+	element = stack->head->num;
 	if (stack->size == 1)
 	{
 		free(stack->head);
@@ -61,7 +63,7 @@ void	pop(t_stack *stack)
 		stack->tail = NULL;
 		stack->size = 0;
 		stack->range = 0;
-		return ;
+		return (element);
 	}
 	temp = stack->head;
 	stack->head = stack->head->next;
@@ -69,6 +71,7 @@ void	pop(t_stack *stack)
 	free(temp);
 	stack->size -= 1;
 	stack->range = calc_range(stack);
+	return (element);
 }
 
 void	rotate_up(t_stack *stack)
