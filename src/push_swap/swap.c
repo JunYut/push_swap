@@ -6,12 +6,23 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:21:18 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 15:21:33 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 14:39:25 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../includes/push_swap.h"
 
-void    sa(t_stack *A);
-void    sb(t_stack *B);
-void    ss(t_stack *A, t_stack *B);
+void	sa(t_stack *A)
+{
+	swap(A);
+}
+
+void	sb(t_stack *B)
+{
+	swap(B);
+}
+void	ss(t_stack *A, t_stack *B)
+{
+	sa(A);
+	sb(B);
+}
