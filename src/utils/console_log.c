@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   console_log.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 11:19:42 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/17 10:21:30 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 13:49:17 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static char	*arg_parser(va_list args, const char fspec);
  * @brief A simiplified version of printf()
  *
  * @param fmessage a formatted string
- * @param ... only handles integer and string, maybe char too
+ * @param ... only handles integer, string and char
  */
 void	console_log(const char *fmessage, ...)
 {
