@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 14:22:14 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 15:13:21 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ void	print_stack(t_stack *stack)
 {
 	t_node	*current;
 
+	console_log("STACK [size: %d, range: %d]", stack->size, stack->range);
 	if (is_empty(stack, "print_stack"))
 		return ;
-	console_log("STACK [size: %d, range: %d]", stack->size, stack->range);
 	current = stack->head;
 	console_log("element: %d | digits: %d", current->num, current->digits);
 	current = current->next;
