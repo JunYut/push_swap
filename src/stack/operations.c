@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:37:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/25 11:46:34 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 11:51:35 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,13 @@ void	push(t_stack *stack, int element)
 	stack->range = calc_range(stack);
 }
 
+/**
+ * @brief Removes the top element of the stack and returns it.
+ *
+ * @param stack The stack to pop from.
+ * @return long The top element of the stack. If the stack is empty, returns
+ *  LONG_MIN.
+ */
 long	pop(t_stack *stack)
 {
 	int		element;
