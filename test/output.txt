@@ -1,4 +1,4 @@
-RA RB RR TEST:
+RRA RRB RRR TEST:
 __________________________________________
 push: is empty stack
 A:
@@ -31,6 +31,8 @@ element: -1 | digits: 1
 --------------------
 A:
 STACK [size: 10, range: 9]
+element: 1 | digits: 1
+element: 10 | digits: 2
 element: 9 | digits: 1
 element: 8 | digits: 1
 element: 7 | digits: 1
@@ -39,12 +41,12 @@ element: 5 | digits: 1
 element: 4 | digits: 1
 element: 3 | digits: 1
 element: 2 | digits: 1
-element: 1 | digits: 1
-element: 10 | digits: 2
 
 --------------------
 B:
 STACK [size: 10, range: 9]
+element: -1 | digits: 1
+element: -10 | digits: 2
 element: -9 | digits: 1
 element: -8 | digits: 1
 element: -7 | digits: 1
@@ -53,35 +55,33 @@ element: -5 | digits: 1
 element: -4 | digits: 1
 element: -3 | digits: 1
 element: -2 | digits: 1
-element: -1 | digits: 1
-element: -10 | digits: 2
 
 --------------------
 A:
 STACK [size: 10, range: 9]
+element: 2 | digits: 1
+element: 1 | digits: 1
+element: 10 | digits: 2
+element: 9 | digits: 1
 element: 8 | digits: 1
 element: 7 | digits: 1
 element: 6 | digits: 1
 element: 5 | digits: 1
 element: 4 | digits: 1
 element: 3 | digits: 1
-element: 2 | digits: 1
-element: 1 | digits: 1
-element: 10 | digits: 2
-element: 9 | digits: 1
 
 B:
 STACK [size: 10, range: 9]
+element: -2 | digits: 1
+element: -1 | digits: 1
+element: -10 | digits: 2
+element: -9 | digits: 1
 element: -8 | digits: 1
 element: -7 | digits: 1
 element: -6 | digits: 1
 element: -5 | digits: 1
 element: -4 | digits: 1
 element: -3 | digits: 1
-element: -2 | digits: 1
-element: -1 | digits: 1
-element: -10 | digits: 2
-element: -9 | digits: 1
 
 free_stack: is empty stack
 free_stack: is empty stack

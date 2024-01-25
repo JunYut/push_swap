@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/25 14:49:53 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 14:56:33 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ int main(int argc, char **argv)
 		case 7:
 			RA_RB_RR_TEST();
 			break;
+		case 8:
+			RRA_RRB_RRR_TEST();
+			break;
 		default:
 			console_log("invalid test name");
 			// ALL_TEST();
@@ -63,10 +66,12 @@ int	TEST(char *test)
 		return (4);
 	if (same_str("papb", test))
 		return (5);
-	if (same_str("sasbss", test))
+	if (same_str("ss", test))
 		return (6);
-	if (same_str("rarbrr", test))
+	if (same_str("rr", test))
 		return (7);
+	if (same_str("rrr", test))
+		return (8);
 	return (0);
 }
 
@@ -79,6 +84,7 @@ void	ALL_TEST()	// incomplete
 	PA_PB_TEST();
 	SA_SB_SS_TEST();
 	RA_RB_RR_TEST();
+	RRA_RRB_RRR_TEST();
 }
 
 void	DEBUG_SWAP(t_stack *stack)

@@ -87,3 +87,33 @@ void	RA_RB_RR_TEST()
 	free_stack(A);
 	free_stack(B);
 }
+
+void	RRA_RRB_RRR_TEST()
+{
+	console_log("RRA RRB RRR TEST:");
+	console_log("__________________________________________");
+
+	t_stack *A = new_stack();
+	for (int i = 1; i <= 10; i++)
+		push(A, i);
+	console_log("A:");	print_stack(A);
+
+	t_stack *B = new_stack();
+	for (int i = -1; i >= -10; --i)
+		push(B, i);
+	console_log("B:");	print_stack(B);
+
+	console_log("--------------------");
+	rra(A);
+	console_log("A:");	print_stack(A);
+	console_log("--------------------");
+	rrb(B);
+	console_log("B:");	print_stack(B);
+	console_log("--------------------");
+	rrr(A, B);
+	console_log("A:");	print_stack(A);
+	console_log("B:");	print_stack(B);
+
+	free_stack(A);
+	free_stack(B);
+}
