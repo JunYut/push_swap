@@ -5,15 +5,15 @@
 
 	int	    TEST(char *test);
 
-	void	ALL_TEST(t_stack *A, t_stack *B);
-	void    PUSH_TEST(t_stack *stack);
-	void	POP_TEST(t_stack *stack);
-	void	SWAP_TEST(t_stack *stack);
-	void	ROTATE_TEST(t_stack *stack);
-	void	SA_SB_SS_TEST(t_stack *A, t_stack *B);
-	void	PA_PB_TEST(t_stack *A, t_stack *B);
-	void	RA_RB_RR_TEST(t_stack *A, t_stack *B);
-	void	RRA_RRB_RRR_TEST(t_stack *A, t_stack *B);
+	void	ALL_TEST();
+	void    PUSH_TEST();
+	void	POP_TEST();
+	void	SWAP_TEST();
+	void	ROTATE_TEST();
+	void	SA_SB_SS_TEST();
+	void	PA_PB_TEST();
+	void	RA_RB_RR_TEST();
+	void	RRA_RRB_RRR_TEST();
 
 	void	DEBUG_SWAP(t_stack *stack);
 

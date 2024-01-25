@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/25 10:47:53 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 11:10:32 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 int main()
 {
-	char	*test = "rotate";
-	t_stack *A = new_stack();
+	char* test = "rotate";
 
 	switch (TEST(test))
 	{
 		case 1:
-			PUSH_TEST(A);
+			PUSH_TEST();
 			break;
 		case 2:
-			POP_TEST(A);
+			POP_TEST();
 			break;
 		case 3:
-			SWAP_TEST(A);
+			SWAP_TEST();
 			break;
 		case 4:
-			ROTATE_TEST(A);
+			ROTATE_TEST();
 			break;
 		default:
+			ALL_TEST();
 			break;
 	}
 
-	free_stack(A);
+	return (0);
 }
 
 int	TEST(char *test)
@@ -48,15 +48,18 @@ int	TEST(char *test)
 		return (3);
 	if (same_str("rotate", test))
 		return (4);
+	if (same_str("sasbss", test))
+		return (5);
 	return (0);
 }
 
-void	ALL_TEST(t_stack *A, t_stack *B)	// incomplete
+void	ALL_TEST()	// incomplete
 {
-	PUSH_TEST(A);
-	POP_TEST(A);
-	SWAP_TEST(A);
-	ROTATE_TEST(A);
+	PUSH_TEST();
+	POP_TEST();
+	SWAP_TEST();
+	ROTATE_TEST();
+	SA_SB_SS_TEST();
 }
 
 void	DEBUG_SWAP(t_stack *stack)
