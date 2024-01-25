@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:46:22 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/18 10:49:27 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 11:30:46 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	isnum(const char *str)
 	return (1);
 }
 
-int	inrange(const char *num)
+int	is_int(const char *num)
 {
 	if (ft_atoi(num) < INT_MIN || ft_atoi(num) > INT_MAX)
 		return (0);

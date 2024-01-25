@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validation.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:46:25 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/18 10:45:59 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 11:31:14 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	validator(char *argv[], int (*checker)(const char *num), int argc);
 void	duplicate_checker(char *argv[], int argc);
 
 int		isnum(const char *str);
-int		inrange(const char *num);
+int		is_int(const char *num);
 int		same_str(const char *s1, const char *s2);
 
 #endif // VALIDATION_H
