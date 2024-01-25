@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/25 14:56:33 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 15:09:11 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	char* test = argv[1];
 
 	if (argc < 2)
-		test = "all";
+		test = "";
 	switch (TEST(test))
 	{
 		case 1:
@@ -44,6 +44,9 @@ int main(int argc, char **argv)
 			break;
 		case 8:
 			RRA_RRB_RRR_TEST();
+			break;
+		case 9:
+			EMPTY_TEST();
 			break;
 		default:
 			console_log("invalid test name");
@@ -72,6 +75,8 @@ int	TEST(char *test)
 		return (7);
 	if (same_str("rrr", test))
 		return (8);
+	if (same_str("empty", test))
+		return (9);
 	return (0);
 }
 

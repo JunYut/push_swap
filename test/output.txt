@@ -29,6 +29,7 @@ element: -2 | digits: 1
 element: -1 | digits: 1
 
 --------------------
+rra
 A:
 STACK [size: 10, range: 9]
 element: 1 | digits: 1
@@ -43,6 +44,7 @@ element: 3 | digits: 1
 element: 2 | digits: 1
 
 --------------------
+rrb
 B:
 STACK [size: 10, range: 9]
 element: -1 | digits: 1
@@ -57,6 +59,7 @@ element: -3 | digits: 1
 element: -2 | digits: 1
 
 --------------------
+rrr
 A:
 STACK [size: 10, range: 9]
 element: 2 | digits: 1
