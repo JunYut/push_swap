@@ -16,5 +16,6 @@
 	void	RRA_RRB_RRR_TEST();
 
 	void	DEBUG_SWAP(t_stack *stack);
+	void	DEBUG();
 
 # endif

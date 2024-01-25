@@ -24,8 +24,8 @@ void	POP_TEST()
 		push(stack, i);
 	for (int i = 0; i < 10; i++)
 	{
+		console_log("popped: %d", pop(stack));
 		print_stack(stack);
-		pop(stack);
 	}
 	pop(stack);
 	free_stack(stack);

@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 15:16:34 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 12:27:25 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void    sa(t_stack *A);
 void    sb(t_stack *B);
 void    ss(t_stack *A, t_stack *B);
 void    pa(t_stack *A, t_stack *B);
-void    pb(t_stack *A, t_stack *B);
+void    pb(t_stack *B, t_stack *A);
 void    ra(t_stack *A);
 void    rb(t_stack *B);
 void    rr(t_stack *A, t_stack *B);

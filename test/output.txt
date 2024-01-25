@@ -1,0 +1,84 @@
+PA PB TEST:
+__________________________________________
+push: is empty stack
+A:
+STACK [size: 10, range: 9]
+element: 10 | digits: 2
+element: 9 | digits: 1
+element: 8 | digits: 1
+element: 7 | digits: 1
+element: 6 | digits: 1
+element: 5 | digits: 1
+element: 4 | digits: 1
+element: 3 | digits: 1
+element: 2 | digits: 1
+element: 1 | digits: 1
+
+push: is empty stack
+B:
+STACK [size: 10, range: 9]
+element: -10 | digits: 2
+element: -9 | digits: 1
+element: -8 | digits: 1
+element: -7 | digits: 1
+element: -6 | digits: 1
+element: -5 | digits: 1
+element: -4 | digits: 1
+element: -3 | digits: 1
+element: -2 | digits: 1
+element: -1 | digits: 1
+
+--------------------
+A:
+STACK [size: 11, range: 20]
+element: -10 | digits: 2
+element: 10 | digits: 2
+element: 9 | digits: 1
+element: 8 | digits: 1
+element: 7 | digits: 1
+element: 6 | digits: 1
+element: 5 | digits: 1
+element: 4 | digits: 1
+element: 3 | digits: 1
+element: 2 | digits: 1
+element: 1 | digits: 1
+
+B:
+STACK [size: 9, range: 8]
+element: -9 | digits: 1
+element: -8 | digits: 1
+element: -7 | digits: 1
+element: -6 | digits: 1
+element: -5 | digits: 1
+element: -4 | digits: 1
+element: -3 | digits: 1
+element: -2 | digits: 1
+element: -1 | digits: 1
+
+--------------------
+A:
+STACK [size: 10, range: 9]
+element: 10 | digits: 2
+element: 9 | digits: 1
+element: 8 | digits: 1
+element: 7 | digits: 1
+element: 6 | digits: 1
+element: 5 | digits: 1
+element: 4 | digits: 1
+element: 3 | digits: 1
+element: 2 | digits: 1
+element: 1 | digits: 1
+
+B:
+STACK [size: 10, range: 9]
+element: -10 | digits: 2
+element: -9 | digits: 1
+element: -8 | digits: 1
+element: -7 | digits: 1
+element: -6 | digits: 1
+element: -5 | digits: 1
+element: -4 | digits: 1
+element: -3 | digits: 1
+element: -2 | digits: 1
+element: -1 | digits: 1
+
