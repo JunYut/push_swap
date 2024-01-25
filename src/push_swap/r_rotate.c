@@ -6,12 +6,12 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:22:09 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/24 15:22:26 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/25 10:57:08 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../includes/push_swap.h"
 
-void    rra(t_stack *A);
-void    rrb(t_stack *B);
-void    rrr(t_stack *A, t_stack *B);
+void	rra(t_stack *A);
+void	rrb(t_stack *B);
+void	rrr(t_stack *A, t_stack *B);
