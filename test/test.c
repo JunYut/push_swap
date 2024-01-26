@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/26 14:31:53 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/26 14:38:06 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,6 @@ int main(int argc, char **argv)
 	if (argc < 2)
 		test = "";
 
-	t_stack	*test_stack = new_stack();
-	push(test_stack, 1);
-	push(test_stack, 2);
-	print_stack(test_stack);
-	swap(test_stack);	// doesnt work if stack size is 2
-	print_stack(test_stack);
-	free_stack(test_stack);
 	switch (TEST(test))
 	{
 		case 1:
