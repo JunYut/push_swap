@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+         #
+#    By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/11 12:51:48 by tjun-yu           #+#    #+#              #
-#    Updated: 2024/01/23 14:43:35 by tjun-yu          ###   ########.fr        #
+#    Updated: 2024/01/26 14:08:50 by tjun-yu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,9 @@ $(NAME): $(OBJECTS)
 # 	$(CC) $(CFLAGS) -c -I$(INCLUDE) $< -o $@
 obj/%.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -c -I$(INCLUDE) $< -o $@
+
+run: $(NAME)
+	$(CC) $(CFLAGS) -I$(INCLUDE) $(NAME) main.c -o push_swap
 
 clean:
 	rm -rf $(OBJECTS)
