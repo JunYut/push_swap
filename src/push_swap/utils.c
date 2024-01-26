@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/26 14:27:32 by tjun-yu          ###   ########.fr       */
+/*   Created: 2024/01/26 10:29:26 by tjun-yu           #+#    #+#             */
+/*   Updated: 2024/01/26 13:38:51 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-int	main(int argc, char *argv[])
+int	is_sorted(t_stack *A)
 {
-	t_stack	*A;
-	t_stack	*B;
+	t_node	*current;
+	int		i;
 
-	input_validation(argc, argv);
-	A = parser(argc, argv);
-	B = new_stack();
-	console_log("Before:"); print_stack(A);		// debug
-	if (!is_sorted(A))
-		sort(A, B);
-	else
-		console_log("Already sorted");			// debug
-	console_log("After:"); print_stack(A);		// debug
-	free_stack(A);
-	free_stack(B);
-	return (0);
+	if (A->size <= 1)
+		return (1);
+	current = A->head;
+	i = -1;
+	while (++i < (int)A->size - 1)
+	{
+		if (current->num > current->next->num)
+			return (0);
+		current = current->next;
+	}
+	return (1);
 }
