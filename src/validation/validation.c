@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:51:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/25 11:31:05 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/26 10:48:41 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	validator(char *argv[], int (*checker)(const char *num), int argc)
 {
 	int	i;
 
-	i = -1;
+	i = 0;
 	while (++i < argc)
 	{
 		if (!(*checker)(argv[i]))

@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:21:18 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/25 15:25:05 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/26 10:25:28 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	sb(t_stack *B)
 	console_log("sb");
 	swap(B);
 }
+
 void	ss(t_stack *A, t_stack *B)
 {
 	console_log("ss");
