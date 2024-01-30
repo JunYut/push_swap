@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:51:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/26 10:48:41 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/30 14:17:41 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 	- greater than INT_MAX or smaller than INT_MIN
 	- duplicates
 */
-void	input_validation(int argc, char *argv[])
+void	input_validation(int argc, char *argv[]) // refactor this function
 {
 	if (argc == 1)
 		exit(EXIT_FAILURE);

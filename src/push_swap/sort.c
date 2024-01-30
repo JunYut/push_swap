@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/26 14:17:43 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/30 14:24:45 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,26 +28,21 @@ void	sort(t_stack *A, t_stack *B)
 		console_log("nothing here"); //sort_hundred(A, B);
 }
 
+/**
+ * @brief
+ *
+ * @param A
+ * @attention IMPLEMENT 'max()' AND 'min()' FUNCTIONS
+ */
 static void	sort_three(t_stack *A)
 {
 	console_log("sort_three");		// debug
-	if (A->head->num > A->head->next->num)
-	{
-		if (A->head->num > A->tail->num)
-		{
-			ra(A);
-			if (A->head->num > A->head->next->num)
-				sa(A);
-		}
-		else
-			sa(A);
-	}
-	else if (A->head->next->num > A->tail->num)
-	{
+	if (A->head->num == max(A))
+		ra(A);
+	else if (A->head->next->num == max(A))
 		rra(A);
-		if (A->head->num > A->head->next->num)
-			sa(A);
-	}
+	if (A->head->num > A->head->next->num)
+		sa(A);
 }
 
 static void	sort_five(t_stack *A, t_stack *B)
