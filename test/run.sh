@@ -9,7 +9,10 @@ case $1 in
 	"M")
 		valgrind --leak-check=full ./executable $2
 		;;
-	*)
+	"s")
 		./executable $1 > output.txt
+		;;
+	*)
+		./executable $1
 		;;
 esac
