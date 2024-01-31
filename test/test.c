@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/26 14:38:06 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/31 15:05:37 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@ int main(int argc, char **argv)
 		case 9:
 			EMPTY_TEST();
 			break;
+		case 10:
+			FT_SPLIT_TEST();
+			break;
 		default:
 			console_log("invalid test name");
 			// ALL_TEST();
@@ -78,6 +81,8 @@ int	TEST(char *test)
 		return (8);
 	if (same_str("empty", test))
 		return (9);
+	if (same_str("split", test))
+		return (10);
 	return (0);
 }
 

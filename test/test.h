@@ -15,6 +15,7 @@
 	void	RA_RB_RR_TEST();
 	void	RRA_RRB_RRR_TEST();
 	void	EMPTY_TEST();
+	void	FT_SPLIT_TEST();
 
 	void	DEBUG_SWAP(t_stack *stack);
 	void	DEBUG();
