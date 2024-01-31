@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/25 15:13:21 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/31 14:03:14 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	free_stack(t_stack *stack)
 {
 	while (!is_empty(stack, "free_stack"))
 		pop(stack);
-	free(stack);
+	c_free(stack, "free_stack");
 }
 
 /**

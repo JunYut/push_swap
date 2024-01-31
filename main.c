@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/26 14:27:32 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/31 11:11:31 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,14 @@ int	main(int argc, char *argv[])
 {
 	t_stack	*A;
 	t_stack	*B;
+	char	**strs;
 
-	input_validation(argc, argv);
-	A = parser(argc, argv);
+	strs = argv;
+	if (argc == 2)
+		strs = ft_split(argv[1], ' ');
+	input_validation(count_strs(strs), strs);
+	input_validation(count_strs(strs), strs);
+	A = parser(count_strs(strs), strs);
 	B = new_stack();
 	console_log("Before:"); print_stack(A);		// debug
 	if (!is_sorted(A))
@@ -28,5 +33,6 @@ int	main(int argc, char *argv[])
 	console_log("After:"); print_stack(A);		// debug
 	free_stack(A);
 	free_stack(B);
+	free_strs(strs);
 	return (0);
 }

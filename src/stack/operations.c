@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:37:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/26 14:55:39 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/31 14:04:06 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	push(t_stack *stack, int element)
  *
  * @param stack The stack to pop from.
  * @return long The top element of the stack. If the stack is empty, returns
- *  LONG_MIN.
+ *  	   LONG_MIN.
  */
 long	pop(t_stack *stack)
 {
@@ -70,7 +70,7 @@ long	pop(t_stack *stack)
 	element = stack->head->num;
 	if (stack->size == 1)
 	{
-		free(stack->head);
+		c_free(stack->head, "pop");
 		stack->head = NULL;
 		stack->tail = NULL;
 		stack->size = 0;
@@ -80,7 +80,7 @@ long	pop(t_stack *stack)
 	temp = stack->head;
 	stack->head = stack->head->next;
 	stack->tail->next = stack->head;
-	free(temp);
+	c_free(temp, "pop");
 	stack->size -= 1;
 	stack->range = calc_range(stack);
 	return (element);

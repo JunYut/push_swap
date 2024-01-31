@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.h                                           :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 13:26:04 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/31 12:53:17 by tjun-yu          ###   ########.fr       */
+/*   Created: 2024/01/31 11:15:26 by tjun-yu           #+#    #+#             */
+/*   Updated: 2024/01/31 11:28:57 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PARSER_H
-# define PARSER_H
+#include "parser.h"
 
-# include "../../includes/push_swap.h"
-# include <limits.h>
-# include <stddef.h>
+char	**ft_split(const char *str, char c)
+{
+	char	**strs;
+	size_t	count;
+	int		flag;
+	int		i;
 
-typedef struct s_stack	t_stack;
+	strs = (char **)c_malloc(sizeof(char *), "ft_split");
+	i = -1;
+	while (str[++i] != 0)
+	{
+		if (str[i] == c)
+			
+	}
 
-t_stack	*parser(int argc, char *argv[]);
-char	**ft_split(char const *str, char c);
-long	ft_atoi(const char *integer);
-char	*ft_itoa(int num);
-
-size_t	count_strs(char **strs);
-size_t	count_digits(long num);
-
-#endif // PARSER_H
+	return (strs);
+}

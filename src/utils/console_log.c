@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 11:19:42 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/25 13:49:17 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/31 14:02:46 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	console_log(const char *fmessage, ...)
 		{
 			arg_str = arg_parser(args, fmessage[i + 1]);
 			write(1, arg_str, ft_strlen(arg_str));
-			free(arg_str);
+			c_free(arg_str, "console_log");
 			++i;
 		}
 	}
