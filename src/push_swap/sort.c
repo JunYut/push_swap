@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/30 14:24:45 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/31 14:56:18 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ void	sort(t_stack *A, t_stack *B)
 static void	sort_three(t_stack *A)
 {
 	console_log("sort_three");		// debug
-	if (A->head->num == max(A))
+	if (A->head->num == max_node(A))
 		ra(A);
-	else if (A->head->next->num == max(A))
+	else if (A->head->next->num == max_node(A))
 		rra(A);
 	if (A->head->num > A->head->next->num)
 		sa(A);

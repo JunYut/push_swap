@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:04:38 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/26 13:51:38 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/31 14:57:11 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	rotate_down(t_stack *stack);
 
 void	free_stack(t_stack *stack);
 size_t	calc_range(t_stack *stack);
+int		max_node(t_stack *stack);
 void	print_stack(t_stack *stack);
 int		is_empty(t_stack *stack, const char *func);
 t_stack	*new_stack(void);
