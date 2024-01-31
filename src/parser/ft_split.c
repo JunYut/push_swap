@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 11:15:26 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/31 11:28:57 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/31 14:17:23 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 char	**ft_split(const char *str, char c)
 {
-	char	**strs;
+	char	**words;
 	size_t	count;
-	int		flag;
 	int		i;
 
-	strs = (char **)c_malloc(sizeof(char *), "ft_split");
+	words = (char **)c_malloc(sizeof(char *), "ft_split");
+	count = 0;
 	i = -1;
 	while (str[++i] != 0)
 	{
 		if (str[i] == c)
-			
+
 	}
 
-	return (strs);
+	return (words);
 }

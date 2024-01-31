@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:37:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/31 14:04:06 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/01/31 14:28:55 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ long	pop(t_stack *stack)
 	element = stack->head->num;
 	if (stack->size == 1)
 	{
-		c_free(stack->head, "pop");
+		free(stack->head);
 		stack->head = NULL;
 		stack->tail = NULL;
 		stack->size = 0;
@@ -80,7 +80,8 @@ long	pop(t_stack *stack)
 	temp = stack->head;
 	stack->head = stack->head->next;
 	stack->tail->next = stack->head;
-	c_free(temp, "pop");
+	free(temp);
+	temp = NULL;
 	stack->size -= 1;
 	stack->range = calc_range(stack);
 	return (element);
