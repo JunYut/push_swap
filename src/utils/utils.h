@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:26:01 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/01 13:20:21 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/01 13:37:12 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	free_strs(char ***strs);
 
 // String util functions
 
+void	print_strs(char **strs);
 void	console_log(const char *fmessage, ...);
 char	*ft_strdup(const char *src);
 size_t	ft_strlen(const char *str);

@@ -3,14 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   string.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 10:47:02 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/16 11:56:44 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/01 13:38:33 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
+
+void	print_strs(char **strs)
+{
+	int	i;
+
+	i = -1;
+	while (strs[++i] != 0)
+		console_log("str[%d]: %s", i, strs[i]);
+}
 
 char	*ft_strdup(const char *src)
 {
