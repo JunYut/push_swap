@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/01 13:51:08 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/01 14:39:38 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ int	main(int argc, char *argv[])
 	t_stack	*A;
 	t_stack	*B;
 	char	**strs;
-console_log("argc: %d", argc);		// debug
 	strs = argv;
 	if (argc == 2)
 		strs = ft_split(argv[1], ' ');
-print_strs(strs);
 	input_validation(count_strs(strs), strs);
 	input_validation(count_strs(strs), strs);
 	A = parser(count_strs(strs), strs, argc);

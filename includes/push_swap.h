@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/26 10:57:38 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/01 14:24:04 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ void    rr(t_stack *A, t_stack *B);
 void    rra(t_stack *A);
 void    rrb(t_stack *B);
 void    rrr(t_stack *A, t_stack *B);
+
+void	rot_to_min(t_stack *A, int pos);
 
 void    sort(t_stack *A, t_stack *B);
 int		is_sorted(t_stack *A);
