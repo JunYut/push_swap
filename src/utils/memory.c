@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:56:42 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/01 11:01:44 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/01 13:22:35 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,13 @@ void	*c_malloc(size_t size, const char *func)
 	return (ptr);
 }
 
-void	free_strs(char **strs)
+void	free_strs(char ***strs)
 {
 	int	i;
 
 	i = -1;
-	while (strs[++i] != NULL)
-	{
-		free(strs[i]);
-		strs[i] = NULL;
-	}
-	free(strs);
+	while ((*strs)[++i] != NULL)
+		free((*strs)[i]);
+	free(*strs);
+	*strs = NULL;
 }
