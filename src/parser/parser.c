@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:29:21 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/18 14:04:30 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/01 13:50:59 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,16 @@
  * @param argv a string array
  * @return t_stack* a stack that consists of useful datas
  */
-t_stack	*parser(int argc, char *argv[])
+t_stack	*parser(int count, char *argv[], int argc)
 {
 	t_stack	*stack;
 	int		i;
 
 	stack = new_stack();
 	i = 0;
-	while (++i < argc)
+	if (argc == 2)
+		i = -1;
+	while (++i < count)
 		push(stack, ft_atoi(argv[i]));
 	return (stack);
 }

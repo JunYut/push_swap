@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:26:04 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/31 12:53:17 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/01 13:50:41 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 typedef struct s_stack	t_stack;
 
-t_stack	*parser(int argc, char *argv[]);
+t_stack	*parser(int count, char *argv[], int argc);
 char	**ft_split(char const *str, char c);
 long	ft_atoi(const char *integer);
 char	*ft_itoa(int num);
