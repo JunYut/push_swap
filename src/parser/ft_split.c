@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 11:15:26 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/31 15:34:23 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/01 12:03:33 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,24 @@ char	**ft_split(const char *str, char c)
 	int		j;
 	int		k;
 
-	words = (char **)c_malloc(word_count(str, c) + 1, "ft_split");
+	i = word_count(str, c) + 1;
+	words = (char **)c_malloc(i * sizeof(char *), "ft_split");
 	i = -1;
 	j = -1;
 	while (str[++i] != 0)
 	{
 		k = -1;
-		if (str[i] != c)
+		if (str[i] != c && str[i] != 0)
 		{
 			word_size = word_len(str + i, ' ');
 			words[++j] = (char *)c_malloc(word_size + 1, "ft_split");
 			while (str[i] != c && str[i] != 0)
 				words[j][++k] = str[i++];
-			words[j][word_size] = 0;
+			words[j][k + 1] = 0;
+			--i;
 		}
 	}
-	words[++j] = 0;
+	words[word_count(str, c)] = NULL;
 	return (words);
 }
 
