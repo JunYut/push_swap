@@ -6,7 +6,7 @@
 /*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:21:44 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 11:52:24 by v                ###   ########.fr       */
+/*   Updated: 2024/02/02 12:24:44 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,30 +54,18 @@ void	rot_to_min(t_stack *stack)
 
 int	rot_to_negatives(t_stack *stack)
 {
-console_log("rot_to_negatives...");		// debug
 	int		pos;
 	int		i;
 
 	pos = find_negative(stack);
-console_log("pos: %d", pos);		// debug
 	if (pos == -1)
 		return (0);
 	i = -1;
 	if (pos < (int)stack->size / 2)
-	{
 		while (++i < pos)
-		{
 			ra(stack);
-console_log("ra");	// debug
-		}
-	}
 	else
-	{
 		while (++i < (int)stack->size - pos)
-		{
 			rra(stack);
-console_log("rra");	// debug
-		}
-	}
 	return (1);
 }

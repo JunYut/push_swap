@@ -6,23 +6,25 @@
 /*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 14:58:22 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 12:01:09 by v                ###   ########.fr       */
+/*   Updated: 2024/02/02 12:20:01 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-int	find_negative(t_stack *stack)	// infinte loop
+int	find_negative(t_stack *stack)
 {
-console_log("find_negative...");		// debug
 	t_node	*curr;
 	int		i;
 
 	curr = stack->head;
 	i = 0;
-	while (curr != NULL)
+	if (curr->num < 0)
+		return (i);
+	++i;
+	curr = curr->next;
+	while (curr != stack->head)
 	{
-console_log("infiniteloop...");		// debug
 		if (curr->num < 0)
 			return (i);
 		++i;
@@ -38,7 +40,11 @@ int	find_position(t_stack *stack, int target)
 
 	curr = stack->head;
 	i = 0;
-	while (curr != NULL)
+	if (curr->num == target)
+		return (i);
+	++i;
+	curr = curr->next;
+	while (curr != stack->head)
 	{
 		if (curr->num == target)
 			return (i);

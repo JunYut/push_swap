@@ -6,7 +6,7 @@
 /*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 11:27:38 by v                ###   ########.fr       */
+/*   Updated: 2024/02/02 12:39:59 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		is_sorted(t_stack *A);
 
 void	rot_to_min(t_stack *A);
 int		rot_to_negatives(t_stack *A);
+void	rot_to_digit_tier(t_stack *A, int tier);
 
 void    sa(t_stack *A);
 void    sb(t_stack *B);
