@@ -6,7 +6,7 @@
 /*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:04:38 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 10:43:04 by v                ###   ########.fr       */
+/*   Updated: 2024/02/02 15:35:11 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int		find_position(t_stack *stack, int target);
 size_t	calc_range(t_stack *stack);
 t_node	*find_max_node(t_stack *stack);
 t_node	*find_min_node(t_stack *stack);
-void	print_stack(t_stack *stack);
+void	print_stack(t_stack *stack, const char *name);
 int		is_empty(t_stack *stack, const char *func);
 void	free_stack(t_stack *stack);
 t_stack	*new_stack(void);

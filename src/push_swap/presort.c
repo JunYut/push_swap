@@ -6,7 +6,7 @@
 /*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 15:22:30 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 12:51:07 by v                ###   ########.fr       */
+/*   Updated: 2024/02/02 15:35:38 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ console_log("presort...");		// debug
 
 void	push_negatives(t_stack *A, t_stack *B)
 {
+console_log("push_negatives...");		// debug
 	int	i;
 
 	i = 0;
@@ -32,6 +33,7 @@ void	push_negatives(t_stack *A, t_stack *B)
 			pb(B, A);
 		++i;
 	}
+print_stack(A, "A");	print_stack(B, "B");	// debug
 }
 
 void	digit_sort(t_stack *A, t_stack *B)
@@ -47,4 +49,6 @@ console_log("digit_sort...");		// debug
 		rot_to_digit_tier(A, i);
 		pb(B, A);
 	}
+print_stack(A, "A");
+print_stack(B, "B");
 }

@@ -6,7 +6,7 @@
 /*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 13:05:41 by v                ###   ########.fr       */
+/*   Updated: 2024/02/02 15:22:22 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	sort(t_stack *A, t_stack *B)
 	else if (A->size <= 5)
 		sort_five(A, B);
 	else
-		console_log("nothing here"); //sort_hundred(A, B);
+		sort_hundred(A, B);
 }
 
 void	sort_three(t_stack *A)

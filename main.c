@@ -6,7 +6,7 @@
 /*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 12:55:35 by v                ###   ########.fr       */
+/*   Updated: 2024/02/02 15:36:43 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char *argv[])
 	B = new_stack();
 	console_log("Before:");
 	console_log("_________________________");		// debug
-	print_stack(A);		// debug
+	print_stack(A, "A");		// debug
 	if (!is_sorted(A))
 	{
 		presort(A, B);
@@ -36,7 +36,7 @@ int	main(int argc, char *argv[])
 		console_log("Already sorted");			// debug
 	console_log("\nAfter:");
 	console_log("_________________________");		// debug
-	print_stack(A);		// debug
+	print_stack(A, "A");		// debug
 	free_stack(A);
 	free_stack(B);
 	if (argc == 2)

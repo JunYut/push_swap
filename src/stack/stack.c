@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/31 14:27:50 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/02 15:35:24 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,20 @@ void	free_stack(t_stack *stack)
 /**
  * @note This function is tested
  */
-void	print_stack(t_stack *stack)
+void	print_stack(t_stack *stack, const char *name)
 {
-	t_node	*current;
+	t_node	*curr;
 
-	console_log("STACK [size: %d, range: %d]", stack->size, stack->range);
+	console_log("%s [size: %d, range: %d]", name, stack->size, stack->range);
 	if (is_empty(stack, "print_stack"))
 		return ;
-	current = stack->head;
-	console_log("element: %d | digits: %d", current->num, current->digits);
-	current = current->next;
-	while (current != stack->head)
+	curr = stack->head;
+	console_log("element: %d | digits: %d", curr->num, curr->digits);
+	curr = curr->next;
+	while (curr != stack->head)
 	{
-		console_log("element: %d | digits: %d", current->num, current->digits);
-		current = current->next;
+		console_log("element: %d | digits: %d", curr->num, curr->digits);
+		curr = curr->next;
 	}
 	console_log("");
 }
@@ -51,25 +51,25 @@ size_t	calc_range(t_stack *stack)
 {
 	int		max;
 	int		min;
-	t_node	*current;
+	t_node	*curr;
 
 	if (is_empty(stack, "calc_range"))
 		return (0);
 	max = stack->head->num;
 	min = stack->head->num;
-	current = stack->head;
-	if (current->num > max)
-		max = current->num;
-	if (current->num < min)
-		min = current->num;
-	current = current->next;
-	while (current != stack->head)
+	curr = stack->head;
+	if (curr->num > max)
+		max = curr->num;
+	if (curr->num < min)
+		min = curr->num;
+	curr = curr->next;
+	while (curr != stack->head)
 	{
-		if (current->num > max)
-			max = current->num;
-		if (current->num < min)
-			min = current->num;
-		current = current->next;
+		if (curr->num > max)
+			max = curr->num;
+		if (curr->num < min)
+			min = curr->num;
+		curr = curr->next;
 	}
 	return (max - min);
 }
