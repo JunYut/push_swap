@@ -6,7 +6,7 @@
 /*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 15:22:30 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 15:35:38 by v                ###   ########.fr       */
+/*   Updated: 2024/02/02 15:58:04 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ console_log("push_negatives...");		// debug
 print_stack(A, "A");	print_stack(B, "B");	// debug
 }
 
+// incomplete
+// not considering negative numbers
 void	digit_sort(t_stack *A, t_stack *B)
 {
 console_log("digit_sort...");		// debug
@@ -49,6 +51,5 @@ console_log("digit_sort...");		// debug
 		rot_to_digit_tier(A, i);
 		pb(B, A);
 	}
-print_stack(A, "A");
-print_stack(B, "B");
+print_stack(A, "A");	print_stack(B, "B");	// debug
 }
