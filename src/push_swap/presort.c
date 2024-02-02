@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   presort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 15:22:30 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/01 15:58:00 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/02 11:51:53 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,23 @@
 
 void	presort(t_stack *A, t_stack *B)
 {
+console_log("presort...");		// debug
 	push_negatives(A, B);
+console_log("presort...");		// debug
+	digit_sort(A, B);
 }
 
-void	push_negatives(t_stack *A, t_stack *B)	// infinite loop
+void	push_negatives(t_stack *A, t_stack *B)
 {
-	t_node	*node;
-	int		i;
+	int	i;
 
 	i = 0;
 	while (i < (int)A->size)
 	{
-		node = A->head;
-		if (node->num < 0)
-		{
+console_log("push_negatives...");		// debug
+		if (rot_to_negatives(A))
 			pb(B, A);
-			i++;
-		}
-		else
-			ra(A);
+		++i;
 	}
 }
 

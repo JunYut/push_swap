@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/01 15:24:36 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/02 11:12:52 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ void	sort_three(t_stack *A)
 void	sort_five(t_stack *A, t_stack *B)
 {
 	console_log("sort_five...");		// debug
-	rot_to_min(A, find_position(A, find_min_node(A)->num));
+	rot_to_min(A);
 	pb(B, A);
-	rot_to_min(A, find_position(A, find_min_node(A)->num));
+	rot_to_min(A);
 	pb(B, A);
 	sort_three(A);
 	pa(A, B);

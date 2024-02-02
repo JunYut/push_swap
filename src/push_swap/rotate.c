@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:21:44 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/01 15:11:29 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/02 11:52:24 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,14 @@ void	rr(t_stack *A, t_stack *B)
 	rotate_up(B);
 }
 
-void	rot_to_min(t_stack *stack, int pos)
+void	rot_to_min(t_stack *stack)
 {
+	int		pos;
 	int		i;
 
+	pos = find_position(stack, find_min_node(stack)->num);
+	if (pos <= 0)
+		return ;
 	i = -1;
 	if (pos < (int)stack->size / 2)
 		while (++i < pos)
@@ -46,4 +50,34 @@ void	rot_to_min(t_stack *stack, int pos)
 	else
 		while (++i < (int)stack->size - pos)
 			rra(stack);
+}
+
+int	rot_to_negatives(t_stack *stack)
+{
+console_log("rot_to_negatives...");		// debug
+	int		pos;
+	int		i;
+
+	pos = find_negative(stack);
+console_log("pos: %d", pos);		// debug
+	if (pos == -1)
+		return (0);
+	i = -1;
+	if (pos < (int)stack->size / 2)
+	{
+		while (++i < pos)
+		{
+			ra(stack);
+console_log("ra");	// debug
+		}
+	}
+	else
+	{
+		while (++i < (int)stack->size - pos)
+		{
+			rra(stack);
+console_log("rra");	// debug
+		}
+	}
+	return (1);
 }

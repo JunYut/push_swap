@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/01 15:31:05 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/02 11:27:38 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void	digit_sort(t_stack *A, t_stack *B);
 void	push_negatives(t_stack *A, t_stack *B);
 int		is_sorted(t_stack *A);
 
-void	rot_to_min(t_stack *A, int pos);
+void	rot_to_min(t_stack *A);
+int		rot_to_negatives(t_stack *A);
 
 void    sa(t_stack *A);
 void    sb(t_stack *B);

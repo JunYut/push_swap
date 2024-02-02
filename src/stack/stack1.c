@@ -3,22 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   stack1.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 14:58:22 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/01 15:03:33 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/02 12:01:09 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
+int	find_negative(t_stack *stack)	// infinte loop
+{
+console_log("find_negative...");		// debug
+	t_node	*curr;
+	int		i;
+
+	curr = stack->head;
+	i = 0;
+	while (curr != NULL)
+	{
+console_log("infiniteloop...");		// debug
+		if (curr->num < 0)
+			return (i);
+		++i;
+		curr = curr->next;
+	}
+	return (-1);
+}
+
 int	find_position(t_stack *stack, int target)
 {
-	int		i;
 	t_node	*curr;
+	int		i;
 
-	i = 0;
 	curr = stack->head;
+	i = 0;
 	while (curr != NULL)
 	{
 		if (curr->num == target)

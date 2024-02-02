@@ -6,7 +6,7 @@
 #    By: v <v@student.42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/11 12:51:48 by tjun-yu           #+#    #+#              #
-#    Updated: 2024/02/02 11:38:24 by v                ###   ########.fr        #
+#    Updated: 2024/02/02 11:58:36 by v                ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,9 +58,9 @@ run: re clean
 clean:
 	rm -rf $(OBJECTS)
 
-fclean: clean
-	rm -rf $(NAME)
+fclean:
+	rm -rf $(OBJECTS) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re run
