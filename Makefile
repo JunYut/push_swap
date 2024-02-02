@@ -53,7 +53,7 @@ obj/%.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -c -I$(INCLUDE) $< -o $@
 
 run: $(NAME)
-	$(CC) $(CFLAGS) -I$(INCLUDE) $(NAME) main.c -o push_swap
+	$(CC) $(CFLAGS) -I$(INCLUDE) $(NAME) main.c -o push_swap -L. -lpush_swap
 
 clean:
 	rm -rf $(OBJECTS)
