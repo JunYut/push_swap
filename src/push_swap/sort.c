@@ -6,7 +6,7 @@
 /*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 11:12:52 by v                ###   ########.fr       */
+/*   Updated: 2024/02/02 12:53:28 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,11 @@ void	sort_three(t_stack *A)
 void	sort_five(t_stack *A, t_stack *B)
 {
 	console_log("sort_five...");		// debug
-	rot_to_min(A);
-	pb(B, A);
-	rot_to_min(A);
-	pb(B, A);
+	while (A->size > 3)
+	{
+		rot_to_min(A);
+		pb(B, A);
+	}
 	sort_three(A);
 	pa(A, B);
 	pa(A, B);
