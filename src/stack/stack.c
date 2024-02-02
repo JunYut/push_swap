@@ -6,7 +6,7 @@
 /*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:38:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 15:35:24 by v                ###   ########.fr       */
+/*   Updated: 2024/02/02 15:42:08 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	is_empty(t_stack *stack, const char *func)
 {
 	if (stack->head != NULL)
 		return (0);
-	console_log("%s: is empty stack", func);
+	(void)func;
 	return (1);
 }
 
