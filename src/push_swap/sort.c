@@ -6,7 +6,7 @@
 /*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 12:53:28 by v                ###   ########.fr       */
+/*   Updated: 2024/02/02 13:05:41 by v                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ void	sort_five(t_stack *A, t_stack *B)
 		pb(B, A);
 	}
 	sort_three(A);
-	pa(A, B);
-	pa(A, B);
+	while (B->size > 0)
+		pa(A, B);
 }
 
 void	sort_hundred(t_stack *A, t_stack *B)
