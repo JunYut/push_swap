@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 12:07:29 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/06 15:00:27 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,19 @@
 # include "../src/utils/utils.h"
 
 void    sort(t_stack *A, t_stack *B);
-void	sort_stack(t_stack *stack, t_stack *other);
-void	sort_three(t_stack *A);
-void	sort_five(t_stack *A, t_stack *B);
-void	sort_hundred(t_stack *A, t_stack *B);
+void	sort_stack_A(t_stack *A, t_stack *B);
+void	sort_stack_B(t_stack *B, t_stack *A);
 void	presort(t_stack *A, t_stack *B);
 void	digit_sort(t_stack *A, t_stack *B);
 void	push_negatives(t_stack *A, t_stack *B);
-int		is_sorted(t_stack *A);
+int		is_sorted(t_stack *A, int direction);
 
+void	sort_three_A(t_stack *A);
+void	sort_five_A(t_stack *A, t_stack *B);
+void	sort_hundred_A(t_stack *A, t_stack *B);
+void	sort_three_B(t_stack *B);
+void	sort_five_B(t_stack *B, t_stack *A);
+void	sort_hundred_B(t_stack *B, t_stack *A);
 
 void	rot_to_max(t_stack *stack);
 void	rot_to_min(t_stack *stack);

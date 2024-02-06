@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 11:03:20 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/06 15:03:06 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int argc, char *argv[])
 	console_log("_________________________");		// debug
 	print_stack(A, "A");		// debug
 	console_log("_________________________");		// debug
-	if (!is_sorted(A))
+	if (!is_sorted(A, 1))
 	{
 		presort(A, B);
 		sort(A, B);
