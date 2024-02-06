@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   presort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 15:22:30 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 15:58:04 by v                ###   ########.fr       */
+/*   Updated: 2024/02/06 11:23:36 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ console_log("presort...");		// debug
 	if (A->size <= 5)
 		return ;
 	push_negatives(A, B);
+	if (A->size <= 5 || B->size <= 5)
+		return ;
 	digit_sort(A, B);
 }
 
