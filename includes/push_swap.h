@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 11:28:22 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/06 12:07:29 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 # include "../src/utils/utils.h"
 
 void    sort(t_stack *A, t_stack *B);
-void	sort_three(t_stack *A, t_stack *B);
+void	sort_stack(t_stack *stack, t_stack *other);
+void	sort_three(t_stack *A);
 void	sort_five(t_stack *A, t_stack *B);
 void	sort_hundred(t_stack *A, t_stack *B);
 void	presort(t_stack *A, t_stack *B);
