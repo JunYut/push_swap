@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:46:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 15:04:47 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/06 15:22:20 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sort_stack_B(t_stack *B, t_stack *A)
 {
 console_log("sort_stack_B...");		// debug
-	if (is_sorted(B, -1))
+	if (is_sorted(B, 1))
 		return ;
 	if (B->size == 2)
 		sb(B);

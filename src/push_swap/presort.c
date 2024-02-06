@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 15:22:30 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 11:36:30 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/06 15:27:46 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	presort(t_stack *A, t_stack *B)
 {
-console_log("presort...");		// debug
 	if (A->size <= 5)
 		return ;
 	push_negatives(A, B);

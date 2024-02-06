@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:22:09 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 12:56:54 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/06 15:28:37 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ console_log("rot_to_digit_tier...");
  */
 void	fast_rotate(t_stack *stack, int pos)
 {
-console_log("fast_rotate...");
 	int	i;
 
 	if (pos <= 0)
