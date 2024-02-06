@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 15:41:19 by v                ###   ########.fr       */
+/*   Updated: 2024/02/06 11:03:20 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(int argc, char *argv[])
 	input_validation(count_strs(strs), strs);
 	A = parser(count_strs(strs), strs, argc);
 	B = new_stack();
-	console_log("Before:");
+	console_log("Before:");	// debug
 	console_log("_________________________");		// debug
 	print_stack(A, "A");		// debug
 	console_log("_________________________");		// debug
@@ -35,7 +35,7 @@ int	main(int argc, char *argv[])
 	}
 	else
 		console_log("Already sorted");			// debug
-	console_log("\nAfter:");
+	console_log("\nAfter:");	// debug
 	console_log("_________________________");		// debug
 	print_stack(A, "A");		// debug
 	console_log("_________________________");		// debug

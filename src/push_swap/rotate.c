@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:21:44 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 12:24:44 by v                ###   ########.fr       */
+/*   Updated: 2024/02/06 11:02:03 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,35 +37,23 @@ void	rr(t_stack *A, t_stack *B)
 
 void	rot_to_min(t_stack *stack)
 {
+console_log("rot_to_min...");
 	int		pos;
-	int		i;
 
 	pos = find_position(stack, find_min_node(stack)->num);
 	if (pos <= 0)
 		return ;
-	i = -1;
-	if (pos < (int)stack->size / 2)
-		while (++i < pos)
-			ra(stack);
-	else
-		while (++i < (int)stack->size - pos)
-			rra(stack);
+	fast_rotate(stack, pos);
 }
 
 int	rot_to_negatives(t_stack *stack)
 {
+console_log("rot_to_negatives...");
 	int		pos;
-	int		i;
 
 	pos = find_negative(stack);
 	if (pos == -1)
 		return (0);
-	i = -1;
-	if (pos < (int)stack->size / 2)
-		while (++i < pos)
-			ra(stack);
-	else
-		while (++i < (int)stack->size - pos)
-			rra(stack);
+	fast_rotate(stack, pos);
 	return (1);
 }

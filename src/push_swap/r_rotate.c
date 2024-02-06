@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   r_rotate.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: v <v@student.42.fr>                        +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:22:09 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/02 12:42:26 by v                ###   ########.fr       */
+/*   Updated: 2024/02/06 11:02:07 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,33 @@ void	rrr(t_stack *A, t_stack *B)
 	rotate_down(B);
 }
 
-void	rot_to_digit_tier(t_stack *A, int tier)
+void	rot_to_digit_tier(t_stack *stack, int tier)
 {
-	int		i;
-
+console_log("rot_to_digit_tier...");
 	if (tier <= 0)
 		return ;
+	fast_rotate(stack, tier);
+}
+
+/**
+ * @brief A function that takes a position to determine which direction to
+ * 		  rotate the stack
+ *
+ * @param stack the stack to rotate
+ * @param pos the position to rotate to
+ */
+void	fast_rotate(t_stack *stack, int pos)
+{
+console_log("fast_rotate...");
+	int	i;
+
+	if (pos <= 0)
+		return ;
 	i = -1;
-	if (tier < (int)A->size / 2)
-		while (++i < tier)
-			ra(A);
+	if (pos < (int)stack->size / 2)
+		while (++i < pos)
+			ra(stack);
 	else
-		while (++i < (int)A->size - tier)
-			rra(A);
+		while (++i < (int)stack->size - pos)
+			rra(stack);
 }
