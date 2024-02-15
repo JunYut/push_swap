@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/15 19:17:40 by we               ###   ########.fr       */
+/*   Updated: 2024/02/16 02:06:45 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,38 @@ void	sort(t_stack *A, t_stack *B)
 		pa(A, B);
 }
 
+void	select_sort(t_stack *A, t_stack *B)
+{
+	while (A->size > 5)
+	{
+		rot_to_min(A);
+		pb(B, A);
+	}
+	sort_five_A(A, B);
+	while (B->size > 0)
+		pa(A, B);
+}
+
+// Not finished
 void	insert_sort(t_stack *A, t_stack *B)
 {
 	int	i;
 	int	j;
 
-	i = -1;
+	i = 0;
 	while (++i < (int)(A->size))
 	{
-		j = i + 1;
-		while (--j > 0)
+		j = -1;
+		while (++j < i)
 			pb(B, A);
-		j = i + 1;
-		while (--j > 0 && B->head->num > A->head->num)
+		while (j-- > 0 && B->head->num < B->head->next->num)
 		{
-			pa(A, B);
-			sa(A);
+			sb(B);
+			rra(A);
 		}
+		print_stack(B, "B");		// debug
+		while (B->size > 0)
+			pa(A, B);
+		console_log("_________________________");		// debug
 	}
 }

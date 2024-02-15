@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/15 18:32:20 by we               ###   ########.fr       */
+/*   Updated: 2024/02/16 01:46:33 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "../src/validation/validation.h"
 # include "../src/utils/utils.h"
 
+void	select_sort(t_stack *A, t_stack *B);
 void	insert_sort(t_stack *A, t_stack *B);
 void    sort(t_stack *A, t_stack *B);
 void	sort_stack_A(t_stack *A, t_stack *B);
