@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:29:26 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 15:19:39 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/15 19:08:41 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int	is_sorted(t_stack *A, int direction)
 	i = -1;
 	while (++i < (int)A->size - 1)
 	{
-		if (direction == 1 && current->num < current->next->num)
+		if (direction == -1 && current->num < current->next->num)
 			return (0);
-		else if (direction == -1 && current->num > current->next->num)
+		else if (direction == 1 && current->num > current->next->num)
 			return (0);
 		current = current->next;
 	}
