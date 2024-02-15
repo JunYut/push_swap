@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 15:00:27 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/15 18:32:20 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "../src/validation/validation.h"
 # include "../src/utils/utils.h"
 
+void	insert_sort(t_stack *A, t_stack *B);
 void    sort(t_stack *A, t_stack *B);
 void	sort_stack_A(t_stack *A, t_stack *B);
 void	sort_stack_B(t_stack *B, t_stack *A);

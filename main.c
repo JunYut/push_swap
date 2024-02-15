@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 15:03:06 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/15 19:09:21 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,9 @@ int	main(int argc, char *argv[])
 	console_log("_________________________");		// debug
 	if (!is_sorted(A, 1))
 	{
-		presort(A, B);
-		sort(A, B);
+		// presort(A, B);
+		// sort(A, B);
+		insert_sort(A, B);
 	}
 	else
 		console_log("Already sorted");			// debug
