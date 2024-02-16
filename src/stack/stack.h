@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:04:38 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 12:48:31 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/16 17:34:47 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ long	pop(t_stack *stack);
 void	rotate_up(t_stack *stack);
 void	rotate_down(t_stack *stack);
 
+int		find_digit(t_stack *stack, int digit);
 int		find_negative(t_stack *stack);
 int		find_position(t_stack *stack, int target);
 size_t	calc_range(t_stack *stack);

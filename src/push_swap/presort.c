@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   presort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 15:22:30 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 15:27:46 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/16 18:02:31 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,13 @@ void	presort(t_stack *A, t_stack *B)
 	if (A->size <= 5)
 		return ;
 	push_negatives(A, B);
-	if (A->size <= 5 || B->size <= 5)
+	if (A->size <= 5 && B->size <= 5)
 		return ;
 	digit_sort(A, B);
 }
 
 void	push_negatives(t_stack *A, t_stack *B)
 {
-console_log("push_negatives...");		// debug
 	int	i;
 
 	i = 0;
@@ -34,7 +33,6 @@ console_log("push_negatives...");		// debug
 			pb(B, A);
 		++i;
 	}
-print_stack(A, "A");	print_stack(B, "B");	// debug
 }
 
 // incomplete
@@ -42,15 +40,21 @@ print_stack(A, "A");	print_stack(B, "B");	// debug
 void	digit_sort(t_stack *A, t_stack *B)
 {
 console_log("digit_sort...");		// debug
-	int	i;
+	int	max_dgts;
+	int	min_dgts;
+	int	dgt_tier;
 
-	if (find_max_node(A)->digits == find_min_node(A)->digits)
+	max_dgts = find_max_node(A)->digits;
+	min_dgts = find_min_node(A)->digits;
+	if (min_dgts == max_dgts)
 		return ;
-	i = -1;
-	while (++i < (int)count_digits(A->range))
+	dgt_tier = min_dgts - 1;
+	while (++dgt_tier <= max_dgts)
 	{
-		rot_to_digit_tier(A, i);
-		pb(B, A);
+		console_log("dgt_tier: %d", dgt_tier);		// debug
+		while (fast_rotate(A, find_digit(A, dgt_tier)) == 1)
+			pb(B, A);
 	}
-print_stack(A, "A");	print_stack(B, "B");	// debug
+	while (B->size > 0)
+		pa(A, B);
 }

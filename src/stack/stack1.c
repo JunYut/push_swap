@@ -3,14 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   stack1.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 14:58:22 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 12:48:28 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/16 17:44:47 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
+
+int	find_digit(t_stack *stack, int digit)
+{
+	t_node	*curr;
+	int		i;
+
+	if (stack->size == 0)
+		return (-1);
+	curr = stack->head;
+	i = 0;
+	if ((int)curr->digits == digit)
+		return (i);
+	++i;
+	curr = curr->next;
+	while (curr != stack->head)
+	{
+		if ((int)curr->digits == digit)
+		{
+			console_log("position: %d", i);		// debug
+			return (i);
+		}
+		++i;
+		curr = curr->next;
+	}
+	return (-1);
+}
 
 int	find_negative(t_stack *stack)
 {
@@ -40,7 +66,7 @@ int	find_position(t_stack *stack, int target)
 	t_node	*curr;
 	int		i;
 
-	if (stack->size == 0)
+	if (stack->size == 0 || target < 0)
 		return (-1);
 	curr = stack->head;
 	i = 0;

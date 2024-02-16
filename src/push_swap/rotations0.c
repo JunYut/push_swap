@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:21:44 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/16 12:32:13 by we               ###   ########.fr       */
+/*   Updated: 2024/02/16 16:57:59 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,7 @@ void	rot_to_min(t_stack *stack)
 
 int	rot_to_negatives(t_stack *stack)
 {
-console_log("rot_to_negatives...");
-	int		pos;
+	int	pos;
 
 	pos = find_negative(stack);
 	if (pos == -1)

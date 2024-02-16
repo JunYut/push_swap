@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/16 02:06:45 by we               ###   ########.fr       */
+/*   Updated: 2024/02/16 16:59:26 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	sort(t_stack *A, t_stack *B)
 
 void	select_sort(t_stack *A, t_stack *B)
 {
+console_log("select_sort...");		// debug
 	while (A->size > 5)
 	{
 		rot_to_min(A);

@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/16 01:46:33 by we               ###   ########.fr       */
+/*   Updated: 2024/02/16 17:53:30 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,7 @@ void	sort_hundred_B(t_stack *B, t_stack *A);
 void	rot_to_max(t_stack *stack);
 void	rot_to_min(t_stack *stack);
 int		rot_to_negatives(t_stack *stack);
-void	rot_to_digit_tier(t_stack *stack, int tier);
-void	fast_rotate(t_stack *stack, int pos);
+int		fast_rotate(t_stack *stack, int pos);
 
 void    sa(t_stack *A);
 void    sb(t_stack *B);
