@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   A_sort.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:33:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 15:22:26 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/16 12:32:46 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ console_log("sort_stack_A...");		// debug
 
 void	sort_three_A(t_stack *A)
 {
-console_log("sort_three_A...");		// debug
 	if (A->head->num == find_max_node(A)->num)
 		ra(A);
 	else if (A->head->next->num == find_max_node(A)->num)
@@ -40,7 +39,6 @@ console_log("sort_three_A...");		// debug
 
 void	sort_five_A(t_stack *A, t_stack *B)
 {
-console_log("sort_five_A...");		// debug
 	int	popped;
 	int	i;
 

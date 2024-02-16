@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotations0.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:21:44 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 11:13:24 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/16 12:32:13 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,7 @@ void	rr(t_stack *A, t_stack *B)
 
 void	rot_to_min(t_stack *stack)
 {
-console_log("rot_to_min...");
-	int		pos;
+	int	pos;
 
 	pos = find_position(stack, find_min_node(stack)->num);
 	fast_rotate(stack, pos);
