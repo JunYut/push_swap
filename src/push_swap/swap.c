@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:21:18 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/26 10:25:28 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/17 16:44:45 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,43 @@ void	ss(t_stack *A, t_stack *B)
 	console_log("ss");
 	swap(A);
 	swap(B);
+}
+
+// Complexity: 1 + 4n
+void	rotate_swap(int dist, t_stack *stack)
+{
+	int	i;
+
+	i = -1;
+	while (++i < dist)
+	{
+		sa(stack);
+		ra(stack);
+	}
+	sa(stack);
+	i = -1;
+	while (++i < dist)
+	{
+		rra(stack);
+		sa(stack);
+	}
+}
+
+// Complexity: 5 + 2n
+// Use this when distance is greater than 0
+void	pop_swap(int dist, t_stack *A, t_stack *B)
+{
+	int	i;
+
+	ra(A);
+	i = -1;
+	while (++i < dist)
+		pb(B, A);
+	rra(A);
+	sa(A);
+	ra(A);
+	i = -1;
+	while (++i < dist)
+		pa(A, B);
+	rra(A);
 }
