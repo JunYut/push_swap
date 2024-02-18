@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:21:18 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/17 16:44:45 by we               ###   ########.fr       */
+/*   Updated: 2024/02/17 17:09:51 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,25 @@ void	ss(t_stack *A, t_stack *B)
 	swap(B);
 }
 
+// Complexity: 5 + 2n
+// Use this when distance is greater than 0
+void	pop_swap(int pos, t_stack *A, t_stack *B)
+{
+	int	i;
+
+	ra(A);
+	i = -1;
+	while (++i < --pos)
+		pb(B, A);
+	rra(A);
+	sa(A);
+	ra(A);
+	i = -1;
+	while (++i < pos)
+		pa(A, B);
+	rra(A);
+}
+
 // Complexity: 1 + 4n
 void	rotate_swap(int dist, t_stack *stack)
 {
@@ -49,23 +68,4 @@ void	rotate_swap(int dist, t_stack *stack)
 		rra(stack);
 		sa(stack);
 	}
-}
-
-// Complexity: 5 + 2n
-// Use this when distance is greater than 0
-void	pop_swap(int dist, t_stack *A, t_stack *B)
-{
-	int	i;
-
-	ra(A);
-	i = -1;
-	while (++i < dist)
-		pb(B, A);
-	rra(A);
-	sa(A);
-	ra(A);
-	i = -1;
-	while (++i < dist)
-		pa(A, B);
-	rra(A);
 }
