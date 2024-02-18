@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/18 16:45:06 by we               ###   ########.fr       */
+/*   Updated: 2024/02/18 17:32:42 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,22 +60,38 @@ void bubble_sort(t_stack *A, t_stack *B)
 
 // Not finished
 // Input:		Output:
-// 4 1 2 9 5 10 6 0 8 7    |    8 0 1 2 4 5 6 7 9 10
-// 4 1 2 9 5 10 6 0 7 8    |    8 0 1 2 4 5 6 7 9 10
-// 4 1 2 9 5 10 7 0 8 6    |    8 0 1 2 4 5 6 7 9 10
-// 4 1 2 9 5 10 7 0 6 8    |    8 0 1 2 4 5 6 7 9 10
-// if first 2 number is not largest and second largest, fuck shit
+// 5 4 3 2 1    |    OK
+// 1 2 4 3 5	|    2 1 3 4 5
+// 1 2 4 5 3	|    2 1 3 4 5
+// if last 2 number is not max & second max or min & second min, fuck shit
 void	insert_sort(t_stack *A, t_stack *B)
 {
-	// console_log("insert_sort...");    // debug
+	int min_or_max;
 	int i;
 	int j;
 
+	// make stack bottom max & second max or min & second min
 	fast_rotate(A, A->size - 2);
-	if (A->head->num > A->head->next->num)
-		sa(A);
-	ra(A);
-	ra(A);
+	i = 3;
+	console_log("i: %d", i);	// debug
+	console_log("Bottom maxxing");	//debug
+	while (--i > 0)
+	{
+		console_log("i: %d", i);	//debug
+		min_or_max = find_position(A, find_min_node(A)->num);
+		if (min_or_max < find_position(A, find_max_node(A)->num))
+			min_or_max = find_position(A, find_max_node(A)->num);
+		pop_swap(min_or_max, A, B);
+		console_log("Done pop swap"); //debug
+		print_stack(A, "A");	//debug
+		print_stack(B, "B");	//debug
+		if (i == 2)
+			pb(B, A);
+		if (i == 1)
+			pa(A, B);
+		print_stack(B, "B");	//debug
+	}
+	console_log("Done bottom maxxing");
 	i = 0;
 	while (++i < (int)(A->size))
 	{
@@ -92,9 +108,11 @@ void	insert_sort(t_stack *A, t_stack *B)
 				rra(A);
 			print_stack(A, "A");	// debug
 		}
+		// can be optimised by 'fast_rotate()'
 		while (j-- >= 0)
 			rra(A);
 		print_stack(A, "A");	// debug
 	}
 	(void)B;
+	(void)min_or_max;
 }
