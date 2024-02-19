@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/19 13:29:42 by we               ###   ########.fr       */
+/*   Updated: 2024/02/19 16:50:58 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void bubble_sort(t_stack *A, t_stack *B)
 }
 
 // No failures yet(?)
+// For 500: <= 5500, 100: <= 700
 //5 stack: 42
 //10 stack: 125
 //100 stack: 9661
@@ -68,12 +69,13 @@ void	insert_sort(t_stack *A, t_stack *B)
 	int	anchor;
 	int	i;
 
+	console_log("rotating to min...");	// debug
 	rot_to_min(A);
+	console_log("min: %d", A->head->num);	// debug
 	anchor = find_min_node(A)->num;
 	while (!is_sorted(A, 1))
 	{
 		i = find_unsorted(A);
-		console_log("unsorted: %d", i);	// debug
 		console_log("fast rotate...");	// debug
 		fast_rotate(A, i);
 		++i;
@@ -86,9 +88,6 @@ void	insert_sort(t_stack *A, t_stack *B)
 		}
 		console_log("returning...");	// debug
 		fast_rotate(A, find_position(A, anchor));
-		// while (i-- > 0)
-		// 	rra(A);
 	}
 	(void)B;
-	(void)anchor;
 }

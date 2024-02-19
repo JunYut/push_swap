@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 14:58:22 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/16 17:44:47 by we               ###   ########.fr       */
+/*   Updated: 2024/02/19 16:04:23 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	find_position(t_stack *stack, int target)
 	t_node	*curr;
 	int		i;
 
-	if (stack->size == 0 || target < 0)
+	if (stack->size == 0)
 		return (-1);
 	curr = stack->head;
 	i = 0;
