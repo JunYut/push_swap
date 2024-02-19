@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/19 11:21:31 by we               ###   ########.fr       */
+/*   Updated: 2024/02/19 12:46:50 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,7 @@ void bubble_sort(t_stack *A, t_stack *B)
 	(void)B;
 }
 
-// Not finished
-// Input:		Output:
-// 5 4 3 2 1    |    OK
-// 1 2 4 3 5	|    2 1 3 4 5
-// 1 2 4 5 3	|    2 1 3 4 5
-// if last 2 number is not max & second max or min & second min, fuck shit
+// /Fuck still shit
 void	insert_sort(t_stack *A, t_stack *B)
 {
 	int min;
@@ -81,6 +76,8 @@ void	insert_sort(t_stack *A, t_stack *B)
 		if (i == 1)
 			pa(A, B);
 	}
+	ra(A);
+	ra(A);
 	i = 0;
 	while (++i < (int)(A->size))
 	{
@@ -98,7 +95,27 @@ void	insert_sort(t_stack *A, t_stack *B)
 	}
 }
 
+// No failures yet(?)
 void	insert_sort1(t_stack *A, t_stack *B)
 {
-	
+	int	i;
+
+	while (!is_sorted(A, 1))
+	{
+		i = find_unsorted(A);
+		console_log("unsorted: %d", i);	// debug
+		console_log("fast rotate...");	// debug
+		fast_rotate(A, i);
+		++i;
+		console_log("! swapping...");	// debug
+		while (--i >= 0 && A->head->num > A->head->next->num)
+		{
+			sa(A);
+			if (i != 0 && !is_sorted(A, 1))
+				rra(A);
+		}
+		while (i-- > 0)
+			rra(A);
+	}
+	(void)B;
 }
