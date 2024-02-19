@@ -1,0 +1,36 @@
+Before:
+_________________________
+A [size: 5, range: 337]
+element: 394 | digits: 3
+element: 496 | digits: 3
+element: 163 | digits: 3
+element: 228 | digits: 3
+element: 500 | digits: 3
+
+_________________________
+ra
+ra
+pb
+pb
+pb
+rb
+pb
+rra
+rb
+pb
+rra
+pa
+pa
+pa
+pa
+pa
+_________________________
+A [size: 5, range: 337]
+element: 163 | digits: 3
+element: 228 | digits: 3
+element: 394 | digits: 3
+element: 496 | digits: 3
+element: 500 | digits: 3
+
+_________________________
+OK
