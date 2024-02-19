@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/19 20:28:58 by we               ###   ########.fr       */
+/*   Updated: 2024/02/19 23:11:07 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	insert_sort(t_stack *A, t_stack *B)
 	while (A->size > 0)
 	{
 			while (A->head->num < B->head->num)
-				rb(B);
+				rb(B);	// this can be optimized using fast_rotate
 			pb(B, A);
 			rot_to_max(B);
 	}
