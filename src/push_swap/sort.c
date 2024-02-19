@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/19 16:50:58 by we               ###   ########.fr       */
+/*   Updated: 2024/02/19 20:01:57 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	sort(t_stack *A, t_stack *B)
 
 void	select_sort(t_stack *A, t_stack *B)
 {
-	// console_log("select_sort...");		// debug
 	while (A->size > 5)
 	{
 		rot_to_min(A);
@@ -37,7 +36,6 @@ void	select_sort(t_stack *A, t_stack *B)
 
 void bubble_sort(t_stack *A, t_stack *B)
 {
-	// console_log("bubble_sort...");    // debug
 	int i;
 	int j;
 
@@ -59,35 +57,28 @@ void bubble_sort(t_stack *A, t_stack *B)
 }
 
 // No failures yet(?)
-// For 500: <= 5500, 100: <= 700
-//5 stack: 42
-//10 stack: 125
-//100 stack: 9661
-//500 stack: 241857
+// Requirements: 500: <= 5500, 100: <= 700
+//5 stack: 32 -> 37
+//10 stack: 125 -> 80
+//100 stack: 5546 -> 4186
+//500 stack: 134052 - > 94865
 void	insert_sort(t_stack *A, t_stack *B)
 {
-	int	anchor;
-	int	i;
-
-	console_log("rotating to min...");	// debug
 	rot_to_min(A);
-	console_log("min: %d", A->head->num);	// debug
-	anchor = find_min_node(A)->num;
-	while (!is_sorted(A, 1))
+	pb(B, A);
+	while (A->size > 0)
 	{
-		i = find_unsorted(A);
-		console_log("fast rotate...");	// debug
-		fast_rotate(A, i);
-		++i;
-		console_log("! swapping...");	// debug
-		while (--i >= 0 && A->head->num > A->head->next->num)
-		{
-			sa(A);
-			if (i != 0 && !is_sorted(A, 1))
-				rra(A);
-		}
-		console_log("returning...");	// debug
-		fast_rotate(A, find_position(A, anchor));
+			while (A->head->num < B->head->num)
+				rb(B);
+			pb(B, A);
+			fast_rotate(B, find_position(B, find_max_node(B)->num));
 	}
+	while (B->size > 0)
+		pa(A, B);
+}
+
+void	insert_sort1(t_stack *A, t_stack *B)
+{
 	(void)B;
+	(void)A;
 }
