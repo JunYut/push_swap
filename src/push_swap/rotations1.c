@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:22:09 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/17 19:40:55 by we               ###   ########.fr       */
+/*   Updated: 2024/02/19 13:07:56 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	fast_rotate(t_stack *stack, int pos)
 {
 	int	i;
 
-	if (pos < 0)
+	if (pos < 0 || pos >= (int)stack->size)
 		return (-1);
 	if (pos == 0)
 		return (1);
