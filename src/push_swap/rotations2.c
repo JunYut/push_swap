@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotations2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 11:08:47 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 11:12:44 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/19 20:29:28 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	rot_to_max(t_stack *stack)
 {
-console_log("rot_to_max...");
-	int	pos;
-
-	pos = find_position(stack, find_max_node(stack)->num);
-	fast_rotate(stack, pos);
+	fast_rotate(stack, find_position(stack, find_max_node(stack)->num));
 }
+

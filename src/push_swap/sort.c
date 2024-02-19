@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/19 20:01:57 by we               ###   ########.fr       */
+/*   Updated: 2024/02/19 20:28:58 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	insert_sort(t_stack *A, t_stack *B)
 			while (A->head->num < B->head->num)
 				rb(B);
 			pb(B, A);
-			fast_rotate(B, find_position(B, find_max_node(B)->num));
+			rot_to_max(B);
 	}
 	while (B->size > 0)
 		pa(A, B);

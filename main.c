@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/19 19:35:19 by we               ###   ########.fr       */
+/*   Updated: 2024/02/19 20:07:51 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int argc, char *argv[])
 		// sort(A, B);
 		// select_sort(A, B);
 		// bubble_sort(A, B);
-		insert_sort1(A, B);
+		insert_sort(A, B);
 	}
 	else
 		// console_log("Already sorted");			// debug
