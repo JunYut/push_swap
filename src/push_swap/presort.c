@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 15:22:30 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/20 14:49:54 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/20 16:01:41 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,10 @@ void	push_negatives(t_stack *A, t_stack *B)
 }
 
 // incomplete
+// +ve 5 stack: 16
+// +ve 10 stack: 30
+// +ve 100 stack: 345
+// +ve 500 stack: 1889
 void	digit_sort(t_stack *A, t_stack *B)
 {
 	console_log("digit_sort...");		// debug
@@ -45,12 +49,12 @@ void	digit_sort(t_stack *A, t_stack *B)
 
 	max_dgts = find_max_node(A)->digits;
 	min_dgts = find_min_node(A)->digits;
-	// if (min_dgts == max_dgts)			 // remember to uncomment
-	// 	return ;
 	dgt_tier = min_dgts - 1;
 	while (++dgt_tier <= max_dgts)
+	{
 		while (fast_rotate(A, find_digit(A, dgt_tier)) == 1)
 			pb(B, A);
-	// while (B->size > 0)
-	// 	pa(A, B);
+		if (B->size > 1 && B->head->num < B->head->next->num)
+			sb(B);
+	}
 }
