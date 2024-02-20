@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   presort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 15:22:30 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/16 18:02:31 by we               ###   ########.fr       */
+/*   Updated: 2024/02/20 13:18:17 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,8 @@ console_log("digit_sort...");		// debug
 		return ;
 	dgt_tier = min_dgts - 1;
 	while (++dgt_tier <= max_dgts)
-	{
-		console_log("dgt_tier: %d", dgt_tier);		// debug
 		while (fast_rotate(A, find_digit(A, dgt_tier)) == 1)
 			pb(B, A);
-	}
 	while (B->size > 0)
 		pa(A, B);
 }

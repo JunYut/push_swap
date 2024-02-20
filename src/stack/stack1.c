@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack1.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 14:58:22 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/19 16:04:23 by we               ###   ########.fr       */
+/*   Updated: 2024/02/20 13:18:06 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,7 @@ int	find_digit(t_stack *stack, int digit)
 	while (curr != stack->head)
 	{
 		if ((int)curr->digits == digit)
-		{
-			console_log("position: %d", i);		// debug
 			return (i);
-		}
 		++i;
 		curr = curr->next;
 	}
