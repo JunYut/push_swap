@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/20 10:44:02 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/20 11:33:13 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,11 @@ void bubble_sort(t_stack *A, t_stack *B)
 	(void)B;
 }
 
-// No failures yet(?)
 // Requirements: 500: <= 5500, 100: <= 700
-//5 stack: 32 -> 37 ->35
-//10 stack: 125 -> 80 -> 72
-//100 stack: 5546 -> 4186 -> 4140
-//500 stack: 134052 - > 94865 -> 94616
+//5 stack: 32 -> 37 -> 35 -> 35
+//10 stack: 125 -> 80 -> 72 -> 72
+//100 stack: 5546 -> 4186 -> 4140 -> 2967
+//500 stack: 134052 - > 94865 -> 94616 -> 66121
 void	insert_sort(t_stack *A, t_stack *B)
 {
 	rot_to_min(A);
@@ -70,8 +69,7 @@ void	insert_sort(t_stack *A, t_stack *B)
 	{
 			if (A->head->num > A->head->next->num)
 				sa(A);
-			while (A->head->num < B->head->num)
-				rb(B);	// this can be optimized using fast_rotate
+			fast_rotate(B, find_position(B, find_smaller(B, A->head->num)));
 			pb(B, A);
 			rot_to_max(B);
 	}

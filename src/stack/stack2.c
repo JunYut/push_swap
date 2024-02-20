@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 09:38:59 by we                #+#    #+#             */
-/*   Updated: 2024/02/19 12:09:52 by we               ###   ########.fr       */
+/*   Updated: 2024/02/20 11:13:55 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,22 @@ int	find_unsorted(t_stack *stack)
 			return (pos);
 		current = current->next;
 		++pos;
+	}
+	return (-1);
+}
+
+int	find_smaller(t_stack *stack, int target)
+{
+	t_node	*current;
+	int		i;
+
+	current = stack->head;
+	i = -1;
+	while (++i < (int)(stack->size))
+	{
+		if (current->num < target)
+			return (current->num);
+		current = current->next;
 	}
 	return (-1);
 }
