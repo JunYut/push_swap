@@ -6,12 +6,13 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 14:19:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/31 15:18:29 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/20 13:41:11 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parser.h"
 
+// Need to modify to consider negative numbers
 size_t	count_digits(long num)
 {
 	size_t	digits;
