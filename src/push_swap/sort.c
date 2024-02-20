@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/20 11:33:13 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/20 13:09:31 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void bubble_sort(t_stack *A, t_stack *B)
 	(void)B;
 }
 
+// TODO: modify to accomodate with digit_sort
 // Requirements: 500: <= 5500, 100: <= 700
 //5 stack: 32 -> 37 -> 35 -> 35
 //10 stack: 125 -> 80 -> 72 -> 72
@@ -63,6 +64,7 @@ void bubble_sort(t_stack *A, t_stack *B)
 //500 stack: 134052 - > 94865 -> 94616 -> 66121
 void	insert_sort(t_stack *A, t_stack *B)
 {
+	console_log("insert_sort...");	// debug
 	rot_to_min(A);
 	pb(B, A);
 	while (A->size > 0)
