@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/20 14:29:53 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/20 15:09:01 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ int	main(int argc, char *argv[])
 	console_log("_________________________");		// debug
 	if (!is_sorted(A, 1))
 	{
-		// digit_sort(A, B);
+		digit_sort(A, B);
 		// sort(A, B);
 		// select_sort(A, B);
 		// bubble_sort(A, B);
-		insert_sort(A, B);
+		insert_sort1(A, B);
 	}
 	else
 		// console_log("Already sorted");			// debug

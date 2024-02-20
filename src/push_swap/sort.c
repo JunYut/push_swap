@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/20 13:09:31 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/20 15:15:14 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,21 @@ void	insert_sort(t_stack *A, t_stack *B)
 		pa(A, B);
 }
 
+// digit_sort + insert_sort
+// +ve 5 stack: 39 -> 39
+// +ve 10 stack: 69 -> 64
+// +ve 100 stack: 2919 -> 2408
+// +ve 500 stack: 69018 -> 45270
 void	insert_sort1(t_stack *A, t_stack *B)
 {
-	(void)B;
-	(void)A;
+	console_log("insert_sort1...");	// debug
+	pa(A, B);
+	while (B->size > 0)
+	{
+		if (B->head->num < B->head->next->num)
+			sb(B);
+		fast_rotate(A, find_position(A, find_larger(A, B->head->num)));
+		pa(A, B);
+		rot_to_min(A);
+	}
 }
