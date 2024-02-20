@@ -6,25 +6,34 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 14:19:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/20 13:41:11 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/20 14:31:28 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parser.h"
 
-// Need to modify to consider negative numbers
-size_t	count_digits(long num)
+int	absolute(int num)
 {
-	size_t	digits;
+	if (num < 0)
+		return (num * -1);
+	return (num);
 
-	digits = 1;
+}
+
+int	count_digits(long num)
+{
+	int	digits;
+	int	sign;
+
+	sign = 1;
+	if (num < 0)
+		sign = -1;
+	digits = sign;
 	if (num != 0)
 	{
-		if (num < 0)
-			num *= -1;
-		while (num >= 10)
+		while (num <= -10 || num >= 10)
 		{
-			digits += 1;
+			digits += sign;
 			num /= 10;
 		}
 	}

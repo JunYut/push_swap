@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 11:55:50 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/25 14:19:29 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/20 14:19:29 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_itoa(int num)
 		chars += 1;
 		temp *= -1;
 	}
-	chars += count_digits(temp);
+	chars += absolute(count_digits(temp));
 	str = (char *)c_malloc(chars + 1, "ft_itoa");
 	str[chars] = 0;
 	if (num < 0)

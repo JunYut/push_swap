@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/20 13:01:07 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/20 14:29:53 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int argc, char *argv[])
 	console_log("_________________________");		// debug
 	if (!is_sorted(A, 1))
 	{
-		digit_sort(A, B);
+		// digit_sort(A, B);
 		// sort(A, B);
 		// select_sort(A, B);
 		// bubble_sort(A, B);

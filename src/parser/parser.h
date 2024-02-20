@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:26:04 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/01 13:50:41 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/20 14:20:10 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ long	ft_atoi(const char *integer);
 char	*ft_itoa(int num);
 
 size_t	count_strs(char **strs);
-size_t	count_digits(long num);
+int		count_digits(long num);
+
+int		absolute(int num);
 
 #endif // PARSER_H
