@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/19 23:11:07 by we               ###   ########.fr       */
+/*   Updated: 2024/02/20 10:44:02 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,16 +58,18 @@ void bubble_sort(t_stack *A, t_stack *B)
 
 // No failures yet(?)
 // Requirements: 500: <= 5500, 100: <= 700
-//5 stack: 32 -> 37
-//10 stack: 125 -> 80
-//100 stack: 5546 -> 4186
-//500 stack: 134052 - > 94865
+//5 stack: 32 -> 37 ->35
+//10 stack: 125 -> 80 -> 72
+//100 stack: 5546 -> 4186 -> 4140
+//500 stack: 134052 - > 94865 -> 94616
 void	insert_sort(t_stack *A, t_stack *B)
 {
 	rot_to_min(A);
 	pb(B, A);
 	while (A->size > 0)
 	{
+			if (A->head->num > A->head->next->num)
+				sa(A);
 			while (A->head->num < B->head->num)
 				rb(B);	// this can be optimized using fast_rotate
 			pb(B, A);
