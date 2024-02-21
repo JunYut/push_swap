@@ -6,11 +6,11 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 09:38:59 by we                #+#    #+#             */
-/*   Updated: 2024/02/20 14:47:27 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/21 14:55:27 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "stack.h"
+#include "stack.h"
 
 int	find_unsorted(t_stack *stack)
 {
@@ -61,4 +61,34 @@ int	find_larger(t_stack *stack, int target)
 		current = current->next;
 	}
 	return (-1);
+}
+
+// please set i & j to -1 before calling this function
+int	find_mid(t_stack *stack, int i, int j)
+{
+	t_node	*ptr;
+	t_node	*current;
+	int		s;
+	int		l;
+
+	ptr = stack->head;
+	while (++i < (int)(stack->size))
+	{
+		current = stack->head;
+		s = 0;
+		l = 0;
+		j = -1;
+		while (++j < (int)(stack->size))
+		{
+			if (ptr->num < current->num)
+				++s;
+			if (ptr->num > current->num)
+				++l;
+			current = current->next;
+		}
+		if (s == l || s == l - 1 || s == l + 1)
+			return (ptr->num);
+		ptr = ptr->next;
+	}
+	return (-2147483648);
 }

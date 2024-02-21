@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:04:38 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/20 14:48:35 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/21 14:52:40 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ long	pop(t_stack *stack);
 void	rotate_up(t_stack *stack);
 void	rotate_down(t_stack *stack);
 
+int		find_mid(t_stack *stack, int i, int j);
 int		find_larger(t_stack *stack, int target);
 int		find_smaller(t_stack *stack, int target);
 int		find_unsorted(t_stack *stack);
