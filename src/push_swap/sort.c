@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/20 15:49:59 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/21 15:31:41 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ void	sort(t_stack *A, t_stack *B)
 		pa(A, B);
 }
 
+// +ve 5 stack: 28
+// +ve 10 stack: 52
+// +ve 100 stack: 1637
+// +ve 500 stack: 31868
 void	select_sort(t_stack *A, t_stack *B)
 {
 	while (A->size > 5)
@@ -58,19 +62,21 @@ void bubble_sort(t_stack *A, t_stack *B)
 
 // TODO: modify to use anchor min and max
 // Requirements: 500: <= 5500, 100: <= 700
-//5 stack: 32 -> 37 -> 35 -> 35
-//10 stack: 125 -> 80 -> 72 -> 72
-//100 stack: 5546 -> 4186 -> 4140 -> 2967
-//500 stack: 134052 - > 94865 -> 94616 -> 66121
+//5 stack: 32 -> 37 -> 35 -> 35 -> 37 -> 36
+//10 stack: 125 -> 80 -> 72 -> 72 -> 74 -> 80
+//100 stack: 5546 -> 4186 -> 4140 -> 2967 -> 2723 -> 2676
+//500 stack: 134052 - > 94865 -> 94616 -> 66121 -> 63960 -> 63703
 void	insert_sort(t_stack *A, t_stack *B)
 {
 	console_log("insert_sort...");	// debug
-	rot_to_min(A);
+	int	mid;
+
+	mid = fast_rotate(A, find_position(A, find_mid(A, -1, -1)));
 	pb(B, A);
 	while (A->size > 0)
 	{
-			if (A->head->num > A->head->next->num)
-				sa(A);
+			if (A->head->num < mid)
+				ra(A);
 			fast_rotate(B, find_position(B, find_smaller(B, A->head->num)));
 			pb(B, A);
 			rot_to_max(B);
