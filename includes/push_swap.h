@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/22 14:44:50 by we               ###   ########.fr       */
+/*   Updated: 2024/02/22 17:18:04 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,18 @@
 # include "../src/validation/validation.h"
 # include "../src/utils/utils.h"
 
-void	select_sort(t_stack *A, t_stack *B);
-void	select_sort1(t_stack *A, t_stack *B);
-void	bubble_sort(t_stack *A, t_stack *B);
-void	insert_sort(t_stack *A, t_stack *B);
-void	insert_sort1(t_stack *A, t_stack *B);
 void	mid_sort(t_stack *A, t_stack *B);
-void    sort(t_stack *A, t_stack *B);
-void	sort_stack_A(t_stack *A, t_stack *B);
-void	sort_stack_B(t_stack *B, t_stack *A);
-
-void	presort(t_stack *A, t_stack *B);
 void	mid_sort_A(t_stack *A, t_stack *B);
 void	mid_sort_B(t_stack *B, t_stack *A);
-void	digit_sort(t_stack *A, t_stack *B);
-void	push_negatives(t_stack *A, t_stack *B);
+
+void	select_sort(t_stack *A, t_stack *B);
+void	select_sort1(t_stack *A, t_stack *B);
+void	insert_sort(t_stack *A, t_stack *B);
+void	insert_sort1(t_stack *A, t_stack *B);
+void	insert_sort_B(t_stack *A, t_stack *B, int chunck);
+
+void	sort_stack_A(t_stack *A, t_stack *B);
+void	sort_stack_B(t_stack *B, t_stack *A);
 
 int		is_sorted(t_stack *A, int direction);
 
