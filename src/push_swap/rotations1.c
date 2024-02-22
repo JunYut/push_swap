@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotations1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:22:09 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/21 10:39:42 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/22 11:31:04 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,14 @@ void	rrr(t_stack *A, t_stack *B)
  *
  * @param stack the stack to rotate
  * @param pos the position to rotate to
+ * @return int 1 if the rotation was successful, 0 if the position is invalid
  */
 int	fast_rotate(t_stack *stack, int pos)
 {
 	int	i;
 
 	if (pos < 0 || pos >= (int)stack->size)
-		return (-1);
+		return (0);
 	if (pos == 0)
 		return (1);
 	i = -1;
