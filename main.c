@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/22 19:14:14 by we               ###   ########.fr       */
+/*   Updated: 2024/02/23 00:12:10 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,9 @@ int	main(int argc, char *argv[])
 
 		// mid_sort_a0(A, B); mid_sort_b(B, A); insert_sort(A, B);
 
-		mid_sort_a0(A, B); mid_sort_b(B, A); select_sort(A, B);
+		// mid_sort_a0(A, B); mid_sort_b(B, A); select_sort(A, B);
+
+		mid_sort_a0(A, B); mid_sort_b(B, A); clean_up(A, B);
 
 		(void)size;
 	}
