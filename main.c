@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/22 11:40:04 by we               ###   ########.fr       */
+/*   Updated: 2024/02/22 15:58:21 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	main(int argc, char *argv[])
 	t_stack	*A;
 	t_stack	*B;
 	char	**strs;
+	size_t	size;
 	strs = argv;
 	if (argc == 2)
 		strs = ft_split(argv[1], ' ');
@@ -31,10 +32,20 @@ int	main(int argc, char *argv[])
 	if (!is_sorted(A, 1))
 	{
 		// select_sort(A, B);
-		// bubble_sort(A, B);
 		mid_sort_A(A, B);	mid_sort_B(B, A);
+		/*
+			size = A->size;
+			for (size_t i = 0; i < size; i++)
+				pb(B, A);
+			insert_sort1(A, B);
+		*/
+		// mid_sort_A(A, B);	select_sort1(A, B);
+		// mid_sort_A(A, B);	insert_sort1(A, B);
+		// mid_sort_A(A, B);	mid_sort_B(B, A);	select_sort(A, B);
+		// mid_sort_A(A, B);	mid_sort_B(B, A);	insert_sort(A, B);
 		// insert_sort(A, B);
 		// digit_sort(A, B); insert_sort1(A, B);
+		(void)size;
 	}
 	else
 		// console_log("Already sorted");			// debug

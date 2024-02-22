@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 15:22:30 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/22 11:39:18 by we               ###   ########.fr       */
+/*   Updated: 2024/02/22 16:02:34 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,10 @@ void	digit_sort(t_stack *A, t_stack *B)
 	}
 }
 
-// nah
+// +ve 5 stack: 37 -> 37
+// +ve 10 stack: 62 -> 62
+// +ve 100 stack: 593 -> 721
+// +ve 500 stack: 2982 -> 3869
 void	mid_sort_A(t_stack *A, t_stack *B)
 {
 	console_log("mid sort A...");	// debug
@@ -79,12 +82,19 @@ void	mid_sort_A(t_stack *A, t_stack *B)
 				fast_rotate(A, find_position(A, mid));
 				pb(B, A);
 			}
+			if (B->head->num < B->head->next->num)
+				sb(B);
 		}
 		if (A->size == 1)
 			pb(B, A);
+		insert_sort1(A, B);
 	}
 }
 
+// +ve 5 stack: 37
+// +ve 10 stack: 62
+// +ve 100 stack: 593
+// +ve 500 stack: 2982
 void	mid_sort_B(t_stack *B, t_stack *A)
 {
 	console_log("mid sort B...");	// debug
@@ -104,6 +114,8 @@ void	mid_sort_B(t_stack *B, t_stack *A)
 				fast_rotate(B, find_position(B, mid));
 				pa(A, B);
 			}
+			if (A->head->num > A->head->next->num)
+				sa(A);
 		}
 		if (B->size == 1)
 			pa(A, B);
