@@ -6,28 +6,32 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/22 18:44:07 by we               ###   ########.fr       */
+/*   Updated: 2024/02/22 19:16:53 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-//
+// mid_sort_a0 + mid_sort_b + insert_sort
+// +ve 5   stack: 42
+// +ve 10  stack: 77
+// +ve 100 stack: 1064
+// +ve 500 stack: 10623
 void	select_sort(t_stack *A, t_stack *B)
 {
 	console_log("select_sort...");	// debug
 	int i;
 
 	i = 0;
-	while (B->size > 5)
+	while (A->size > 5)
 	{
-		rot_to_max(B);
-		pa(A, B);
+		rot_to_min(A);
+		pb(B, A);
 		++i;
 	}
-	sort_five_B(A, B);
+	sort_five_A(A, B);
 	while (i-- > 0)
-		pb(B, A);
+		pa(A, B);
 }
 
 //
@@ -41,7 +45,11 @@ void	select_sort1(t_stack *A, t_stack *B)
 	}
 }
 
-//
+// mid_sort_a0 + mid_sort_b + insert_sort_B
+// +ve 5   stack: 48
+// +ve 10  stack: 83
+// +ve 100 stack: 1528
+// +ve 500 stack: 23695
 void	insert_sort(t_stack *A, t_stack *B)
 {
 	console_log("insert_sort...");	// debug
@@ -77,7 +85,7 @@ void	insert_sort1(t_stack *A, t_stack *B)
 // +ve 10  stack: 99 -> 83 -> 83 -> 83
 // +ve 100 stack: 3081 -> 2261 -> 1196 -> 1155
 // +ve 500 stack: 48995 -> 42965 -> 14666 -> 14535
-void	insert_sort_B(t_stack *A, t_stack *B, int chunck)
+void	select_sort_B(t_stack *A, t_stack *B, int chunck)
 {
 	console_log("insert_sort_B...");	// debug
 	int i;
