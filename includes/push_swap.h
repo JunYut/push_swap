@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/19 17:14:36 by we               ###   ########.fr       */
+/*   Updated: 2024/02/22 11:36:13 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,13 @@ void	insert_sort1(t_stack *A, t_stack *B);
 void    sort(t_stack *A, t_stack *B);
 void	sort_stack_A(t_stack *A, t_stack *B);
 void	sort_stack_B(t_stack *B, t_stack *A);
+
 void	presort(t_stack *A, t_stack *B);
+void	mid_sort_A(t_stack *A, t_stack *B);
+void	mid_sort_B(t_stack *B, t_stack *A);
 void	digit_sort(t_stack *A, t_stack *B);
 void	push_negatives(t_stack *A, t_stack *B);
+
 int		is_sorted(t_stack *A, int direction);
 
 void	sort_three_A(t_stack *A);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/21 15:27:24 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/22 11:40:04 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,17 @@ int	main(int argc, char *argv[])
 	console_log("_________________________");		// debug
 	if (!is_sorted(A, 1))
 	{
-		// sort(A, B);
 		// select_sort(A, B);
 		// bubble_sort(A, B);
+		mid_sort_A(A, B);	mid_sort_B(B, A);
 		// insert_sort(A, B);
-		digit_sort(A, B); insert_sort1(A, B);
+		// digit_sort(A, B); insert_sort1(A, B);
 	}
 	else
 		// console_log("Already sorted");			// debug
 	console_log("\nAfter:");	// debug
 	console_log("_________________________");		// debug
-	print_stack(A, "A");		// debug
+	print_stack(A, "A");	print_stack(B, "B");		// debug
 	console_log("_________________________");		// debug
 	if (is_sorted(A, 1))	// debug
 		console_log("OK");		// debug
