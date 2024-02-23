@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/23 14:12:02 by we               ###   ########.fr       */
+/*   Updated: 2024/02/23 18:04:45 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main(int argc, char *argv[])
 
 		// mid_sort_a0(A, B); mid_sort_b(B, A); select_sort(A, B);
 
-		mid_sort(A, B);
+		mid_sort(A, B);	//clean_up(A, B); rot_to_min(A);
 
 		(void)size;
 	}
@@ -48,7 +48,7 @@ int	main(int argc, char *argv[])
 		// console_log("Already sorted");			// debug
 	console_log("\nAfter:");	// debug
 	console_log("_________________________");		// debug
-	print_stack(A, "A");	print_stack(B, "B");		// debug
+	print_stack(A, "A");	// debug
 	console_log("_________________________");		// debug
 	sorted_rate(A, 1);
 	free_stack(A);
