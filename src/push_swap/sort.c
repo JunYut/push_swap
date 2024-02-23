@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/23 19:06:12 by we               ###   ########.fr       */
+/*   Updated: 2024/02/24 00:40:14 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,16 @@ void	select_sort(t_stack *A, t_stack *B)
 }
 
 //
-void	select_sort1(t_stack *A, t_stack *B)
+void	select_sort_half(t_stack *A, t_stack *B)
 {
 	console_log("select_sort1...");	// debug
-	while (B->size > 0)
+	size_t	half;
+
+	half = (A->size + A->size % 2) / 2;
+	while (A->size > half)
 	{
-		rot_to_max(B);
-		pa(A, B);
+		rot_to_min(A);
+		pb(B, A);
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 16:04:21 by we                #+#    #+#             */
-/*   Updated: 2024/02/24 00:26:11 by we               ###   ########.fr       */
+/*   Updated: 2024/02/24 00:46:20 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,10 +116,10 @@ void	mid_sort_b(t_stack *B, t_stack *A)
 
 //clean_up:
 // steps:
-// +ve 5   stack: 46 -> 38 -> 48
-// +ve 10  stack: 76 -> 63 -> 94
-// +ve 100 stack: 2820 -> 4070 -> 1261
-// +ve 500 stack: 66042 -> 116639 -> 11510
+// +ve 5   stack: 46 -> 38 -> 48 -> 48
+// +ve 10  stack: 76 -> 63 -> 94 -> 104
+// +ve 100 stack: 2820 -> 4070 -> 1261 -> 1314
+// +ve 500 stack: 66042 -> 116639 -> 11510 -> 10940
 //---------------------------------------------------------
 // sorted rate:
 // +ve 5   stack: 4/4
@@ -137,8 +137,7 @@ void	clean_up(t_stack *A, t_stack *B, int half)
 	while (++i < half)
 		pb(B, A);
 	while (B->size > 0)
-	{
 		if (fast_rotate(B, find_position(B, find_max_node(B)->num)))
 			pa(A, B);
-	}
+	fast_rotate(A, half);
 }
