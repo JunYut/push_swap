@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 16:04:21 by we                #+#    #+#             */
-/*   Updated: 2024/02/23 17:51:57 by we               ###   ########.fr       */
+/*   Updated: 2024/02/24 00:26:11 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,43 +116,29 @@ void	mid_sort_b(t_stack *B, t_stack *A)
 
 //clean_up:
 // steps:
-// +ve 5   stack: 46 -> 38
-// +ve 10  stack: 76 -> 63
-// +ve 100 stack: 2820 -> 4070
-// +ve 500 stack: 66042 -> 116639
+// +ve 5   stack: 46 -> 38 -> 48
+// +ve 10  stack: 76 -> 63 -> 94
+// +ve 100 stack: 2820 -> 4070 -> 1261
+// +ve 500 stack: 66042 -> 116639 -> 11510
 //---------------------------------------------------------
 // sorted rate:
 // +ve 5   stack: 4/4
 // +ve 10  stack: 9/9
 // +ve 100 stack: 99/99
 // +ve 500 stack: 499/499
-void	clean_up(t_stack *A, t_stack *B)
+void	clean_up(t_stack *A, t_stack *B, int half)
 {
 	console_log("clean_up...");	// debug
-	t_node	*head;
-	t_node	*tail;
-	int		unsort_pos;
-	int		i;
+	int	i;
 
-	head = A->head;
-	tail = A->tail;
-	while (!is_sorted1(head, tail, 1))
+	if (half > 5)
+		clean_up(A, B, half / 2);
+	i = -1;
+	while (++i < half)
+		pb(B, A);
+	while (B->size > 0)
 	{
-		i = -1;
-		unsort_pos = find_unsorted(A);
-		if (unsort_pos >= (int)(A->size + A->size % 2) / 2)
-		{
-			i = (A->size + A->size % 2) / 2;
-			fast_rotate(A, (int)(A->size + A->size % 2) / 2);
-		}
-		while (++i <= unsort_pos + 1)
-		{
-			pb(B, A);
-		}
-		while (B->size > 0)
-		{
-			rot_to_max(B);
+		if (fast_rotate(B, find_position(B, find_max_node(B)->num)))
 			pa(A, B);
-		}
 	}
 }

@@ -6,21 +6,21 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/22 19:16:53 by we               ###   ########.fr       */
+/*   Updated: 2024/02/23 19:06:12 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// mid_sort_a0 + mid_sort_b + insert_sort
-// +ve 5   stack: 42
-// +ve 10  stack: 77
-// +ve 100 stack: 1064
+// mid_sort + insert_sort
+// +ve 5   stack: 42 -> 
+// +ve 10  stack: 77 -> 
+// +ve 100 stack: 1064 -> 
 // +ve 500 stack: 10623
 void	select_sort(t_stack *A, t_stack *B)
 {
 	console_log("select_sort...");	// debug
-	int i;
+	int	i;
 
 	i = 0;
 	while (A->size > 5)

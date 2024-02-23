@@ -1,11 +1,1 @@
-1. modify 'is_sorted' to take in 't_node *' instead of 't_stack *'
-	- the 2 params are head and tail of the stack
-2. clean_up:
-	while !is_sorted(head, tail)
-		fast rotate to unsorted
-		pop
-		if (pop < mid)
-			fast rotate to smaller than popped
-		else
-			fast rotate to larger than popped
-		push
+1. modify rot_to_min & rot_to_max to take 't_node *' as parameters
