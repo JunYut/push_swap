@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 16:04:21 by we                #+#    #+#             */
-/*   Updated: 2024/02/24 00:46:20 by we               ###   ########.fr       */
+/*   Updated: 2024/02/25 01:59:16 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,15 +129,23 @@ void	mid_sort_b(t_stack *B, t_stack *A)
 void	clean_up(t_stack *A, t_stack *B, int half)
 {
 	console_log("clean_up...");	// debug
+	t_node	*head;
+	t_node	*tail;
 	int	i;
 
+	head = A->head; (void)head;
+	tail = A->tail; (void)tail;
 	if (half > 5)
 		clean_up(A, B, half / 2);
 	i = -1;
 	while (++i < half)
 		pb(B, A);
-	while (B->size > 0)
-		if (fast_rotate(B, find_position(B, find_max_node(B)->num)))
+	// while (B->size > 0)
+		bubble_sort(A, B);
+	if (A->size == 0)
+		while (B->size > 0)
 			pa(A, B);
-	fast_rotate(A, half);
+	// if (is_sorted1(head, tail, 1))
+	// 	return ;
+	// fast_rotate(A, half);
 }

@@ -6,26 +6,34 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 09:38:59 by we                #+#    #+#             */
-/*   Updated: 2024/02/23 16:20:36 by we               ###   ########.fr       */
+/*   Updated: 2024/02/25 00:56:09 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-int	find_unsorted(t_stack *stack)
+int	find_unsorted(t_stack *stack, int direction)
 {
-	t_node	*current;
+	t_node	*curr;
 	int		pos;
 	int		i;
 
-	current = stack->head;
+	curr = stack->head;
 	pos = 0;
 	i = -1;
 	while (++i < (int)(stack->size - 1))
 	{
-		if (current->num > current->next->num)
-			return (pos);
-		current = current->next;
+			if (direction == 1 && (curr == find_max_node(stack)
+			&& curr->next == find_min_node(stack)))
+				return (-1);
+			if (direction == 1 && curr->num > curr->next->num)
+				return (pos);
+			if (direction == -1 && (curr == find_min_node(stack)
+			&& curr->next == find_max_node(stack)))
+				return (-1);
+			if (direction == -1 && curr->num < curr->next->num)
+				return (pos);
+		curr = curr->next;
 		++pos;
 	}
 	return (-1);

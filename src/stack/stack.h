@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:04:38 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/23 16:19:59 by we               ###   ########.fr       */
+/*   Updated: 2024/02/24 14:22:48 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	rotate_down(t_stack *stack);
 int		find_mid(t_stack *stack, int i, int j);
 long	find_larger(t_stack *stack, int target);
 long	find_smaller(t_stack *stack, int target);
-int		find_unsorted(t_stack *stack);
+int		find_unsorted(t_stack *stack, int direction);
 int		find_digit(t_stack *stack, int digit);
 int		find_negative(t_stack *stack);
 int		find_position(t_stack *stack, int target);
