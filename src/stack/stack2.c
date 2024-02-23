@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 09:38:59 by we                #+#    #+#             */
-/*   Updated: 2024/02/21 14:55:27 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/23 16:20:36 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	find_unsorted(t_stack *stack)
 	return (-1);
 }
 
-int	find_smaller(t_stack *stack, int target)
+long	find_smaller(t_stack *stack, int target)
 {
 	t_node	*current;
 	int		i;
@@ -44,10 +44,10 @@ int	find_smaller(t_stack *stack, int target)
 			return (current->num);
 		current = current->next;
 	}
-	return (-1);
+	return (LONG_MIN);
 }
 
-int	find_larger(t_stack *stack, int target)
+long	find_larger(t_stack *stack, int target)
 {
 	t_node	*current;
 	int		i;
@@ -60,7 +60,7 @@ int	find_larger(t_stack *stack, int target)
 			return (current->num);
 		current = current->next;
 	}
-	return (-1);
+	return (LONG_MIN);
 }
 
 // please set i & j to -1 before calling this function
