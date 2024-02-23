@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/23 00:12:51 by we               ###   ########.fr       */
+/*   Updated: 2024/02/23 13:11:45 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include "../src/parser/parser.h"
 # include "../src/validation/validation.h"
 # include "../src/utils/utils.h"
+
+typedef struct s_node t_node;
 
 void	mid_sort(t_stack *A, t_stack *B);
 void	mid_sort_a0(t_stack *A, t_stack *B);
@@ -34,6 +36,8 @@ void	sort_stack_A(t_stack *A, t_stack *B);
 void	sort_stack_B(t_stack *B, t_stack *A);
 
 int		is_sorted(t_stack *A, int direction);
+int		is_sorted1(t_node *head, t_node *tail, int direction);
+int		sorted_rate(t_stack *A, int direction);
 
 void	sort_three_A(t_stack *A);
 void	sort_five_A(t_stack *A, t_stack *B);

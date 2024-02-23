@@ -1,63 +1,11 @@
-PART 1:
--------------------------------------------------------------------------------
-1.	Pick sorting algorithm
-2.	Inplement sorting algorithm
-
-PART 2:
--------------------------------------------------------------------------------
-1.	Figure how stack works
-2.	Implement simple stack based sorting algorithm
-3.	Implement chosen sorting algorithm
-
-PROCEDURE:
--------------------------------------------------------------------------------
-1.	Input validation
-	- no arguments
-2.	Argument parsing
-3.	Argument validation
-	- non integers
-	- greater than INT_MAX or smaller than INT_MIN
-	- duplicates
-4.	Stack initialization
-5.	Instruction generation (sorting)
-6.	Print instruction list
-
-INPUTS:
--------------------------------------------------------------------------------
-Range:
-- 1 digit:	 +-(0 ~ 9),							19 numbers
-- 2 digits:	 +-(10 ~ 99),						200 numbers
-- 3 digits:  +-(100 ~ 999),						2K numbers
-- 4 digits:  +-(1K ~ 9999),						20K numbers
-- 5 digits:  +-(10K ~ 99999),					200K numbers
-- 6 digits:  +-(100K ~ 999999),					2M numbers
-- 7 digits:  +-(1M ~ 9999999),					20M numbers
-- 8 digits:  +-(10M ~ 99999999),				200M numbers
-- 9 digits:  +-(100M ~ 999999999),				2B numbers
-- 10 digits: +-(1B) ~ -2147483648/2147483647,	4294967298/4294967297 numbers
-
-stack <= 3:
-	Smallest Compact Range: any digit tier
-	Loose range			  : random numbers
-
-stack <= 5:
-	Smallest Compact Range: any digit tier
-	Loose range			  : random numbers
-
-stack <= 100:
-	Smallest Compact Range:	digit tier 1 ~ 2
-		1. -99 ~ 0
-		2. 0 ~ 99
-		3. -49 ~ 49
-	Loose range			  :
-		1. 10 numbers from each digit tier(only '+' or only '-')
-		2. 5 numbers from each digit tier(both '+' and '-')
-
-stack <= 500:
-	Smallest Compact Range: digit tier 1 ~ 3
-		1. -499 ~ 0
-		2. 0 ~ 499
-		3. -250 ~ 249
-	Loose range			  :
-		1. 50 numbers from each digit tier(only '+' or only '-')
-		2. 25 numbers from each digit tier(both '+' and '-')
+1. modify 'is_sorted' to take in 't_node *' instead of 't_stack *'
+	- the 2 params are head and tail of the stack
+2. clean_up:
+	while !is_sorted(head, tail)
+		fast rotate to unsorted
+		pop
+		if (pop < mid)
+			fast rotate to smaller than popped
+		else
+			fast rotate to larger than popped
+		push
