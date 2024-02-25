@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 09:38:59 by we                #+#    #+#             */
-/*   Updated: 2024/02/25 00:56:09 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 00:52:55 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ long	find_smaller(t_stack *stack, int target)
 	i = -1;
 	while (++i < (int)(stack->size))
 	{
-		if (current->num < target)
+		if (current->num <= target)
 			return (current->num);
 		current = current->next;
 	}
@@ -64,7 +64,7 @@ long	find_larger(t_stack *stack, int target)
 	i = -1;
 	while (++i < (int)(stack->size))
 	{
-		if (current->num > target)
+		if (current->num >= target)
 			return (current->num);
 		current = current->next;
 	}
