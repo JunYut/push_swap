@@ -6,17 +6,17 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/25 01:39:05 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 01:30:41 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
 // mid_sort + insert_sort
-// +ve 5   stack: 42 -> 
-// +ve 10  stack: 77 -> 
-// +ve 100 stack: 1064 -> 
-// +ve 500 stack: 10623
+// +ve 5   stack: 42 -> 42
+// +ve 10  stack: 77 -> 77
+// +ve 100 stack: 1064 -> 1066
+// +ve 500 stack: 10623 -> 10614
 void	select_sort(t_stack *A, t_stack *B)
 {
 	console_log("select_sort...");	// debug
@@ -107,7 +107,7 @@ void	insert_sort1(t_stack *A, t_stack *B)
 // +ve 500 stack: 48995 -> 42965 -> 14666 -> 14535
 void	select_sort_B(t_stack *A, t_stack *B, int chunck)
 {
-	console_log("insert_sort_B...");	// debug
+	console_log("select_sort_B...");	// debug
 	int i;
 
 	i = 0;
@@ -119,6 +119,7 @@ void	select_sort_B(t_stack *A, t_stack *B, int chunck)
 	}
 	while (i-- > 0)
 		pb(B, A);
+	console_log("select_sort_B done");	// debug
 }
 
 // mid_sort + bubble_sort

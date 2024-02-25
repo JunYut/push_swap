@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/24 01:28:30 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 00:07:29 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_node t_node;
 void	mid_sort(t_stack *A, t_stack *B);
 void	mid_sort_a0(t_stack *A, t_stack *B);
 void	mid_sort_a(t_stack *A, t_stack *B);
+void	mid_sort_b0(t_stack *B, t_stack *A);
 void	mid_sort_b(t_stack *B, t_stack *A);
 void	clean_up(t_stack *A, t_stack *B, int half);
 

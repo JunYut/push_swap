@@ -1,1 +1,3 @@
-1. modify rot_to_min & rot_to_max to take 't_node *' as parameters
+1. modify mid_sort to finest
+2. push 10 elements and use select_sort
+3. implement compact_sort

@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 16:04:21 by we                #+#    #+#             */
-/*   Updated: 2024/02/25 01:59:16 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 01:28:13 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 // mid_sort:
 // steps:
-// +ve 5   stack: 38 -> 38 -> 38
-// +ve 10  stack: 63 -> 63 -> 63
-// +ve 100 stack: 594 -> 665 -> 722
-// +ve 500 stack: 2983 -> 3441 -> 3870
+// +ve 5   stack: 38 -> 38 -> 38 -> 37
+// +ve 10  stack: 63 -> 63 -> 63 -> 58
+// +ve 100 stack: 594 -> 665 -> 722 -> 549
+// +ve 500 stack: 2983 -> 3441 -> 3870 -> 2740
 //---------------------------------------------------------
 // sorted rate:
-// +ve 5   stack: 4/4 -> 4/4 -> 4/4
-// +ve 10  stack: 9/9 -> 9/9 -> 9/9
-// +ve 100 stack: 59/99 -> 63/99 -> 69/99
-// +ve 500 stack: 260/499 -> 268/499 -> 279/499
+// +ve 5   stack: 4/4 -> 4/4 -> 4/4 -> 4/4
+// +ve 10  stack: 9/9 -> 9/9 -> 9/9 -> 7/9
+// +ve 100 stack: 59/99 -> 63/99 -> 69/99 -> 54/99
+// +ve 500 stack: 260/499 -> 268/499 -> 279/499 -> 253/499
 void	mid_sort(t_stack *A, t_stack *B)
 {
 	console_log("mid_sort...");	// debug
 	mid_sort_a0(A, B);
-	mid_sort_b(B, A);
+	mid_sort_b0(B, A);
 }
 
 void	mid_sort_a0(t_stack *A, t_stack *B)
@@ -88,8 +88,7 @@ void	mid_sort_a(t_stack *A, t_stack *B)
 	}
 }
 
-//
-void	mid_sort_b(t_stack *B, t_stack *A)
+void	mid_sort_b0(t_stack *B, t_stack *A)
 {
 	console_log("mid sort B...");	// debug
 	size_t	half;
@@ -112,6 +111,31 @@ void	mid_sort_b(t_stack *B, t_stack *A)
 		if (B->size == 1)
 			pa(A, B);
 	}
+}
+
+void	mid_sort_b(t_stack *B, t_stack *A)
+{
+	console_log("mid sort B0...");	// debug
+	size_t	half;
+	int		mid;
+	int		i;
+
+	half = (int)(B->size + B->size % 2) / 2;
+	mid = find_mid(B, -1, -1);
+	i = 0;
+	while (B->size > half)
+	{
+		if (fast_rotate(B, find_position(B, find_larger(B, mid))))
+			pa(A, B);
+		if (find_max_node(A)->num == mid)
+		{
+			fast_rotate(A, find_position(A, mid));
+			pb(B, A);
+		}
+			++i;
+	}
+	while (i-- > 0)
+		pb(B, A);
 }
 
 //clean_up:
