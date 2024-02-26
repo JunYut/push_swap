@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 14:31:04 by we                #+#    #+#             */
-/*   Updated: 2024/02/26 17:06:13 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 17:40:34 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 // quarter_sort:
 // steps:
-// +ve 5   stack: 28 -> 31
-// +ve 10  stack: 51 -> 55
-// +ve 100 stack: 448 -> 744
-// +ve 500 stack: 2182 -> 4097
+// +ve 5   stack: 28 -> 31 -> 31
+// +ve 10  stack: 51 -> 55 -> 55
+// +ve 100 stack: 448 -> 744 -> 728
+// +ve 500 stack: 2182 -> 4097 -> 4144
 //---------------------------------------------------------
 // sorted rate:
-// +ve 5   stack: 3/4 -> 4/4
-// +ve 10  stack: 7/9 -> 9/9
-// +ve 100 stack: 50/99 -> 68/99
-// +ve 500 stack: 258/499 -> 269/499
+// +ve 5   stack: 3/4 -> 4/4 -> 4/4
+// +ve 10  stack: 7/9 -> 9/9 -> 9/9
+// +ve 100 stack: 50/99 -> 68/99 -> 62/99
+// +ve 500 stack: 258/499 -> 269/499 -> 267/499
 void	quarter_sort(t_stack *A, t_stack *B)
 {
-	console_log("quarter_sort...");	// debug
+	// console_log("quarter_sort...");	// debug
 	quarter_sort_a(A, B);
 	quarter_sort_b(B, A);
 }
 
 void	quarter_sort_a(t_stack *A, t_stack *B)
 {
-	console_log("quarter_sort_a...");	// debug
+	// console_log("quarter_sort_a...");	// debug
 	size_t	quarter;
 	int		q25;
 
@@ -41,10 +41,6 @@ void	quarter_sort_a(t_stack *A, t_stack *B)
 	{
 		quarter = A->size - (int)(A->size + A->size % 2) / 4;
 		q25 = find_q25(A, -1, -1);
-		// console_log("A->size: %d", A->size);    // debug
-		// console_log("quarter: %d", quarter);    // debug
-		// console_log("q25: %d", q25);    // debug
-		// console_log("q75: %d", find_q75(A, -1, -1));    // debug
 		while (A->size > 5 && A->size > quarter)
 		{
 			if (fast_rotate(A, find_position(A, find_smaller(A, q25))))
@@ -55,14 +51,13 @@ void	quarter_sort_a(t_stack *A, t_stack *B)
 				pb(B, A);
 			}
 		}
-		// print_stack(B, "B");		// debug
 	}
 	sort_five_A(A, B);
 }
 
 void	quarter_sort_b(t_stack *B, t_stack *A)
 {
-	console_log("quarter_sort_b...");	// debug
+	// console_log("quarter_sort_b...");	// debug
 	size_t	quarter;
 	int		q75;
 
@@ -80,7 +75,6 @@ void	quarter_sort_b(t_stack *B, t_stack *A)
 				pa(A, B);
 			}
 		}
-		// print_stack(A, "A");		// debug
 	}
 	while (B->size > 0)
 	{

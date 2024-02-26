@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/26 17:05:56 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 17:39:28 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 // +ve 500 stack: 23052 -> 8620 -> 7857
 void	select_sort(t_stack *A, t_stack *B)
 {
-	console_log("select_sort...");	// debug
+	// console_log("select_sort...");	// debug
 	int	i;
 
 	i = 0;
@@ -47,7 +47,7 @@ void	select_sort(t_stack *A, t_stack *B)
 // +ve 500 stack: 10882
 void	select_sort_half(t_stack *A, t_stack *B)
 {
-	console_log("select_sort_half...");	// debug
+	// console_log("select_sort_half...");	// debug
 	size_t	half;
 
 	half = (A->size + A->size % 2) / 2;
@@ -65,7 +65,7 @@ void	select_sort_half(t_stack *A, t_stack *B)
 // +ve 500 stack: 48995 -> 42965 -> 14666 -> 14535
 void	select_sort_B(t_stack *A, t_stack *B)
 {
-	console_log("select_sort_B...");	// debug
+	// console_log("select_sort_B...");	// debug
 	int i;
 
 	i = 0;
@@ -84,13 +84,13 @@ void	select_sort_B(t_stack *A, t_stack *B)
 // +ve 500 stack: 23695 -> 24969 ->
 // ---------------------------------------------------------
 // quarter_sort + insert_sort
-// +ve 5   stack: 43
-// +ve 10  stack: 82
-// +ve 100 stack: 2398
-// +ve 500 stack: 49448
+// +ve 5   stack: 43 -> 42
+// +ve 10  stack: 82 -> 76
+// +ve 100 stack: 2398 -> 1283
+// +ve 500 stack: 49448 -> 16221
 void	insert_sort(t_stack *A, t_stack *B)
 {
-	console_log("insert_sort...");	// debug
+	// console_log("insert_sort...");	// debug
 	int	i;
 
 	i = 0;
@@ -113,7 +113,7 @@ void	insert_sort(t_stack *A, t_stack *B)
 //
 void	insert_sort1(t_stack *A, t_stack *B)
 {
-	console_log("insert_sort1...");	// debug
+	// console_log("insert_sort1...");	// debug
 	fast_rotate(B, find_position(B, find_max_node(B)->num));
 	pa(A, B);
 	while (B->size > 0)
@@ -133,17 +133,17 @@ void	insert_sort1(t_stack *A, t_stack *B)
 // +ve 500 stack: 65319 ->
 void	bubble_sort(t_stack *A, t_stack *B)
 {
-	console_log("bubble_sort...");	// debug
-	while (!is_sorted(B, -1))
+	// console_log("bubble_sort...");	// debug
+	while (!is_sorted(A, 1))
 	{
-		fast_rotate(B, find_unsorted(B, -1));
-		if (B->head->num == find_min_node(B)->num)
-			rb(B);
-		pa(A, B);
-		fast_rotate(B, find_position(B, find_smaller(B, A->head->num)));
+		fast_rotate(A, find_unsorted(A, 1));
+		if (A->head->num == find_max_node(A)->num)
+			ra(A);
 		pb(B, A);
-	}
-	rot_to_max(B);
-	while (B->size > 0)
+		fast_rotate(A, find_position(A, find_larger(A, A->head->num)));
 		pa(A, B);
+	}
+	rot_to_min(A);
+	while (A->size > 0)
+		pa(A, A);
 }

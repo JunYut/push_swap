@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/26 17:04:44 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 17:55:47 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	main(int argc, char *argv[])
 	t_stack	*A;
 	t_stack	*B;
 	char	**strs;
-	size_t	size;
 	strs = argv;
 	if (argc == 2)
 		strs = ft_split(argv[1], ' ');
@@ -25,52 +24,30 @@ int	main(int argc, char *argv[])
 	input_validation(count_strs(strs), strs);
 	A = parser(count_strs(strs), strs, argc);
 	B = new_stack();
-	console_log("Before:");	// debug
-	console_log("_________________________");		// debug
-	print_stack(A, "A");		// debug
-	console_log("_________________________");		// debug
+	// console_log("Before:");	// debug
+	// console_log("_________________________");		// debug
+	// print_stack(A, "A");		// debug
+	// console_log("_________________________");		// debug
 	if (!is_sorted(A, 1))
 	{
 		// quarter_sort(A, B);
 
-		quarter_sort(A, B); select_sort(A, B);
+		// quarter_sort(A, B); select_sort(A, B);
 
 		// quarter_sort(A, B); insert_sort(A, B);
 
-		// mid_sort(A, B);
+		// quarter_sort(A, B); bubble_sort(A, B);
 
-		// mid_sort_a(A, B);
-
-		// mid_sort(A, B); select_sort(A, B);
-
-		// mid_sort(A, B); insert_sort(A, B);
-
-		// int half = (A->size + A->size % 2) / 2;
-		// mid_sort(A, B);
-		// while (A->size > (size_t)half)
-		// 	pb(B, A);
-		// select_sort(A, B);
-		// select_sort_B(A, B, B->size);
-
-		// mid_sort(A, B);
-		// select_sort_half(A, B);
-		// clean_up(A, B, A->size);
-		// while (B->size > 0)
-		// 	pa(A, B);
-		// rot_to_min(A);
-
-		// mid_sort(A, B); clean_up(A, B, A->size);
-
-		(void)size;
+		select_sort(A, B);
 	}
 	else
 		// console_log("Already sorted");			// debug
-	console_log("\nAfter:");	// debug
-	console_log("_________________________");		// debug
-	print_stack(A, "A");	// debug
+	// console_log("\nAfter:");	// debug
+	// console_log("_________________________");		// debug
+	// print_stack(A, "A");	// debug
 	// print_stack(B, "B");	// debug
-	console_log("_________________________");		// debug
-	sorted_rate(A, 1);
+	// console_log("_________________________");		// debug
+	// sorted_rate(A, 1);	// debug
 	free_stack(A);
 	free_stack(B);
 	if (argc == 2)
