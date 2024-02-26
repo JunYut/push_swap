@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/26 16:21:17 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 16:58:34 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ int	main(int argc, char *argv[])
 	console_log("_________________________");		// debug
 	if (!is_sorted(A, 1))
 	{
-		// quarter_sort(A, B);
+		quarter_sort(A, B);
 
 		// quarter_sort(A, B); select_sort(A, B);
 
-		quarter_sort(A, B); insert_sort(A, B);
+		// quarter_sort(A, B); insert_sort(A, B);
 
 		// mid_sort(A, B);
 
