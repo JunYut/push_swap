@@ -6,13 +6,13 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:50:21 by we                #+#    #+#             */
-/*   Updated: 2024/02/26 15:57:39 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 16:52:58 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-int	find_q75(t_stack *stack, int i, int j)
+int	find_q25(t_stack *stack, int i, int j)
 {
 	t_node	*ptr;
 	t_node	*current;
@@ -42,7 +42,7 @@ int	find_q75(t_stack *stack, int i, int j)
 	return (-2147483648);
 }
 
-int	find_q25(t_stack *stack, int i, int j)
+int	find_q75(t_stack *stack, int i, int j)
 {
 	t_node	*ptr;
 	t_node	*current;
