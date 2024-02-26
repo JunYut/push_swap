@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/26 12:43:14 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 16:22:46 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 // +ve 10  stack: 77 -> 77 -> 76 -> 
 // +ve 100 stack: 1064 -> 1066 -> 1043 -> 
 // +ve 500 stack: 10623 -> 10614 -> 10486 -> 
+//---------------------------------------------------------
+// quarter_sort + select_sort
+// +ve 5   stack: 36
+// +ve 10  stack: 70
+// +ve 100 stack: 1445
+// +ve 500 stack: 23052
 void	select_sort(t_stack *A, t_stack *B)
 {
 	console_log("select_sort...");	// debug
@@ -69,16 +75,19 @@ void	select_sort_B(t_stack *A, t_stack *B)
 		pa(A, B);
 		++i;
 	}
-	while (i-- > 0)
-		pb(B, A);
-	console_log("select_sort_B done");	// debug
 }
 
 // mid_sort + insert_sort_B
 // +ve 5   stack: 48 -> 40 -> 
-// +ve 10  stack: 83 -> 65
+// +ve 10  stack: 83 -> 65 ->
 // +ve 100 stack: 1528 -> 1681 -> 
-// +ve 500 stack: 23695 -> 24969
+// +ve 500 stack: 23695 -> 24969 ->
+// ---------------------------------------------------------
+// quarter_sort + insert_sort
+// +ve 5   stack: 43
+// +ve 10  stack: 82
+// +ve 100 stack: 2398
+// +ve 500 stack: 49448
 void	insert_sort(t_stack *A, t_stack *B)
 {
 	console_log("insert_sort...");	// debug

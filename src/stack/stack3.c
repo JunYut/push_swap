@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:50:21 by we                #+#    #+#             */
-/*   Updated: 2024/02/26 14:16:16 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 15:57:39 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ int	find_q75(t_stack *stack, int i, int j)
 				++l;
 			current = current->next;
 		}
-		if (3 * s == l || 3 * s - 1 == l || 3 * s + 1 == l)
+		// console_log("ptr->num: %d, s: %d, l: %d", ptr->num, s, l);	// debug
+		if (s == 3 * l || s ==  3 * l - 1 || s == 3 * l - 2 || s == 3 * l - 3)
 			return (ptr->num);
 		ptr = ptr->next;
 	}
-	console_log("s: %d, l: %d", s, l);	// debug
 	return (-2147483648);
 }
 
@@ -64,11 +64,11 @@ int	find_q25(t_stack *stack, int i, int j)
 				++l;
 			current = current->next;
 		}
-		if (s == 3 * l || s == 3 * l - 1 || s == 3 * l + 1)
+		// console_log("ptr->num: %d, s: %d, l: %d", ptr->num, s, l);	// debug
+		if (3 * s == l || 3 * s - 1 == l || 3 * s - 2 == l || 3 * s - 3 == l)
 			return (ptr->num);
 		ptr = ptr->next;
 	}
-	console_log("s: %d, l: %d", s, l);	// debug
 	return (-2147483648);
 }
 

@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 16:04:21 by we                #+#    #+#             */
-/*   Updated: 2024/02/26 12:44:03 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 14:28:13 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,6 @@ void	mid_sort_b0(t_stack *B, t_stack *A)
 		}
 		if (B->size == 1)
 			pa(A, B);
-		// insert_sort(A, B);
 	}
 }
 
@@ -133,9 +132,11 @@ void	mid_sort_b(t_stack *B, t_stack *A)
 		if (find_max_node(A)->num == mid)
 		{
 			fast_rotate(A, find_position(A, mid));
-			pb(B, A);
+			pa(B, A);
 		}
 			++i;
+		if (B->size == 1)
+			pa(A, B);
 	}
 	while (i-- > 0)
 		pb(B, A);
