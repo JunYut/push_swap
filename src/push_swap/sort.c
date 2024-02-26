@@ -6,17 +6,17 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/26 01:30:41 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 11:52:19 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// mid_sort + insert_sort
-// +ve 5   stack: 42 -> 42
-// +ve 10  stack: 77 -> 77
-// +ve 100 stack: 1064 -> 1066
-// +ve 500 stack: 10623 -> 10614
+// mid_sort + select_sort
+// +ve 5   stack: 42 -> 42 -> 42
+// +ve 10  stack: 77 -> 77 -> 76
+// +ve 100 stack: 1064 -> 1066 -> 1043
+// +ve 500 stack: 10623 -> 10614 -> 10486
 void	select_sort(t_stack *A, t_stack *B)
 {
 	console_log("select_sort...");	// debug
@@ -105,13 +105,13 @@ void	insert_sort1(t_stack *A, t_stack *B)
 // +ve 10  stack: 99 -> 83 -> 83 -> 83
 // +ve 100 stack: 3081 -> 2261 -> 1196 -> 1155
 // +ve 500 stack: 48995 -> 42965 -> 14666 -> 14535
-void	select_sort_B(t_stack *A, t_stack *B, int chunck)
+void	select_sort_B(t_stack *A, t_stack *B)
 {
 	console_log("select_sort_B...");	// debug
 	int i;
 
 	i = 0;
-	while (chunck-- > 0)
+	while (B->size > 0)
 	{
 		rot_to_max(B);
 		pa(A, B);

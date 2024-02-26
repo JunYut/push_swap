@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 16:04:21 by we                #+#    #+#             */
-/*   Updated: 2024/02/26 01:28:13 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 11:49:25 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,36 +56,36 @@ void	mid_sort_a0(t_stack *A, t_stack *B)
 	}
 }
 
+// mid_sort_a:
+// steps:
+// +ve 5   stack: 63
+// +ve 10  stack: 129
+// +ve 100 stack: 2197
+// +ve 500 stack: 21998
 void	mid_sort_a(t_stack *A, t_stack *B)
 {
 	console_log("mid sort A...");	// debug
 	size_t	half;
 	int		mid;
-	int		chunck;
 
 	while (A->size > 0)
 	{
 		half = (int)(A->size + A->size % 2) / 2;
 		mid = find_mid(A, -1, -1);
-		chunck = 0;
 		while (A->size > half)
 		{
 			if (fast_rotate(A, find_position(A, find_smaller(A, mid)))
 			|| find_min_node(A)->num == mid)
-			{
-				++chunck;
 				pb(B, A);
-			}
 			if (find_min_node(A)->num == mid)
 				fast_rotate(A, find_position(A, mid));
 		}
 		if (A->size == 1)
-		{
-			++chunck;
 			pb(B, A);
-		}
-		select_sort_B(A, B, chunck);
+		select_sort_B(A, B);
 	}
+	while (B->size > 0)
+		pa(A, B);
 }
 
 void	mid_sort_b0(t_stack *B, t_stack *A)
@@ -107,6 +107,8 @@ void	mid_sort_b0(t_stack *B, t_stack *A)
 				fast_rotate(B, find_position(B, mid));
 				pa(A, B);
 			}
+			if (A->head->num > A->head->next->num)
+				sa(A);
 		}
 		if (B->size == 1)
 			pa(A, B);
