@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:04:38 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/26 12:01:42 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 14:16:40 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ long	pop(t_stack *stack);
 void	rotate_up(t_stack *stack);
 void	rotate_down(t_stack *stack);
 
+int		find_q75(t_stack *stack, int i, int j);
+int		find_q25(t_stack *stack, int i, int j);
 int		find_mid(t_stack *stack, int i, int j);
 long	find_larger(t_stack *stack, int target);
 long	find_smaller(t_stack *stack, int target);
