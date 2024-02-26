@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/26 14:30:42 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 20:13:45 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ void	select_sort_B(t_stack *A, t_stack *B);
 void	insert_sort(t_stack *A, t_stack *B);
 void	insert_sort1(t_stack *A, t_stack *B);
 void	bubble_sort(t_stack *A, t_stack *B);
-
-void	compact_sort(t_stack *A, t_stack *B);
 
 void	sort_stack_A(t_stack *A, t_stack *B);
 void	sort_stack_B(t_stack *B, t_stack *A);

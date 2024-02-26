@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:21:18 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/18 17:39:30 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 20:15:27 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 void	sa(t_stack *A)
 {
-	console_log("sa");
+	write(1, "sa\n", 3);
 	swap(A);
 }
 
 void	sb(t_stack *B)
 {
-	console_log("sb");
+	write(1, "sb\n", 3);
 	swap(B);
 }
 
 void	ss(t_stack *A, t_stack *B)
 {
-	console_log("ss");
+	write(1, "ss\n", 3);
 	swap(A);
 	swap(B);
 }

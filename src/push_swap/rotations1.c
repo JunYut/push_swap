@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:22:09 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/22 11:31:04 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 20:15:14 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	rra(t_stack *A)
 {
 	if (A->size < 2)
 		return ;
-	console_log("rra");
+	write(1, "rra\n", 4);
 	rotate_down(A);
 }
 
@@ -24,13 +24,13 @@ void	rrb(t_stack *B)
 {
 	if (B->size < 2)
 		return ;
-	console_log("rrb");
+	write(1, "rrb\n", 4);
 	rotate_down(B);
 }
 
 void	rrr(t_stack *A, t_stack *B)
 {
-	console_log("rrr");
+	write(1, "rrr\n", 4);
 	rotate_down(A);
 	rotate_down(B);
 }
