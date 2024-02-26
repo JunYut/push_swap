@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 14:31:04 by we                #+#    #+#             */
-/*   Updated: 2024/02/26 17:01:12 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 17:06:13 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ void	quarter_sort(t_stack *A, t_stack *B)
 {
 	console_log("quarter_sort...");	// debug
 	quarter_sort_a(A, B);
-	// mid_sort_a0(A, B);
-	// quarter_sort_b(B, A);
-	mid_sort_b0(B, A);
+	quarter_sort_b(B, A);
 }
 
 void	quarter_sort_a(t_stack *A, t_stack *B)
