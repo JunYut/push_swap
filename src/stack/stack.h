@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:04:38 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/24 14:22:48 by we               ###   ########.fr       */
+/*   Updated: 2024/02/26 12:01:42 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,9 @@ int		find_digit(t_stack *stack, int digit);
 int		find_negative(t_stack *stack);
 int		find_position(t_stack *stack, int target);
 size_t	calc_range(t_stack *stack);
+int		find_max(t_node *head, t_node *tail);
 t_node	*find_max_node(t_stack *stack);
+int		find_min(t_node *head, t_node *tail);
 t_node	*find_min_node(t_stack *stack);
 void	print_stack(t_stack *stack, const char *name);
 int		is_empty(t_stack *stack, const char *func);

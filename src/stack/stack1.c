@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack1.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 14:58:22 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/20 13:18:06 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/26 12:04:13 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,42 @@ t_node	*find_min_node(t_stack *stack)
 	{
 		if (curr->num < min->num)
 			min = curr;
+		curr = curr->next;
+	}
+	return (min);
+}
+
+int	find_max(t_node *head, t_node *tail)
+{
+	int		max;
+	t_node	*curr;
+
+	if (head == NULL)
+		return (0);
+	curr = head;
+	max = curr->num;
+	while (curr != tail)
+	{
+		if (curr->num > max)
+			max = curr->num;
+		curr = curr->next;
+	}
+	return (max);
+}
+
+int	find_min(t_node *head, t_node *tail)
+{
+	int		min;
+	t_node	*curr;
+
+	if (head == NULL)
+		return (0);
+	curr = head;
+	min = curr->num;
+	while (curr != tail)
+	{
+		if (curr->num < min)
+			min = curr->num;
 		curr = curr->next;
 	}
 	return (min);
