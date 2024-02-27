@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:51:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/01/30 14:17:41 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/27 10:56:26 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	validator(char *argv[], int (*checker)(const char *num), int argc)
 	{
 		if (!(*checker)(argv[i]))
 		{
-			console_log("Error");
+			write(1, "Error\n", 6);
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -58,7 +58,7 @@ void	duplicate_checker(char *argv[], int argc)
 		{
 			if (same_str(argv[i], argv[j]))
 			{
-				console_log("Error");
+				write(1, "Error\n", 6);
 				exit(EXIT_FAILURE);
 			}
 		}
