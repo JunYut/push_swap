@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:51:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/27 11:47:56 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/27 13:13:19 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,31 @@ void	duplicate_checker(char *argv[], int argc)
 				exit(EXIT_FAILURE);
 			}
 		}
+	}
+}
+
+void	dup_in_stack(t_stack *stack)
+{
+	t_node	*ptr;
+	t_node	*curr;
+	int	i;
+	int	j;
+
+	ptr = stack->head;
+	i = -1;
+	while (++i < (int)(stack->size))
+	{
+		curr = stack->head;
+		j = -1;
+		while (++j < (int)(stack->size))
+		{
+			if (ptr->num == curr->num)
+			{
+				write(2, "Error\n", 6);
+				exit(EXIT_FAILURE);
+			}
+			curr = curr->next;
+		}
+		ptr = ptr->next;
 	}
 }
