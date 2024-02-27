@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   B_sort.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:46:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/06 15:22:20 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/27 20:09:21 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ console_log("sort_stack_B...");		// debug
 	if (B->size == 2)
 		sb(B);
 	if (B->size == 3)
-		sort_three_B(B);
+		sort_three_b(B);
 	if (B->size == 5)
-		sort_five_B(B, A);
+		sort_five_b(B, A);
 	if (B->size > 100)
 		sort_hundred_B(B, A);
 }
 
-void	sort_three_B(t_stack *B)
+void	sort_three_b(t_stack *B)
 {
 console_log("sort_three_B...");		// debug
 	if (B->head->num == find_min_node(B)->num)
@@ -38,7 +38,7 @@ console_log("sort_three_B...");		// debug
 		sa(B);
 }
 
-void	sort_five_B(t_stack *B, t_stack *A)
+void	sort_five_b(t_stack *B, t_stack *A)
 {
 console_log("sort_five_B...");		// debug
 	int	popped;
@@ -51,7 +51,7 @@ console_log("sort_five_B...");		// debug
 		pa(A, B);
 		++popped;
 	}
-	sort_three_B(B);
+	sort_three_b(B);
 	i = -1;
 	while (++i < popped)
 		pb(B, A);

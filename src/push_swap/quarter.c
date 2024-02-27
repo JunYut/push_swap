@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 14:31:04 by we                #+#    #+#             */
-/*   Updated: 2024/02/26 17:40:34 by we               ###   ########.fr       */
+/*   Updated: 2024/02/27 20:11:46 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	quarter_sort_a(t_stack *A, t_stack *B)
 			}
 		}
 	}
-	sort_five_A(A, B);
+	sort_five_a(A, B);
 }
 
 void	quarter_sort_b(t_stack *B, t_stack *A)

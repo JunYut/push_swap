@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/27 11:02:27 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/27 20:09:21 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 # include <stdio.h>
 
 typedef struct s_node t_node;
+
+void	sort(t_stack *A, t_stack *B);
+void	sort_three_a(t_stack *A);
+void	sort_five_a(t_stack *A, t_stack *B);
+void	sort_three_b(t_stack *B);
+void	sort_five_b(t_stack *B, t_stack *A);
 
 void	mid_sort(t_stack *A, t_stack *B);
 void	mid_sort_a0(t_stack *A, t_stack *B);
@@ -46,11 +52,7 @@ int		is_sorted(t_stack *A, int direction);
 int		is_sorted1(t_node *head, t_node *tail, int direction);
 int		sorted_rate(t_stack *A, int direction);
 
-void	sort_three_A(t_stack *A);
-void	sort_five_A(t_stack *A, t_stack *B);
 void	sort_hundred_A(t_stack *A, t_stack *B);
-void	sort_three_B(t_stack *B);
-void	sort_five_B(t_stack *B, t_stack *A);
 void	sort_hundred_B(t_stack *B, t_stack *A);
 
 void	pop_swap(int pos, t_stack *A, t_stack *B);

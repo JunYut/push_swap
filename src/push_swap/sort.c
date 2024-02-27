@@ -5,145 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/26 10:57:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/26 17:39:28 by we               ###   ########.fr       */
+/*   Created: 2024/02/27 20:05:24 by we                #+#    #+#             */
+/*   Updated: 2024/02/27 20:10:22 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// mid_sort + select_sort
-// +ve 5   stack: 42 -> 42 -> 42 -> 
-// +ve 10  stack: 77 -> 77 -> 76 -> 
-// +ve 100 stack: 1064 -> 1066 -> 1043 -> 
-// +ve 500 stack: 10623 -> 10614 -> 10486 -> 
-//---------------------------------------------------------
-// quarter_sort + select_sort
-// +ve 5   stack: 36 -> 36 -> 36
-// +ve 10  stack: 70 -> 70 -> 70
-// +ve 100 stack: 1445 -> 1075 -> 1063
-// +ve 500 stack: 23052 -> 8620 -> 7857
-void	select_sort(t_stack *A, t_stack *B)
+void	sort(t_stack *A, t_stack *B)
 {
-	// console_log("select_sort...");	// debug
-	int	i;
-
-	i = 0;
-	while (A->size > 5)
+	if (A->size == 2)
+		sa(A);
+	if (A->size == 3)
+		sort_three_a(A);
+	if (A->size <= 5)
+		sort_five_a(A, B);
+	else
 	{
-		rot_to_min(A);
-		pb(B, A);
-		++i;
+		quarter_sort(A, B);
+		select_sort(A, B);
 	}
-	sort_five_A(A, B);
-	while (i-- > 0)
-		pa(A, B);
-}
-
-// mid_sort + select_sort_half + clean_up + rot_to_min
-// +ve 5   stack: 50
-// +ve 10  stack: 85
-// +ve 100 stack: 1219
-// +ve 500 stack: 10882
-void	select_sort_half(t_stack *A, t_stack *B)
-{
-	// console_log("select_sort_half...");	// debug
-	size_t	half;
-
-	half = (A->size + A->size % 2) / 2;
-	while (A->size > half)
-	{
-		rot_to_min(A);
-		pb(B, A);
-	}
-}
-
-// mid_sort_A + insert_sort_B
-// +ve 5   stack: 58 -> 48 -> 48 -> 48
-// +ve 10  stack: 99 -> 83 -> 83 -> 83
-// +ve 100 stack: 3081 -> 2261 -> 1196 -> 1155
-// +ve 500 stack: 48995 -> 42965 -> 14666 -> 14535
-void	select_sort_B(t_stack *A, t_stack *B)
-{
-	// console_log("select_sort_B...");	// debug
-	int i;
-
-	i = 0;
-	while (B->size > 0)
-	{
-		rot_to_max(B);
-		pa(A, B);
-		++i;
-	}
-}
-
-// mid_sort + insert_sort_B
-// +ve 5   stack: 48 -> 40 -> 
-// +ve 10  stack: 83 -> 65 ->
-// +ve 100 stack: 1528 -> 1681 -> 
-// +ve 500 stack: 23695 -> 24969 ->
-// ---------------------------------------------------------
-// quarter_sort + insert_sort
-// +ve 5   stack: 43 -> 42
-// +ve 10  stack: 82 -> 76
-// +ve 100 stack: 2398 -> 1283
-// +ve 500 stack: 49448 -> 16221
-void	insert_sort(t_stack *A, t_stack *B)
-{
-	// console_log("insert_sort...");	// debug
-	int	i;
-
-	i = 0;
-	if (B->size == 0)
-	{
-		pb(B, A);
-		++i;
-	}
-	while (A->size > 0)
-	{
-		fast_rotate(B, find_position(B, find_smaller(B, A->head->num)));
-		pb(B, A);
-		rot_to_max(B);
-		++i;
-	}
-	while (i-- > 0)
-		pa(A, B);
-}
-
-//
-void	insert_sort1(t_stack *A, t_stack *B)
-{
-	// console_log("insert_sort1...");	// debug
-	fast_rotate(B, find_position(B, find_max_node(B)->num));
-	pa(A, B);
-	while (B->size > 0)
-	{
-		if (B->head->num < B->head->next->num)
-			sb(B);
-		fast_rotate(A, find_position(A, find_larger(A, B->head->num)));
-		pa(A, B);
-		rot_to_min(A);
-	}
-}
-
-// mid_sort + bubble_sort
-// +ve 5   stack: 38 -> 
-// +ve 10  stack: 63 -> 
-// +ve 100 stack: 2638 -> 
-// +ve 500 stack: 65319 ->
-void	bubble_sort(t_stack *A, t_stack *B)
-{
-	// console_log("bubble_sort...");	// debug
-	while (!is_sorted(A, 1))
-	{
-		fast_rotate(A, find_unsorted(A, 1));
-		if (A->head->num == find_max_node(A)->num)
-			ra(A);
-		pb(B, A);
-		fast_rotate(A, find_position(A, find_larger(A, A->head->num)));
-		pa(A, B);
-	}
-	rot_to_min(A);
-	while (A->size > 0)
-		pa(A, A);
 }

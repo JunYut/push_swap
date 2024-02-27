@@ -1,21 +1,944 @@
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+pb
+ra
+ra
+pb
+ra
+pb
+pb
+ra
+ra
+ra
+ra
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+pb
+pb
+pb
+pb
+ra
+ra
+ra
+ra
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+ra
+pb
+pb
+ra
+pb
+pb
+ra
+ra
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+ra
+ra
+ra
+pb
+pb
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+pb
+ra
+ra
+pb
+ra
+pb
+pb
+ra
+pb
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+pb
+ra
+ra
+ra
+pb
+ra
+pb
+ra
+ra
+pb
+pb
+ra
+pb
+ra
+pb
+ra
+ra
+ra
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+pb
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+pb
+pb
+pb
+ra
+ra
+pb
+ra
+pb
+ra
+pb
+ra
+ra
+pb
+pb
+ra
+pb
+ra
+pb
+pb
+pb
+ra
+pb
+ra
+pb
+ra
+pb
+pb
+rra
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+ra
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+ra
+pa
+ra
+ra
+ra
+pa
+ra
+ra
+pa
+pa
+ra
+pa
+ra
+pa
+ra
+pa
+ra
+ra
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+pa
+ra
+ra
+pa
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+ra
+pa
+pa
+pa
+pa
+pa
+ra
+pa
+pa
+pa
+ra
+pa
+pa
+ra
+ra
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+ra
+ra
+pa
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+ra
+pa
+pa
+pa
+pa
+ra
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+pa
+ra
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+pa
+ra
+pa
+ra
+ra
+ra
+ra
+pa
+pa
+ra
+ra
+ra
+ra
+ra
+pa
+pa
+ra
+pa
+pa
+ra
+pa
+pa
+pa
+pa
+rra
+pa
+pa
+pa
+pb
+pb
+pb
+ra
+pb
+pb
+rra
+pb
+ra
+pb
+rra
+pb
+ra
+pb
+rra
+pb
+pb
+pb
+pb
+ra
+pb
+rra
+pb
+ra
+pb
+ra
+ra
+ra
+pb
+rra
+pb
+rra
+pb
+rra
+rra
+pb
+pb
+ra
+ra
+ra
+ra
+pb
 ra
 ra
 pb
 rra
 rra
+rra
+pb
+ra
 pb
 rra
-sa
-pa
-pa
+pb
+rra
+pb
+rra
+pb
+rra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+rra
+rra
+rra
+pb
+ra
+ra
+ra
+pb
+rra
+rra
+rra
+rra
+pb
+ra
 pb
 pb
+rra
+rra
+pb
+pb
+rra
+rra
+pb
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+rra
+rra
+rra
+pb
+ra
+ra
+pb
+rra
+pb
+rra
+pb
+rra
+rra
+rra
+pb
+rra
+rra
+pb
+rra
+rra
+pb
+rra
+pb
+pb
+ra
+pb
+rra
+pb
+ra
+ra
+pb
+pb
+pb
+rra
+pb
+ra
+pb
+pb
+rra
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+rra
+rra
+pb
+rra
+pb
+rra
+pb
+rra
+pb
+ra
+ra
+pb
+rra
+rra
+rra
+pb
+rra
+pb
+ra
+pb
+rra
+pb
+ra
+ra
+ra
+pb
+rra
+rra
+pb
+ra
+ra
+pb
+pb
+rra
+rra
+pb
+rra
+pb
+pb
+ra
+ra
+ra
+pb
+pb
+rra
+pb
+rra
+rra
+pb
+ra
+ra
+ra
+pb
+rra
+rra
+rra
+pb
+ra
+ra
+pb
+ra
+ra
+pb
+rra
+rra
+rra
+pb
+rra
+pb
+pb
+ra
+pb
+rra
+pb
+ra
+ra
+ra
+pb
+rra
+rra
+rra
+pb
+pb
+ra
+pb
+rra
+pb
+pb
+pb
 pa
 pa
-A [size: 5, range: 4]
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+A [size: 100, range: 99]
+element: 0 | digits: 1
 element: 1 | digits: 1
 element: 2 | digits: 1
 element: 3 | digits: 1
 element: 4 | digits: 1
 element: 5 | digits: 1
+element: 6 | digits: 1
+element: 7 | digits: 1
+element: 8 | digits: 1
+element: 9 | digits: 1
+element: 10 | digits: 2
+element: 11 | digits: 2
+element: 12 | digits: 2
+element: 13 | digits: 2
+element: 14 | digits: 2
+element: 15 | digits: 2
+element: 16 | digits: 2
+element: 17 | digits: 2
+element: 18 | digits: 2
+element: 19 | digits: 2
+element: 20 | digits: 2
+element: 21 | digits: 2
+element: 22 | digits: 2
+element: 23 | digits: 2
+element: 24 | digits: 2
+element: 25 | digits: 2
+element: 26 | digits: 2
+element: 27 | digits: 2
+element: 28 | digits: 2
+element: 29 | digits: 2
+element: 30 | digits: 2
+element: 31 | digits: 2
+element: 32 | digits: 2
+element: 33 | digits: 2
+element: 34 | digits: 2
+element: 35 | digits: 2
+element: 36 | digits: 2
+element: 37 | digits: 2
+element: 38 | digits: 2
+element: 39 | digits: 2
+element: 40 | digits: 2
+element: 41 | digits: 2
+element: 42 | digits: 2
+element: 43 | digits: 2
+element: 44 | digits: 2
+element: 45 | digits: 2
+element: 46 | digits: 2
+element: 47 | digits: 2
+element: 48 | digits: 2
+element: 49 | digits: 2
+element: 50 | digits: 2
+element: 51 | digits: 2
+element: 52 | digits: 2
+element: 53 | digits: 2
+element: 54 | digits: 2
+element: 55 | digits: 2
+element: 56 | digits: 2
+element: 57 | digits: 2
+element: 58 | digits: 2
+element: 59 | digits: 2
+element: 60 | digits: 2
+element: 61 | digits: 2
+element: 62 | digits: 2
+element: 63 | digits: 2
+element: 64 | digits: 2
+element: 65 | digits: 2
+element: 66 | digits: 2
+element: 67 | digits: 2
+element: 68 | digits: 2
+element: 69 | digits: 2
+element: 70 | digits: 2
+element: 71 | digits: 2
+element: 72 | digits: 2
+element: 73 | digits: 2
+element: 74 | digits: 2
+element: 75 | digits: 2
+element: 76 | digits: 2
+element: 77 | digits: 2
+element: 78 | digits: 2
+element: 79 | digits: 2
+element: 80 | digits: 2
+element: 81 | digits: 2
+element: 82 | digits: 2
+element: 83 | digits: 2
+element: 84 | digits: 2
+element: 85 | digits: 2
+element: 86 | digits: 2
+element: 87 | digits: 2
+element: 88 | digits: 2
+element: 89 | digits: 2
+element: 90 | digits: 2
+element: 91 | digits: 2
+element: 92 | digits: 2
+element: 93 | digits: 2
+element: 94 | digits: 2
+element: 95 | digits: 2
+element: 96 | digits: 2
+element: 97 | digits: 2
+element: 98 | digits: 2
+element: 99 | digits: 2
 

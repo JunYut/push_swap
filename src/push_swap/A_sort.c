@@ -6,7 +6,7 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:33:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/16 12:32:46 by we               ###   ########.fr       */
+/*   Updated: 2024/02/27 20:08:33 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ console_log("sort_stack_A...");		// debug
 	if (A->size == 2)
 		sa(A);
 	if (A->size == 3)
-		sort_three_A(A);
+		sort_three_a(A);
 	if (A->size == 5)
-		sort_five_A(A, B);
+		sort_five_a(A, B);
 	if (A->size > 100)
 		sort_hundred_A(A, B);
 }
 
-void	sort_three_A(t_stack *A)
+void	sort_three_a(t_stack *A)
 {
 	if (A->head->num == find_max_node(A)->num)
 		ra(A);
@@ -37,7 +37,7 @@ void	sort_three_A(t_stack *A)
 		sa(A);
 }
 
-void	sort_five_A(t_stack *A, t_stack *B)
+void	sort_five_a(t_stack *A, t_stack *B)
 {
 	int	popped;
 	int	i;
@@ -49,7 +49,7 @@ void	sort_five_A(t_stack *A, t_stack *B)
 		pb(B, A);
 		++popped;
 	}
-	sort_three_A(A);
+	sort_three_a(A);
 	i = -1;
 	while (++i < popped)
 		pa(A, B);
