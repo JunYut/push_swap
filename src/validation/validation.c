@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:51:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/27 13:13:19 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/27 13:28:03 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,11 @@
 */
 void	input_validation(int argc, char *argv[]) // refactor this function
 {
+	// printf("debug0\n");	// debug
 	validator(argv, isnum, argc);
+	// printf("debug1\n");	// debug
 	validator(argv, is_int, argc);
+	// printf("debug2\n");	// debug
 	duplicate_checker(argv, argc);
 }
 
@@ -74,9 +77,9 @@ void	dup_in_stack(t_stack *stack)
 	i = -1;
 	while (++i < (int)(stack->size))
 	{
-		curr = stack->head;
+		curr = ptr->next;
 		j = -1;
-		while (++j < (int)(stack->size))
+		while (++j < (int)(stack->size) - 1)
 		{
 			if (ptr->num == curr->num)
 			{
