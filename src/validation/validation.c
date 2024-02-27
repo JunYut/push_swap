@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:51:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/27 10:56:26 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/27 11:42:28 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@
 */
 void	input_validation(int argc, char *argv[]) // refactor this function
 {
-	if (argc == 1)
-		exit(EXIT_FAILURE);
 	validator(argv, isnum, argc);
 	validator(argv, is_int, argc);
 	duplicate_checker(argv, argc);
@@ -34,7 +32,7 @@ void	validator(char *argv[], int (*checker)(const char *num), int argc)
 {
 	int	i;
 
-	i = 0;
+	i = -1;
 	while (++i < argc)
 	{
 		if (!(*checker)(argv[i]))
