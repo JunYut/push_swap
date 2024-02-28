@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/27 20:09:21 by we               ###   ########.fr       */
+/*   Updated: 2024/02/28 10:37:00 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,11 @@ void	sort_five_a(t_stack *A, t_stack *B);
 void	sort_three_b(t_stack *B);
 void	sort_five_b(t_stack *B, t_stack *A);
 
-void	mid_sort(t_stack *A, t_stack *B);
-void	mid_sort_a0(t_stack *A, t_stack *B);
-void	mid_sort_a(t_stack *A, t_stack *B);
-void	mid_sort_b0(t_stack *B, t_stack *A);
-void	mid_sort_b(t_stack *B, t_stack *A);
-void	clean_up(t_stack *A, t_stack *B, int half);
-
 void	quarter_sort(t_stack *A, t_stack *B);
 void	quarter_sort_a(t_stack *A, t_stack *B);
 void	quarter_sort_b(t_stack *B, t_stack *A);
 
 void	select_sort(t_stack *A, t_stack *B);
-void	select_sort_half(t_stack *A, t_stack *B);
-void	select_sort_B(t_stack *A, t_stack *B);
-void	insert_sort(t_stack *A, t_stack *B);
-void	insert_sort1(t_stack *A, t_stack *B);
-void	bubble_sort(t_stack *A, t_stack *B);
 
 void	sort_stack_A(t_stack *A, t_stack *B);
 void	sort_stack_B(t_stack *B, t_stack *A);
