@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:29:26 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/28 12:54:47 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/28 14:50:22 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,25 +35,6 @@ int	is_sorted(t_stack *A, int direction)
 		else if (direction == 1 && current->num > current->next->num)
 			return (0);
 		current = current->next;
-	}
-	return (1);
-}
-
-//
-int	is_sorted1(t_node *head, t_node *tail, int direction)
-{
-	t_node	*curr;
-
-	if (head == tail)
-		return (1);
-	curr = head;
-	while (curr != tail)
-	{
-		if (direction == -1 && curr->num < curr->next->num)
-			return (0);
-		else if (direction == 1 && curr->num > curr->next->num)
-			return (0);
-		curr = curr->next;
 	}
 	return (1);
 }
