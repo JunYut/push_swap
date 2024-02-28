@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   B_sort.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:46:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/27 20:09:21 by we               ###   ########.fr       */
+/*   Updated: 2024/02/28 11:06:14 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ console_log("sort_five_B...");		// debug
 	popped = 0;
 	while (B->size > 3)
 	{
-		rot_to_max(B);
+		rot_to_max_b(B);
 		pa(A, B);
 		++popped;
 	}

@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 10:33:43 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/28 10:43:53 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/28 11:01:26 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	select_sort(t_stack *A, t_stack *B)
 	i = 0;
 	while (A->size > 5)
 	{
-		rot_to_min(A);
+		rot_to_min_a(A);
 		pb(B, A);
 		++i;
 	}

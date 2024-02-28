@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   A_sort.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:33:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/27 20:08:33 by we               ###   ########.fr       */
+/*   Updated: 2024/02/28 11:01:26 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	sort_five_a(t_stack *A, t_stack *B)
 	popped = 0;
 	while (A->size > 3)
 	{
-		rot_to_min(A);
+		rot_to_min_a(A);
 		pb(B, A);
 		++popped;
 	}

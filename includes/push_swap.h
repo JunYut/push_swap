@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:51:39 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/28 10:37:00 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/28 11:08:26 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,12 @@ void	sort_hundred_B(t_stack *B, t_stack *A);
 void	pop_swap(int pos, t_stack *A, t_stack *B);
 void	rotate_swap(int dist, t_stack *stack);
 
-void	rot_to_max(t_stack *stack);
-void	rot_to_min(t_stack *stack);
-int		rot_to_negatives(t_stack *stack);
-int		fast_rotate(t_stack *stack, int pos);
+void	rot_to_max_a(t_stack *A);
+void	rot_to_max_b(t_stack *B);
+void	rot_to_min_a(t_stack *A);
+void	rot_to_min_b(t_stack *B);
+int		fast_rotate_a(t_stack *A, int pos);
+int		fast_rotate_b(t_stack *B, int pos);
 
 void    sa(t_stack *A);
 void    sb(t_stack *B);
