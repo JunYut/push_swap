@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 14:31:04 by we                #+#    #+#             */
-/*   Updated: 2024/02/28 11:05:59 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/28 12:53:56 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,12 @@
 // +ve 500 stack: 258/499 -> 269/499 -> 267/499
 void	quarter_sort(t_stack *A, t_stack *B)
 {
-	// console_log("quarter_sort...");	// debug
 	quarter_sort_a(A, B);
 	quarter_sort_b(B, A);
 }
 
 void	quarter_sort_a(t_stack *A, t_stack *B)
 {
-	// console_log("quarter_sort_a...");	// debug
 	size_t	quarter;
 	int		q25;
 
@@ -57,7 +55,6 @@ void	quarter_sort_a(t_stack *A, t_stack *B)
 
 void	quarter_sort_b(t_stack *B, t_stack *A)
 {
-	// console_log("quarter_sort_b...");	// debug
 	size_t	quarter;
 	int		q75;
 

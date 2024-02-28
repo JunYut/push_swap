@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/28 10:46:31 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/28 12:50:29 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,8 @@ int	main(int argc, char *argv[])
 	A = parser(count_strs(strs), strs);
 	dup_in_stack(A);
 	B = new_stack();
-	// console_log("Before:");	// debug
-	// console_log("_________________________");		// debug
-	// print_stack(A, "A");		// debug1
-	// console_log("_________________________");		// debug
 	if (!is_sorted(A, 1))
 		sort(A, B);
-	// console_log("\nAfter:");	// debug
-	// console_log("_________________________");		// debug
-	// print_stack(A, "A");	// debug1
-	// console_log("_________________________");		// debug
-	// sorted_rate(A, 1);	// debug
 	free_stack(A);
 	free_stack(B);
 	if (argc == 2)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack3.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:50:21 by we                #+#    #+#             */
-/*   Updated: 2024/02/26 16:52:58 by we               ###   ########.fr       */
+/*   Updated: 2024/02/28 12:56:22 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,7 @@ int	find_q25(t_stack *stack, int i, int j)
 				++l;
 			current = current->next;
 		}
-		// console_log("ptr->num: %d, s: %d, l: %d", ptr->num, s, l);	// debug
-		if (s == 3 * l || s ==  3 * l - 1 || s == 3 * l - 2 || s == 3 * l - 3)
+		if (s == 3 * l || s == 3 * l - 1 || s == 3 * l - 2 || s == 3 * l - 3)
 			return (ptr->num);
 		ptr = ptr->next;
 	}
@@ -64,7 +63,6 @@ int	find_q75(t_stack *stack, int i, int j)
 				++l;
 			current = current->next;
 		}
-		// console_log("ptr->num: %d, s: %d, l: %d", ptr->num, s, l);	// debug
 		if (3 * s == l || 3 * s - 1 == l || 3 * s - 2 == l || 3 * s - 3 == l)
 			return (ptr->num);
 		ptr = ptr->next;

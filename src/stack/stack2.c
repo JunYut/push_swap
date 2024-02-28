@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 09:38:59 by we                #+#    #+#             */
-/*   Updated: 2024/02/26 00:52:55 by we               ###   ########.fr       */
+/*   Updated: 2024/02/28 12:55:39 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ int	find_unsorted(t_stack *stack, int direction)
 	i = -1;
 	while (++i < (int)(stack->size - 1))
 	{
-			if (direction == 1 && (curr == find_max_node(stack)
-			&& curr->next == find_min_node(stack)))
-				return (-1);
-			if (direction == 1 && curr->num > curr->next->num)
-				return (pos);
-			if (direction == -1 && (curr == find_min_node(stack)
-			&& curr->next == find_max_node(stack)))
-				return (-1);
-			if (direction == -1 && curr->num < curr->next->num)
-				return (pos);
+		if (direction == 1 && (curr == find_max_node(stack)
+				&& curr->next == find_min_node(stack)))
+			return (-1);
+		if (direction == 1 && curr->num > curr->next->num)
+			return (pos);
+		if (direction == -1 && (curr == find_min_node(stack)
+				&& curr->next == find_max_node(stack)))
+			return (-1);
+		if (direction == -1 && curr->num < curr->next->num)
+			return (pos);
 		curr = curr->next;
 		++pos;
 	}

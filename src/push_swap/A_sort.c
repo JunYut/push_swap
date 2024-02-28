@@ -6,26 +6,11 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:33:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/28 11:01:26 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/28 12:52:27 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-
-void	sort_stack_A(t_stack *A, t_stack *B)
-{
-console_log("sort_stack_A...");		// debug
-	if (is_sorted(A, -1))
-		return ;
-	if (A->size == 2)
-		sa(A);
-	if (A->size == 3)
-		sort_three_a(A);
-	if (A->size == 5)
-		sort_five_a(A, B);
-	if (A->size > 100)
-		sort_hundred_A(A, B);
-}
 
 void	sort_three_a(t_stack *A)
 {
@@ -53,11 +38,4 @@ void	sort_five_a(t_stack *A, t_stack *B)
 	i = -1;
 	while (++i < popped)
 		pa(A, B);
-}
-
-void	sort_hundred_A(t_stack *A, t_stack *B)
-{
-console_log("sort_hundred_A...");		// debug
-	(void)A;
-	(void)B;
 }

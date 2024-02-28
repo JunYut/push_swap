@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:51:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/27 14:46:12 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/28 12:57:09 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ void	dup_in_stack(t_stack *stack)
 {
 	t_node	*ptr;
 	t_node	*curr;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	ptr = stack->head;
 	i = -1;
