@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 14:19:57 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/20 14:31:28 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/28 12:51:05 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	absolute(int num)
 	if (num < 0)
 		return (num * -1);
 	return (num);
-
 }
 
 int	count_digits(long num)

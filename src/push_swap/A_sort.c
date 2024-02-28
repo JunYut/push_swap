@@ -3,29 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   A_sort.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:33:11 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/27 20:08:33 by we               ###   ########.fr       */
+/*   Updated: 2024/02/28 12:52:27 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-
-void	sort_stack_A(t_stack *A, t_stack *B)
-{
-console_log("sort_stack_A...");		// debug
-	if (is_sorted(A, -1))
-		return ;
-	if (A->size == 2)
-		sa(A);
-	if (A->size == 3)
-		sort_three_a(A);
-	if (A->size == 5)
-		sort_five_a(A, B);
-	if (A->size > 100)
-		sort_hundred_A(A, B);
-}
 
 void	sort_three_a(t_stack *A)
 {
@@ -45,7 +30,7 @@ void	sort_five_a(t_stack *A, t_stack *B)
 	popped = 0;
 	while (A->size > 3)
 	{
-		rot_to_min(A);
+		rot_to_min_a(A);
 		pb(B, A);
 		++popped;
 	}
@@ -53,11 +38,4 @@ void	sort_five_a(t_stack *A, t_stack *B)
 	i = -1;
 	while (++i < popped)
 		pa(A, B);
-}
-
-void	sort_hundred_A(t_stack *A, t_stack *B)
-{
-console_log("sort_hundred_A...");		// debug
-	(void)A;
-	(void)B;
 }

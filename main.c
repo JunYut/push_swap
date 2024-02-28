@@ -6,7 +6,7 @@
 /*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:37 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/28 10:46:31 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/28 14:00:19 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	main(int argc, char *argv[])
 {
-	t_stack	*A;
-	t_stack	*B;
+	t_stack	*a;
+	t_stack	*b;
 	char	**strs;
 
 	strs = argv + 1;
@@ -26,22 +26,13 @@ int	main(int argc, char *argv[])
 		strs = ft_split(argv[1], ' ');
 	}
 	input_validation(count_strs(strs), strs);
-	A = parser(count_strs(strs), strs);
-	dup_in_stack(A);
-	B = new_stack();
-	// console_log("Before:");	// debug
-	// console_log("_________________________");		// debug
-	// print_stack(A, "A");		// debug1
-	// console_log("_________________________");		// debug
-	if (!is_sorted(A, 1))
-		sort(A, B);
-	// console_log("\nAfter:");	// debug
-	// console_log("_________________________");		// debug
-	// print_stack(A, "A");	// debug1
-	// console_log("_________________________");		// debug
-	// sorted_rate(A, 1);	// debug
-	free_stack(A);
-	free_stack(B);
+	a = parser(count_strs(strs), strs);
+	dup_in_stack(a);
+	b = new_stack();
+	if (!is_sorted(a, 1))
+		sort(a, b);
+	free_stack(a);
+	free_stack(b);
 	if (argc == 2)
 		free_strs(&strs);
 	return (0);

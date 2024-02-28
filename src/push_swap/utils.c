@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 10:29:26 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/23 16:31:48 by we               ###   ########.fr       */
+/*   Updated: 2024/02/28 12:54:47 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	is_sorted(t_stack *A, int direction)
 //
 int	is_sorted1(t_node *head, t_node *tail, int direction)
 {
-	t_node *curr;
+	t_node	*curr;
 
 	if (head == tail)
 		return (1);
@@ -76,6 +76,5 @@ int	sorted_rate(t_stack *A, int direction)
 			--rate;
 		curr = curr->next;
 	}
-	console_log("sorted rate: %d/%d", rate, (int)(A->size) - 1);	// debug
 	return (rate);
 }

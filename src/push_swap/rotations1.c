@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotations1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:22:09 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/26 20:15:14 by we               ###   ########.fr       */
+/*   Updated: 2024/02/28 10:57:01 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,26 +37,52 @@ void	rrr(t_stack *A, t_stack *B)
 
 /**
  * @brief A function that takes a position to determine which direction to
- * 		  rotate the stack
+ * 		  rotate stack A
  *
- * @param stack the stack to rotate
+ * @param A stack to rotate
  * @param pos the position to rotate to
  * @return int 1 if the rotation was successful, 0 if the position is invalid
  */
-int	fast_rotate(t_stack *stack, int pos)
+int	fast_rotate_a(t_stack *A, int pos)
 {
 	int	i;
 
-	if (pos < 0 || pos >= (int)stack->size)
+	if (pos < 0 || pos >= (int)A->size)
 		return (0);
 	if (pos == 0)
 		return (1);
 	i = -1;
-	if (pos < (int)(stack->size + stack->size % 2) / 2)
+	if (pos < (int)(A->size + A->size % 2) / 2)
 		while (++i < pos)
-			ra(stack);
+			ra(A);
 	else
-		while (++i < (int)stack->size - pos)
-			rra(stack);
+		while (++i < (int)A->size - pos)
+			rra(A);
+	return (1);
+}
+
+/**
+ * @brief A function that takes a position to determine which direction to
+ * 		  rotate stack B
+ *
+ * @param B stack to rotate
+ * @param pos the position to rotate to
+ * @return int 1 if the rotation was successful, 0 if the position is invalid
+ */
+int	fast_rotate_b(t_stack *B, int pos)
+{
+	int	i;
+
+	if (pos < 0 || pos >= (int)B->size)
+		return (0);
+	if (pos == 0)
+		return (1);
+	i = -1;
+	if (pos < (int)(B->size + B->size % 2) / 2)
+		while (++i < pos)
+			rb(B);
+	else
+		while (++i < (int)B->size - pos)
+			rrb(B);
 	return (1);
 }

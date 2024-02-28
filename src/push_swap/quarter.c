@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   quarter.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 14:31:04 by we                #+#    #+#             */
-/*   Updated: 2024/02/27 20:11:46 by we               ###   ########.fr       */
+/*   Updated: 2024/02/28 12:53:56 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,12 @@
 // +ve 500 stack: 258/499 -> 269/499 -> 267/499
 void	quarter_sort(t_stack *A, t_stack *B)
 {
-	// console_log("quarter_sort...");	// debug
 	quarter_sort_a(A, B);
 	quarter_sort_b(B, A);
 }
 
 void	quarter_sort_a(t_stack *A, t_stack *B)
 {
-	// console_log("quarter_sort_a...");	// debug
 	size_t	quarter;
 	int		q25;
 
@@ -43,11 +41,11 @@ void	quarter_sort_a(t_stack *A, t_stack *B)
 		q25 = find_q25(A, -1, -1);
 		while (A->size > 5 && A->size > quarter)
 		{
-			if (fast_rotate(A, find_position(A, find_smaller(A, q25))))
+			if (fast_rotate_a(A, find_position(A, find_smaller(A, q25))))
 				pb(B, A);
 			if (find_min_node(A)->num == q25)
 			{
-				fast_rotate(A, find_position(A, q25));
+				fast_rotate_a(A, find_position(A, q25));
 				pb(B, A);
 			}
 		}
@@ -57,7 +55,6 @@ void	quarter_sort_a(t_stack *A, t_stack *B)
 
 void	quarter_sort_b(t_stack *B, t_stack *A)
 {
-	// console_log("quarter_sort_b...");	// debug
 	size_t	quarter;
 	int		q75;
 
@@ -67,18 +64,18 @@ void	quarter_sort_b(t_stack *B, t_stack *A)
 		q75 = find_q75(B, -1, -1);
 		while (B->size > 3 && B->size > quarter)
 		{
-			if (fast_rotate(B, find_position(B, find_larger(B, q75))))
+			if (fast_rotate_b(B, find_position(B, find_larger(B, q75))))
 				pa(A, B);
 			if (find_max_node(B)->num == q75)
 			{
-				fast_rotate(B, find_position(B, q75));
+				fast_rotate_b(B, find_position(B, q75));
 				pa(A, B);
 			}
 		}
 	}
 	while (B->size > 0)
 	{
-		rot_to_max(B);
+		rot_to_max_b(B);
 		pa(A, B);
 	}
 }
